@@ -1,0 +1,1255 @@
+[
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2023-02-01",
+  "timing": "post",
+  "headline": "Meta Q4 2022 revenue beat, $40B buyback, 'year of efficiency'; stock +23% next day",
+  "tickers": [
+   "META"
+  ],
+  "source": "https://www.cnbc.com/2023/02/02/meta-stock-rockets-20percent-on-solid-earnings-analyst-reactions.html"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2023-05-24",
+  "timing": "post",
+  "headline": "Nvidia guides FQ2 revenue $11B vs ~$7.2B consensus; stock ~+24% next day",
+  "tickers": [
+   "NVDA"
+  ],
+  "source": "https://www.fool.com/investing/2023/05/25/why-nvidia-stock-skyrocketed-higher-on-thursday"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2024-02-01",
+  "timing": "post",
+  "headline": "Meta Q4 2023 beat, first dividend, $50B buyback; stock +20% record $196B gain",
+  "tickers": [
+   "META"
+  ],
+  "source": "https://investing.com/news/stock-market-news/meta-surges-with-record-196-billion-gain-in-stock-market-value-3291035"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2024-10-23",
+  "timing": "post",
+  "headline": "Tesla Q3 2024 EPS $0.72 vs ~$0.58 est; stock +22% next day",
+  "tickers": [
+   "TSLA"
+  ],
+  "source": "https://www.ksl.com/article/51163235/investors-question-elon-musks-politicking-as-tesla-stock-takes-big-jump"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2013-01-23",
+  "timing": "post",
+  "headline": "Netflix surprise Q4 2012 profit, strong subscriber adds; stock +42% next day",
+  "tickers": [
+   "NFLX"
+  ],
+  "source": "https://www.cnbc.com/2013/01/23/netflix-delivers-surprise-profit-outlook-shares-jump.html"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2015-07-16",
+  "timing": "post",
+  "headline": "Google Q2 2015 beat, Porat cost discipline; stock +16% record $65B gain",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://www.startribune.com/google-soars-16-after-strong-earnings-report/316450461/"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2015-04-23",
+  "timing": "post",
+  "headline": "Amazon discloses AWS results first time ($1.57B rev, profitable); stock ~+14% next day",
+  "tickers": [
+   "AMZN"
+  ],
+  "source": "https://www.fool.com/investing/general/2015/04/24/why-amazoncom-inc-stock-skyrocketed-today.aspx"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2015-10-22",
+  "timing": "post",
+  "headline": "Microsoft FQ1 2016 adj EPS $0.67 vs $0.59 est on cloud; stock ~+10% next day",
+  "tickers": [
+   "MSFT"
+  ],
+  "source": "https://www.fool.com/investing/general/2015/10/23/why-microsoft-corporation-soared-on-friday.aspx"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2019-10-23",
+  "timing": "post",
+  "headline": "Tesla surprise Q3 2019 profit vs expected loss; stock ~+17-20% next day",
+  "tickers": [
+   "TSLA"
+  ],
+  "source": "https://fortune.com/2019/10/23/tesla-shares-soar-20-on-surprise-profit"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2017-10-26",
+  "timing": "post",
+  "headline": "Amazon Q3 2017 earnings far above estimates; stock ~+13% next day",
+  "tickers": [
+   "AMZN"
+  ],
+  "source": "https://www.geekwire.com/2017/amazon-stock-surges-13-earnings-report-making-jeff-bezos-worlds-richest/"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2020-07-30",
+  "timing": "post",
+  "headline": "Apple FQ3 2020 EPS $2.58 vs $2.05, rev $59.7B vs $52.3B, 4:1 split; stock ~+10% next day",
+  "tickers": [
+   "AAPL"
+  ],
+  "source": "https://www.schaeffersresearch.com/content/news/2020/07/31/aapl-surges-on-earnings-stock-split"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2024-04-25",
+  "timing": "post",
+  "headline": "Alphabet Q1 2024 EPS $1.89 vs $1.51, first dividend, $70B buyback; stock +10% next day",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://www.cnbc.com/2024/04/26/alphabet-stock-up-on-strong-earnings-first-ever-dividend-buyback.html"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2024-02-21",
+  "timing": "post",
+  "headline": "Nvidia FQ4 2024 rev $22.1B vs ~$20.4B; stock +16% record $277B gain",
+  "tickers": [
+   "NVDA"
+  ],
+  "source": "https://www.bloomberg.com/news/articles/2024-02-22/nvidia-to-top-meta-record-with-nearly-250-billion-value-jump"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2025-01-21",
+  "timing": "post",
+  "headline": "Netflix record 18.9M Q4 2024 subscriber adds, raised guidance; stock ~+10-14% next day",
+  "tickers": [
+   "NFLX"
+  ],
+  "source": "https://www.euronews.com/2025/01/22/netflix-reports-record-breaking-quarterly-results-as-shares-soar"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2023-04-26",
+  "timing": "post",
+  "headline": "Meta Q1 2023 revenue $28.65B vs ~$27.65B, strong guide; stock ~+14% next day",
+  "tickers": [
+   "META"
+  ],
+  "source": "https://www.cnbc.com/2023/04/27/meta-stock-pops-14percent-on-guidance-sales-increase.html"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2015-07-23",
+  "timing": "post",
+  "headline": "Amazon surprise Q2 2015 profit; stock ~+10-15%, passes Walmart market value",
+  "tickers": [
+   "AMZN"
+  ],
+  "source": "https://money.cnn.com/2015/07/24/investing/amazon-worth-more-than-walmart/"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2024-01-23",
+  "timing": "post",
+  "headline": "Netflix adds 13.1M subs in Q4 2023 vs ~8.7M est; stock ~+11% next day",
+  "tickers": [
+   "NFLX"
+  ],
+  "source": "https://fortune.com/2024/01/23/netflix-earnings-crushes-expectations-stock-8-percent-surge-wwe-subscribers/"
+ },
+ {
+  "type": "megacap_earnings_beat",
+  "date": "2023-04-25",
+  "timing": "post",
+  "headline": "Microsoft FQ3 2023 beat (EPS $2.45, Azure +27%); stock ~+7% next day",
+  "tickers": [
+   "MSFT"
+  ],
+  "source": "https://www.fool.com/investing/2023/04/26/why-microsoft-stock-rallied-hard-on-wednesday/"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2022-02-02",
+  "timing": "post",
+  "headline": "Meta weak Q1 guide, first-ever DAU decline; stock -26% next day (~$230B loss)",
+  "tickers": [
+   "META"
+  ],
+  "source": "https://www.cbsnews.com/news/stock-market-down-meta-facebook-earnings"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2022-04-19",
+  "timing": "post",
+  "headline": "Netflix loses 200k subscribers, guides -2M; stock -35% next day",
+  "tickers": [
+   "NFLX"
+  ],
+  "source": "https://www.bnnbloomberg.ca/netflix-shares-plunge-35-after-massive-subscriber-loss-1.1754275"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2018-07-25",
+  "timing": "post",
+  "headline": "Facebook Q2 2018 revenue miss and growth warning; stock -19% next day ($119B record loss)",
+  "tickers": [
+   "META"
+  ],
+  "source": "https://www.bloomberg.com/news/articles/2018-07-26/facebook-s-119-billion-one-day-rout-makes-u-s-history-chart"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2022-10-26",
+  "timing": "post",
+  "headline": "Meta weak Q4 guide, Reality Labs losses; stock ~-25% next day",
+  "tickers": [
+   "META"
+  ],
+  "source": "https://www.theblock.co/news/markets/2022-10-27-metas-stock-sinks-20-as-metaverse-spending-spree-continues-180304"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2019-01-02",
+  "timing": "post",
+  "headline": "Apple cuts FQ1 revenue guidance to ~$84B (from $89-93B) citing China; stock ~-10% next day",
+  "tickers": [
+   "AAPL"
+  ],
+  "source": "https://www.axios.com/2019/01/02/apple-earnings-warning"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2022-01-20",
+  "timing": "post",
+  "headline": "Netflix guides Q1 2022 adds 2.5M vs 5.9M est; stock -21.7% next day",
+  "tickers": [
+   "NFLX"
+  ],
+  "source": "https://www.bloomberg.com/news/articles/2022-01-20/netflix-subscriber-forecast-misses-estimates-sending-stock-down"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2011-10-24",
+  "timing": "post",
+  "headline": "Netflix loses 800k US subscribers after price hike/Qwikster; stock -35% next day",
+  "tickers": [
+   "NFLX"
+  ],
+  "source": "https://money.cnn.com/2011/10/25/technology/netflix_stock/?npt=NP1"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2018-11-15",
+  "timing": "post",
+  "headline": "Nvidia guides $2.7B vs $3.4B est on crypto inventory glut; stock ~-17-19% next day",
+  "tickers": [
+   "NVDA"
+  ],
+  "source": "https://www.bloomberg.com/news/articles/2018-11-15/nvidia-gives-weak-forecast-citing-inventory-stock-slumps"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2022-04-28",
+  "timing": "post",
+  "headline": "Amazon Q1 2022 loss and weak guide; stock -14% next day, worst since 2006",
+  "tickers": [
+   "AMZN"
+  ],
+  "source": "https://fortune.com/2022/04/29/stocks-tank-amazon-endures-worst-day-since-2006/"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2023-10-24",
+  "timing": "post",
+  "headline": "Alphabet Google Cloud revenue miss ($8.41B vs $8.64B); stock -9.5% next day",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://www.bloomberg.com/news/articles/2023-10-24/alphabet-cloud-unit-reports-sales-missing-estimates-shares-fall"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2024-04-24",
+  "timing": "post",
+  "headline": "Meta light Q2 revenue guide and higher AI capex; stock -10.5% next day",
+  "tickers": [
+   "META"
+  ],
+  "source": "https://www.bloomberg.com/news/articles/2024-04-24/meta-projects-higher-spending-weaker-revenue-amid-ai-push"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2026-01-28",
+  "timing": "post",
+  "headline": "Microsoft FQ2 2026: Azure slows to 39%, capex $37.5B; stock ~-10% next day, worst since 2020",
+  "tickers": [
+   "MSFT"
+  ],
+  "source": "https://www.finanzen.net/nachricht/aktien/stock-market-today-jan-29-microsoft-falls-after-azure-growth-slows-and-ai-spending-raises-investor-concerns-15447471"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2024-07-23",
+  "timing": "post",
+  "headline": "Tesla Q2 2024 EPS $0.52 vs ~$0.61 est, margin squeeze; stock -12% next day",
+  "tickers": [
+   "TSLA"
+  ],
+  "source": "https://www.fool.com/investing/2024/07/24/why-tesla-stock-just-crashed"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2024-08-01",
+  "timing": "post",
+  "headline": "Amazon Q2 2024 revenue miss and weak Q3 guide; stock -8.8% next day",
+  "tickers": [
+   "AMZN"
+  ],
+  "source": "https://www.trefis.com/stock/amzn/articles/557546/why-amazon-stock-fell-9-in-a-day/2024-08-05"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2019-07-17",
+  "timing": "post",
+  "headline": "Netflix Q2 2019 2.7M adds vs 5M est, US subs decline; stock ~-10% next day",
+  "tickers": [
+   "NFLX"
+  ],
+  "source": "https://www.bloomberg.com/news/articles/2019-07-18/netflix-s-2-million-subscriber-shortfall-costs-it-15-billion"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2013-01-23",
+  "timing": "post",
+  "headline": "Apple holiday-quarter iPhone sales miss (47.8M); stock -12% next day",
+  "tickers": [
+   "AAPL"
+  ],
+  "source": "https://m.washingtontimes.com/news/2013/jan/24/apple-shares-take-50-billion-tumble-face-weak-ipho/"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2025-10-29",
+  "timing": "post",
+  "headline": "Meta Q3 2025 $15.9B tax charge and higher 2026 capex/expense outlook; stock ~-11% next day",
+  "tickers": [
+   "META"
+  ],
+  "source": "https://www.nasdaq.com/articles/meta-platforms-stock-falls-despite-strong-growth-heres-why"
+ },
+ {
+  "type": "megacap_earnings_miss",
+  "date": "2018-10-25",
+  "timing": "post",
+  "headline": "Amazon Q3 2018 revenue miss and weak holiday guide; stock fell as much as 10% next day",
+  "tickers": [
+   "AMZN"
+  ],
+  "source": "https://www.fool.com/investing/2018/10/26/why-amazoncom-shares-fell-as-much-as-101-today.aspx"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2017-06-27",
+  "timing": "pre",
+  "headline": "EU Commission fines Google EUR2.42B over Google Shopping self-preferencing",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://9to5google.com/2017/06/27/google-shopping-eu-fine/"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2018-07-18",
+  "timing": "pre",
+  "headline": "EU Commission fines Google EUR4.34B over Android",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://ec.europa.eu/newsroom/comp/items/631884"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2019-03-20",
+  "timing": "pre",
+  "headline": "EU Commission fines Google EUR1.49B over AdSense exclusivity",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://betanews.com/2019/03/20/google-adsense-fine-europe/"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2021-09-10",
+  "timing": "intraday",
+  "headline": "Epic v. Apple ruling: injunction against App Store anti-steering rules",
+  "tickers": [
+   "AAPL"
+  ],
+  "source": "https://foxbusiness.com/technology/apple-shares-fall-epic-games-case"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2023-12-11",
+  "timing": "unknown",
+  "headline": "Jury in Epic v. Google finds Play Store an illegal monopoly",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://fortune.com/2023/12/11/google-antitrust-case-epic-games-jury-verdict-app-store-monopoly"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2024-03-04",
+  "timing": "pre",
+  "headline": "EU Commission fines Apple EUR1.8B over music streaming anti-steering",
+  "tickers": [
+   "AAPL"
+  ],
+  "source": "https://thenextweb.com/news/eu-first-antitrust-fine-apple-music-streaming"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2024-08-05",
+  "timing": "intraday",
+  "headline": "Judge Mehta rules Google illegally monopolized search (US v. Google)",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://claimsjournal.com/news/national/2024/08/06/325520.htm"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2024-09-10",
+  "timing": "pre",
+  "headline": "EU Court of Justice upholds EUR2.4B Google Shopping fine (final)",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://www.rte.ie/news/business/2024/0910/1469281-google"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2025-04-17",
+  "timing": "unknown",
+  "headline": "Judge Brinkema rules Google illegally monopolized ad tech markets",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://www.marketingbrew.com/stories/2025/04/17/google-ad-tech-illegal-monopoly-doj"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2025-04-23",
+  "timing": "pre",
+  "headline": "First DMA fines: Apple EUR500M (anti-steering), Meta EUR200M (pay-or-consent)",
+  "tickers": [
+   "AAPL",
+   "META"
+  ],
+  "source": "https://news.bloomberglaw.com/privacy-and-data-security/apple-meta-hit-by-700-million-in-eu-fines-after-trump-threats"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2025-04-30",
+  "timing": "post",
+  "headline": "Judge finds Apple willfully violated Epic injunction, refers for criminal contempt",
+  "tickers": [
+   "AAPL"
+  ],
+  "source": "https://www.cbsnews.com/news/apple-violated-injunction-antitrust-case-judge-finds"
+ },
+ {
+  "type": "big_tech_antitrust_ruling",
+  "date": "2025-09-05",
+  "timing": "pre",
+  "headline": "EU Commission fines Google EUR2.95B over adtech self-preferencing",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://siliconangle.com/2025/09/05/eu-fines-google-3-5b-advertising-technology-practices/"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2022-11-30",
+  "timing": "intraday",
+  "headline": "OpenAI launches ChatGPT research preview",
+  "tickers": [
+   "MSFT",
+   "GOOGL"
+  ],
+  "source": "https://www.rte.ie/news/business/2023/1130/1419291-chatgpt-turns-one-today"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2023-02-08",
+  "timing": "intraday",
+  "headline": "Google Bard demo factual error; Alphabet -7.7% (~$100B)",
+  "tickers": [
+   "GOOGL",
+   "MSFT"
+  ],
+  "source": "https://www.npr.org/2023/02/09/1155650909/google-chatbot--error-bard-shares"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2023-03-14",
+  "timing": "intraday",
+  "headline": "OpenAI releases GPT-4",
+  "tickers": [
+   "MSFT",
+   "GOOGL"
+  ],
+  "source": "https://www.bloomberg.com/news/articles/2023-03-14/openai-unveils-next-version-of-the-ai-tool-that-birthed-chatgpt"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2023-12-06",
+  "timing": "intraday",
+  "headline": "Google unveils Gemini model; Alphabet +5.3% next day",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://www.fool.com/investing/2023/12/07/alphabet-stock-rallies-gemini-generative-ai"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2024-03-04",
+  "timing": "unknown",
+  "headline": "Anthropic launches Claude 3 family (Opus claims GPT-4-beating benchmarks)",
+  "tickers": [
+   "AMZN",
+   "GOOGL"
+  ],
+  "source": "https://www.tomsguide.com/ai/claude-3-launched-by-anthropic-new-ai-model-leaves-openais-gpt-4-in-the-dust"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2024-05-13",
+  "timing": "intraday",
+  "headline": "OpenAI unveils GPT-4o with real-time voice",
+  "tickers": [
+   "MSFT",
+   "GOOGL",
+   "AAPL"
+  ],
+  "source": "https://www.axios.com/2024/05/13/openai-google-chatgpt-ai"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2024-09-12",
+  "timing": "intraday",
+  "headline": "OpenAI releases o1 reasoning models (Strawberry)",
+  "tickers": [
+   "MSFT",
+   "NVDA"
+  ],
+  "source": "https://www.axios.com/2024/09/12/openai-strawberry-model-reasoning-o1"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2025-01-27",
+  "timing": "pre",
+  "headline": "DeepSeek-R1 low-cost model shock; Nvidia -17% (~$593B record loss)",
+  "tickers": [
+   "NVDA",
+   "AVGO",
+   "MSFT",
+   "GOOGL",
+   "META"
+  ],
+  "source": "https://www.dawn.com/news/1888233"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2025-05-22",
+  "timing": "intraday",
+  "headline": "Anthropic launches Claude Opus 4 and Sonnet 4",
+  "tickers": [
+   "AMZN",
+   "GOOGL"
+  ],
+  "source": "https://www.macrumors.com/2025/05/22/anthropic-launches-claude-4"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2025-08-07",
+  "timing": "intraday",
+  "headline": "OpenAI releases GPT-5",
+  "tickers": [
+   "MSFT"
+  ],
+  "source": "https://fortune.com/2025/08/07/openai-launches-gpt-5-most-powerful-ai-model-llm-sam-altman-stargate/"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2025-11-18",
+  "timing": "intraday",
+  "headline": "Google launches Gemini 3; Alphabet to record high",
+  "tickers": [
+   "GOOGL"
+  ],
+  "source": "https://www.fool.com/investing/2025/11/19/why-alphabet-stock-climbed-to-a-record-high-today"
+ },
+ {
+  "type": "ai_frontier_launch",
+  "date": "2026-02-03",
+  "timing": "intraday",
+  "headline": "Software/data stock selloff on Anthropic Claude Cowork plugins (released Jan 30)",
+  "tickers": [
+   "CRM",
+   "NOW",
+   "WDAY",
+   "TRI",
+   "RELX"
+  ],
+  "source": "https://www.goodmorningamerica.com/news/story/new-ai-tool-hammered-software-stocks-week-129845251"
+ },
+ {
+  "type": "chip_export_restriction",
+  "date": "2019-05-15",
+  "timing": "post",
+  "headline": "Commerce adds Huawei to Entity List (announced end of day May 15)",
+  "tickers": [
+   "QCOM",
+   "AVGO",
+   "MU",
+   "QRVO",
+   "SWKS"
+  ],
+  "source": "https://www.cnbc.com/2019/05/16/trumps-latest-tough-trade-action-could-hit-already-struggling-chip-stocks.html"
+ },
+ {
+  "type": "chip_export_restriction",
+  "date": "2020-05-15",
+  "timing": "unknown",
+  "headline": "BIS expands foreign direct product rule to Huawei/HiSilicon chips made with US tools",
+  "tickers": [
+   "AMAT",
+   "LRCX",
+   "KLAC",
+   "TSM"
+  ],
+  "source": "https://www.wilmerhale.com/en/insights/client-alerts/20200519-commerce-department-escalates-us-china-technology-competition-targeting-huawei-again"
+ },
+ {
+  "type": "chip_export_restriction",
+  "date": "2020-12-18",
+  "timing": "unknown",
+  "headline": "Commerce adds SMIC (and 76 others) to Entity List",
+  "tickers": [
+   "AMAT",
+   "LRCX",
+   "KLAC"
+  ],
+  "source": "https://www.europeansanctions.com/2020/12/us-commerce-dept-adds-smic-60-entities-to-the-entity-list/"
+ },
+ {
+  "type": "chip_export_restriction",
+  "date": "2022-08-31",
+  "timing": "post",
+  "headline": "Nvidia discloses US license requirement for A100/H100 exports to China; NVDA -11% next day",
+  "tickers": [
+   "NVDA",
+   "AMD"
+  ],
+  "source": "https://www.cnbc.com/2022/08/31/nvidia-stock-falls-after-us-government-restricts-chip-sales-to-china.html"
+ },
+ {
+  "type": "chip_export_restriction",
+  "date": "2022-10-07",
+  "timing": "unknown",
+  "headline": "BIS sweeping advanced computing and semiconductor manufacturing export controls on China",
+  "tickers": [
+   "NVDA",
+   "AMD",
+   "AMAT",
+   "LRCX",
+   "KLAC"
+  ],
+  "source": "https://natlawreview.com/article/bis-implements-new-chinese-supercomputer-and-semiconductor-manufacturing-export"
+ },
+ {
+  "type": "chip_export_restriction",
+  "date": "2023-01-27",
+  "timing": "unknown",
+  "headline": "Netherlands and Japan agree with US to restrict chip-equipment exports to China",
+  "tickers": [
+   "ASML",
+   "AMAT",
+   "LRCX",
+   "KLAC"
+  ],
+  "source": "https://www.mayerbrown.com/zh-hans/insights/publications/2023/02/japan-and-the-netherlands-agree-to-new-restrictions-on-exports-of-chipmaking-equipment-to-china"
+ },
+ {
+  "type": "chip_export_restriction",
+  "date": "2023-10-17",
+  "timing": "unknown",
+  "headline": "Commerce tightens AI chip rules (A800/H800/L40S) and equipment controls",
+  "tickers": [
+   "NVDA",
+   "AMD",
+   "AMAT",
+   "LRCX",
+   "KLAC"
+  ],
+  "source": "https://www.cnbc.com/2023/10/17/nvidia-stock-falls-after-us-announces-new-chip-export-restrictions.html"
+ },
+ {
+  "type": "chip_export_restriction",
+  "date": "2024-12-02",
+  "timing": "unknown",
+  "headline": "BIS HBM controls, 24 tool categories, 140 entities added",
+  "tickers": [
+   "AMAT",
+   "LRCX",
+   "KLAC",
+   "ASML",
+   "MU"
+  ],
+  "source": "https://www.bloomberg.com/news/articles/2024-12-02/us-tightens-curbs-on-china-s-access-to-ai-memory-and-chips-tools"
+ },
+ {
+  "type": "chip_export_restriction",
+  "date": "2025-01-13",
+  "timing": "pre",
+  "headline": "Biden 'AI Diffusion' export framework for AI chips",
+  "tickers": [
+   "NVDA",
+   "AMD"
+  ],
+  "source": "https://www.thenationalnews.com/future/technology/2025/01/13/nvidia-says-new-biden-ai-rules-undermine-us-interests"
+ },
+ {
+  "type": "chip_export_restriction",
+  "date": "2025-04-15",
+  "timing": "post",
+  "headline": "US license requirement on Nvidia H20 / AMD MI308 to China; Nvidia $5.5B charge",
+  "tickers": [
+   "NVDA",
+   "AMD"
+  ],
+  "source": "https://www.rte.ie/news/business/2025/0416/1507904-nvidia-faces-5-5-billion-charge-as-us-restricts-sales"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2016-09-19",
+  "timing": "pre",
+  "headline": "FDA accelerated approval of Exondys 51 (eteplirsen) for DMD; SRPT +~75%",
+  "tickers": [
+   "SRPT"
+  ],
+  "source": "https://www.biospace.com/victory-at-last-sarepta-stock-doubles-as-the-fda-finally-approves-dmd-drug"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2019-10-21",
+  "timing": "intraday",
+  "headline": "FDA approves Trikafta ~5 months early",
+  "tickers": [
+   "VRTX"
+  ],
+  "source": "https://www.cnbc.com/2019/10/21/fda-approves-vertex-pharmas-combo-treatment-for-cystic-fibrosis.html"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2019-12-13",
+  "timing": "unknown",
+  "headline": "FDA approves Vascepa CV risk-reduction label expansion",
+  "tickers": [
+   "AMRN"
+  ],
+  "source": "https://cm.healio.com/news/cardiology/20191213/fda-approves-cv-event-risk-reduction-indication-for-icosapent-ethyl"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2019-12-23",
+  "timing": "unknown",
+  "headline": "FDA approval of Caplyta for schizophrenia (news broke Dec 23); ITCI +~85-180% (ITCI acquired by JNJ 2025, may be delisted)",
+  "tickers": [
+   "ITCI"
+  ],
+  "source": "https://pmlive.com/pharma_news/intra-cellular_soars_on_fda_approval_of_schizophrenia_drug_1320890/"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2021-06-04",
+  "timing": "post",
+  "headline": "FDA approves Wegovy (semaglutide 2.4mg) for obesity",
+  "tickers": [
+   "NVO"
+  ],
+  "source": "https://www.biospace.com/novo-nordisk-receives-fda-approval-for-wegovy-to-treat-adults-with-obesity-based-on-unprecedented-efficacy-for-a-prescription-medicine-in-clinical-trials"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2021-06-07",
+  "timing": "intraday",
+  "headline": "FDA accelerated approval of Aduhelm (aducanumab); BIIB +38% after halt",
+  "tickers": [
+   "BIIB"
+  ],
+  "source": "https://www.cnbc.com/2021/06/07/fda-approves-biogens-alzheimers-drug-the-first-new-therapy-for-the-disease-in-nearly-two-decades.html"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2022-08-19",
+  "timing": "pre",
+  "headline": "FDA approves Auvelity for MDD; AXSM +~40%",
+  "tickers": [
+   "AXSM"
+  ],
+  "source": "https://www.biopharmadive.com/news/axsome-fda-approval-auverity-depression/630087/"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2023-01-06",
+  "timing": "intraday",
+  "headline": "FDA accelerated approval of Leqembi (lecanemab)",
+  "tickers": [
+   "BIIB",
+   "4523.T"
+  ],
+  "source": "https://news.bloomberglaw.com/health-law-and-business/eisai-biogen-alzheimers-drug-gets-fda-accelerated-approval"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2023-02-17",
+  "timing": "post",
+  "headline": "FDA approves Syfovre, first geographic atrophy treatment; APLS +~19% after hours",
+  "tickers": [
+   "APLS"
+  ],
+  "source": "https://www.pharmalive.com/?p=224887"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2023-07-06",
+  "timing": "unknown",
+  "headline": "FDA converts Leqembi to traditional approval; CMS broadens coverage",
+  "tickers": [
+   "BIIB",
+   "4523.T"
+  ],
+  "source": "https://www.biospace.com/leqembi-wins-full-fda-approval-as-first-anti-amyloid-antibody-for-alzheimer-s"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2023-11-08",
+  "timing": "unknown",
+  "headline": "FDA approves Zepbound (tirzepatide) for obesity",
+  "tickers": [
+   "LLY"
+  ],
+  "source": "https://www.cnbc.com/2023/11/08/fda-approves-eli-lilly-drug-tirzepatide-for-obesity.html"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2024-03-14",
+  "timing": "unknown",
+  "headline": "FDA accelerated approval of Rezdiffra, first NASH/MASH drug",
+  "tickers": [
+   "MDGL"
+  ],
+  "source": "https://fiercepharma.com/pharma/fda-approves-first-mash-drug-madrigal-breasts-tape-resmetirom"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2024-06-20",
+  "timing": "post",
+  "headline": "FDA expands Elevidys label (age 4+, non-ambulatory); SRPT +~33-40% next day",
+  "tickers": [
+   "SRPT"
+  ],
+  "source": "https://marketscreener.com/quote/stock/SAREPTA-THERAPEUTICS-INC-11204214/news/Sarepta-surges-as-investors-cheer-expanded-use-of-gene-therapy-47019777"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2024-07-02",
+  "timing": "unknown",
+  "headline": "FDA approves Kisunla (donanemab) for early Alzheimer's",
+  "tickers": [
+   "LLY"
+  ],
+  "source": "https://www.nbcnews.com/health/health-news/fda-approves-eli-lillys-alzheimers-drug-slows-memory-decline-rcna158794"
+ },
+ {
+  "type": "fda_approval",
+  "date": "2025-08-12",
+  "timing": "unknown",
+  "headline": "FDA approves Brinsupri (brensocatib), first DPP1 inhibitor, for bronchiectasis",
+  "tickers": [
+   "INSM"
+  ],
+  "source": "https://www.fiercepharma.com/pharma/insmed-brensocatib-fda-approval-chronic-lung-disease-non-cystic-fibrosis-bronchiectasis"
+ },
+ {
+  "type": "fda_trial_failure",
+  "date": "2016-09-15",
+  "timing": "post",
+  "headline": "Novavax RSV vaccine fails Phase 3 RESOLVE in older adults; NVAX ~-80% next day",
+  "tickers": [
+   "NVAX"
+  ],
+  "source": "https://www.cnbc.com/2016/09/16/novavax-plunges-80-after-failed-trial-analysts-downgrade.html"
+ },
+ {
+  "type": "fda_trial_failure",
+  "date": "2016-11-23",
+  "timing": "pre",
+  "headline": "Lilly solanezumab fails Phase 3 EXPEDITION3 in Alzheimer's",
+  "tickers": [
+   "LLY"
+  ],
+  "source": "https://www.biospace.com/devastation-hits-as-eli-lilly-s-alzheimer-s-drug-flunks-late-stage-study-shares-tank"
+ },
+ {
+  "type": "fda_trial_failure",
+  "date": "2019-03-21",
+  "timing": "pre",
+  "headline": "Biogen/Eisai halt aducanumab Phase 3 trials for futility; BIIB -29%",
+  "tickers": [
+   "BIIB"
+  ],
+  "source": "https://amp.cnn.com/cnn/2019/03/21/investing/biogen-stock"
+ },
+ {
+  "type": "fda_trial_failure",
+  "date": "2019-12-05",
+  "timing": "pre",
+  "headline": "Sage zuranolone fails Phase 3 MOUNTAIN in MDD; SAGE ~-55-60% (SAGE acquired 2025, may be delisted)",
+  "tickers": [
+   "SAGE"
+  ],
+  "source": "https://www.biospace.com/sage-plunges-after-phase-iii-setback-in-major-depressive-disorder"
+ },
+ {
+  "type": "fda_trial_failure",
+  "date": "2020-06-29",
+  "timing": "unknown",
+  "headline": "FDA rejects Intercept obeticholic acid for NASH (ICPT acquired 2023, may be delisted)",
+  "tickers": [
+   "ICPT"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Intercept_Pharmaceuticals"
+ },
+ {
+  "type": "fda_trial_failure",
+  "date": "2024-03-08",
+  "timing": "pre",
+  "headline": "Amylyx Relyvrio fails Phase 3 PHOENIX in ALS; AMLX -82%",
+  "tickers": [
+   "AMLX"
+  ],
+  "source": "https://bioworld.com/articles/706477-centaur-doesnt-hold-as-amylyxs-relyvrio-phase-iii-fails-in-als"
+ },
+ {
+  "type": "fda_trial_failure",
+  "date": "2024-11-25",
+  "timing": "unknown",
+  "headline": "Cassava simufilam fails Phase 3 in Alzheimer's; development stopped",
+  "tickers": [
+   "SAVA"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Simufilam"
+ },
+ {
+  "type": "major_recall",
+  "date": "2010-01-21",
+  "timing": "unknown",
+  "headline": "Toyota recalls ~2.3M vehicles for sticking accelerator pedals",
+  "tickers": [
+   "TM"
+  ],
+  "source": "https://en.wikipedia.org/wiki/2009%E2%80%932011_Toyota_vehicle_recalls"
+ },
+ {
+  "type": "major_recall",
+  "date": "2010-01-26",
+  "timing": "unknown",
+  "headline": "Toyota suspends US sales of 8 recalled models",
+  "tickers": [
+   "TM"
+  ],
+  "source": "https://en.wikipedia.org/wiki/2009%E2%80%932011_Toyota_vehicle_recalls"
+ },
+ {
+  "type": "major_recall",
+  "date": "2010-04-30",
+  "timing": "post",
+  "headline": "J&J McNeil recalls 43 children's OTC medicines (Tylenol, Motrin, Zyrtec, Benadryl)",
+  "tickers": [
+   "JNJ"
+  ],
+  "source": "https://en.wikipedia.org/wiki/2010_Johnson_%26_Johnson_children%27s_product_recall"
+ },
+ {
+  "type": "major_recall",
+  "date": "2013-01-16",
+  "timing": "unknown",
+  "headline": "FAA grounds Boeing 787 Dreamliner over battery fires",
+  "tickers": [
+   "BA"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Boeing_787_Dreamliner_battery_problems"
+ },
+ {
+  "type": "major_recall",
+  "date": "2014-02-07",
+  "timing": "unknown",
+  "headline": "GM first ignition-switch recall (Cobalt/G5); later expanded to ~29M vehicles",
+  "tickers": [
+   "GM"
+  ],
+  "source": "https://en.wikipedia.org/wiki/General_Motors_ignition_switch_recalls"
+ },
+ {
+  "type": "major_recall",
+  "date": "2016-09-02",
+  "timing": "pre",
+  "headline": "Samsung suspends Galaxy Note 7 sales and announces recall over battery fires",
+  "tickers": [
+   "005930.KS"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Samsung_Galaxy_Note_7"
+ },
+ {
+  "type": "major_recall",
+  "date": "2016-10-11",
+  "timing": "unknown",
+  "headline": "Samsung permanently discontinues Galaxy Note 7 after replacement units catch fire",
+  "tickers": [
+   "005930.KS"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Samsung_Galaxy_Note_7"
+ },
+ {
+  "type": "major_recall",
+  "date": "2019-03-13",
+  "timing": "intraday",
+  "headline": "FAA grounds Boeing 737 MAX after Ethiopian Airlines 302 crash (Mar 10)",
+  "tickers": [
+   "BA"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Boeing_737_MAX_groundings"
+ },
+ {
+  "type": "major_recall",
+  "date": "2021-06-14",
+  "timing": "unknown",
+  "headline": "Philips recalls CPAP/BiPAP/ventilator devices over sound-abatement foam",
+  "tickers": [
+   "PHG"
+  ],
+  "source": "https://www.philips.com/a-w/about/news/archive/standard/news/press/2021/20210614-philips-issues-recall-notification-to-mitigate-potential-health-risks-related-to-the-sound-abatement-foam-component-in-certain-sleep-and-respiratory-care-devices.html"
+ },
+ {
+  "type": "major_recall",
+  "date": "2022-02-17",
+  "timing": "unknown",
+  "headline": "Abbott recalls Similac/Alimentum/EleCare powdered formula from Sturgis plant",
+  "tickers": [
+   "ABT"
+  ],
+  "source": "https://www.fda.gov/food/outbreaks-foodborne-illness/fda-investigation-cronobacter-infections-powdered-infant-formula-february-2022"
+ },
+ {
+  "type": "major_recall",
+  "date": "2023-02-16",
+  "timing": "unknown",
+  "headline": "Tesla recalls 362,758 vehicles with FSD Beta (NHTSA)",
+  "tickers": [
+   "TSLA"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Tesla_Autopilot"
+ },
+ {
+  "type": "major_recall",
+  "date": "2023-12-12",
+  "timing": "unknown",
+  "headline": "Tesla recalls ~2.03M vehicles over Autosteer/Autopilot safeguards",
+  "tickers": [
+   "TSLA"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Tesla_Autopilot"
+ },
+ {
+  "type": "major_recall",
+  "date": "2024-01-06",
+  "timing": "nontrading",
+  "headline": "FAA grounds 737 MAX 9 after Alaska Airlines 1282 door-plug blowout (Jan 5)",
+  "tickers": [
+   "BA"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Alaska_Airlines_Flight_1282"
+ },
+ {
+  "type": "eu_climate_regulation",
+  "date": "2019-12-11",
+  "timing": "pre",
+  "headline": "European Commission presents the European Green Deal",
+  "tickers": [],
+  "source": "https://en.wikipedia.org/wiki/European_Green_Deal"
+ },
+ {
+  "type": "eu_climate_regulation",
+  "date": "2020-09-17",
+  "timing": "pre",
+  "headline": "Commission 2030 Climate Target Plan (55% cut vs 1990)",
+  "tickers": [],
+  "source": "https://en.wikipedia.org/wiki/European_Green_Deal"
+ },
+ {
+  "type": "eu_climate_regulation",
+  "date": "2021-07-14",
+  "timing": "pre",
+  "headline": "Commission presents Fit for 55 package (ETS reform, CBAM, 2035 car CO2 standards)",
+  "tickers": [],
+  "source": "https://www.europarl.europa.eu/news/en/press-room/20220603IPR32129/fit-for-55-meps-back-objective-of-zero-emissions-for-cars-and-vans-in-2035"
+ },
+ {
+  "type": "eu_climate_regulation",
+  "date": "2022-06-08",
+  "timing": "unknown",
+  "headline": "European Parliament backs zero-emission new cars/vans from 2035 (ICE ban position)",
+  "tickers": [],
+  "source": "https://www.europarl.europa.eu/news/en/press-room/20220603IPR32129/fit-for-55-meps-back-objective-of-zero-emissions-for-cars-and-vans-in-2035"
+ },
+ {
+  "type": "eu_climate_regulation",
+  "date": "2022-06-22",
+  "timing": "unknown",
+  "headline": "European Parliament adopts position on CBAM (450-115)",
+  "tickers": [],
+  "source": "https://en.wikipedia.org/wiki/Carbon_Border_Adjustment_Mechanism"
+ },
+ {
+  "type": "eu_climate_regulation",
+  "date": "2023-02-14",
+  "timing": "unknown",
+  "headline": "European Parliament final approval of 2035 zero-CO2 car/van standards",
+  "tickers": [],
+  "source": "https://www.europarl.europa.eu/news/en/press-room/20230210IPR74715/fit-for-55-zero-co2-emissions-for-new-cars-and-vans-in-2035"
+ },
+ {
+  "type": "eu_climate_regulation",
+  "date": "2023-04-18",
+  "timing": "unknown",
+  "headline": "European Parliament adopts ETS reform (-62% by 2030), ETS2, CBAM, Social Climate Fund",
+  "tickers": [],
+  "source": "https://www.europarl.europa.eu/news/en/press-room/20230414IPR80120/fit-for-55-parliament-adopts-key-laws-to-reach-2030-climate-target"
+ },
+ {
+  "type": "currency_devaluation",
+  "date": "2014-02-11",
+  "timing": "pre",
+  "headline": "Kazakhstan devalues tenge ~19% vs USD",
+  "tickers": [
+   "USDKZT=X"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Kazakhstani_tenge"
+ },
+ {
+  "type": "currency_devaluation",
+  "date": "2014-12-16",
+  "timing": "pre",
+  "headline": "Russia hikes key rate to 17% overnight; ruble crashes to ~79/USD",
+  "tickers": [
+   "USDRUB=X"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Russian_financial_crisis_(2014%E2%80%932016)"
+ },
+ {
+  "type": "currency_devaluation",
+  "date": "2015-01-15",
+  "timing": "pre",
+  "headline": "SNB abandons EUR/CHF 1.20 floor; franc jumps up to 30%",
+  "tickers": [
+   "EURCHF=X",
+   "USDCHF=X"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Swiss_franc"
+ },
+ {
+  "type": "currency_devaluation",
+  "date": "2015-08-11",
+  "timing": "pre",
+  "headline": "PBOC devalues yuan fixing ~1.9% to 6.2298",
+  "tickers": [
+   "USDCNY=X"
+  ],
+  "source": "https://en.wikipedia.org/wiki/2015%E2%80%932016_Chinese_stock_market_turbulence"
+ },
+ {
+  "type": "currency_devaluation",
+  "date": "2015-08-20",
+  "timing": "pre",
+  "headline": "Kazakhstan floats tenge; ~30% one-day drop",
+  "tickers": [
+   "USDKZT=X"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Kazakhstani_tenge"
+ },
+ {
+  "type": "currency_devaluation",
+  "date": "2016-11-03",
+  "timing": "pre",
+  "headline": "Egypt liberalizes FX regime / floats pound",
+  "tickers": [
+   "USDEGP=X"
+  ],
+  "source": "https://www.imf.org/en/News/Articles/2016/11/11/PR16501-Egypt-Executive-Board-Approves-12-billion-Extended-Arrangement"
+ },
+ {
+  "type": "currency_devaluation",
+  "date": "2018-08-10",
+  "timing": "pre",
+  "headline": "Turkish lira crash (~-10% to near 6/USD); US doubles steel/aluminum tariffs",
+  "tickers": [
+   "USDTRY=X"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Turkish_currency_and_debt_crisis,_2018"
+ },
+ {
+  "type": "currency_devaluation",
+  "date": "2023-06-14",
+  "timing": "unknown",
+  "headline": "Nigeria abandons naira peg; naira -23% to ~600/USD",
+  "tickers": [
+   "USDNGN=X"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Nigerian_naira"
+ },
+ {
+  "type": "currency_devaluation",
+  "date": "2023-12-12",
+  "timing": "post",
+  "headline": "Argentina (Caputo) devalues official peso 54% to 800/USD",
+  "tickers": [
+   "USDARS=X"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Argentine_peso"
+ },
+ {
+  "type": "currency_devaluation",
+  "date": "2024-03-06",
+  "timing": "pre",
+  "headline": "Central Bank of Egypt devalues pound (~38%) and hikes rates 600bp",
+  "tickers": [
+   "USDEGP=X"
+  ],
+  "source": "https://en.wikipedia.org/wiki/Central_Bank_of_Egypt"
+ }
+]

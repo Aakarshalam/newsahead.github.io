@@ -1,0 +1,1175 @@
+[
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2015-01-26",
+  "timing": "intraday",
+  "headline": "S&P cuts Russia to BB+ (junk) from BBB-, outlook negative",
+  "tickers": [
+   "RSX"
+  ],
+  "source": "https://fortune.com/2015/01/26/sp-downgrades-russias-credit-rating-to-junk"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2015-02-20",
+  "timing": "post",
+  "headline": "Moody's cuts Russia to Ba1 (junk) from Baa3, outlook negative",
+  "tickers": [
+   "RSX"
+  ],
+  "source": "https://www.foxbusiness.com/markets/moodys-cuts-russias-credit-rating-to-junk-grade-cites-ukraine-crisis-falling-oil-prices"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2015-09-09",
+  "timing": "post",
+  "headline": "S&P cuts Brazil to BB+ (junk) from BBB-, outlook negative",
+  "tickers": [
+   "EWZ"
+  ],
+  "source": "https://money.cnn.com/2015/09/09/investing/brazil-credit-rating-junk/index.html"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2015-12-16",
+  "timing": "unknown",
+  "headline": "Fitch cuts Brazil to BB+ (junk) from BBB-, outlook negative",
+  "tickers": [
+   "EWZ"
+  ],
+  "source": "https://www.foxbusiness.com/markets/brazils-currency-sinks-after-fitch-cuts-rating-to-junk-status"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2016-02-24",
+  "timing": "unknown",
+  "headline": "Moody's cuts Brazil two notches to Ba2 (junk) from Baa3, outlook negative",
+  "tickers": [
+   "EWZ"
+  ],
+  "source": "https://en.mercopress.com/2016/02/25/moody-s-downgrades-brazil-s-sovereign-debt-to-junk-territory"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2016-07-20",
+  "timing": "unknown",
+  "headline": "S&P cuts Turkey to BB from BB+ after failed coup, outlook negative",
+  "tickers": [
+   "TUR"
+  ],
+  "source": "https://www.cnbc.com/2016/07/20/turkish-lira-hits-record-low-of-30769-after-sp-cuts-outlook.html"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2016-09-23",
+  "timing": "post",
+  "headline": "Moody's cuts Turkey to Ba1 (junk) from Baa3",
+  "tickers": [
+   "TUR"
+  ],
+  "source": "https://www.foxnews.com/world/turkish-markets-hit-by-moodys-rating-downgrade"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2017-04-03",
+  "timing": "intraday",
+  "headline": "S&P cuts South Africa to BB+ (junk) from BBB- after Gordhan sacking",
+  "tickers": [
+   "EZA"
+  ],
+  "source": "https://www.foxbusiness.com/markets/south-africas-currency-stocks-sell-off-after-sp-cuts-its-credit-rating-to-junk"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2017-04-07",
+  "timing": "pre",
+  "headline": "Fitch cuts South Africa to BB+ (junk) from BBB-",
+  "tickers": [
+   "EZA"
+  ],
+  "source": "https://www.foxbusiness.com/markets/fitch-ratings-joins-sp-in-downgrading-south-africa-to-junk-status"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2018-01-11",
+  "timing": "unknown",
+  "headline": "S&P cuts Brazil to BB- from BB on pension reform delay",
+  "tickers": [
+   "EWZ"
+  ],
+  "source": "https://www.brecorder.com/news/amp/392445"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2018-02-23",
+  "timing": "unknown",
+  "headline": "Fitch cuts Brazil to BB- from BB on pension bill delay",
+  "tickers": [
+   "EWZ"
+  ],
+  "source": "https://www.gulf-times.com/story/582926/brazil-cut-further-into-junk-by-fitch-on-pension-bill-delay"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2018-08-17",
+  "timing": "post",
+  "headline": "S&P cuts Turkey to B+ from BB- and Moody's cuts Turkey to Ba3 from Ba2 (both late Friday)",
+  "tickers": [
+   "TUR"
+  ],
+  "source": "https://archives.lincolndailynews.com/2018/Aug/18/NEWS/business_k.shtml"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2019-06-14",
+  "timing": "post",
+  "headline": "Moody's cuts Turkey to B1 from Ba3, outlook negative",
+  "tickers": [
+   "TUR"
+  ],
+  "source": "https://www.yahoo.com/news/1-moodys-downgrades-turkey-rating-214706440.html"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2020-03-26",
+  "timing": "post",
+  "headline": "S&P cuts Mexico to BBB from BBB+, outlook negative",
+  "tickers": [
+   "EWW"
+  ],
+  "source": "https://www.yahoo.com/news/mexico-downgraded-bbb-p-virus-223026379.html"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2020-03-27",
+  "timing": "post",
+  "headline": "Moody's cuts South Africa to Ba1 (junk) from Baa3, outlook negative",
+  "tickers": [
+   "EZA"
+  ],
+  "source": "https://www.timeslive.co.za/news/south-africa/2020-03-28-moodys-downgrades-sa-to-junk/"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2020-04-15",
+  "timing": "post",
+  "headline": "Fitch cuts Mexico to BBB- from BBB, outlook stable",
+  "tickers": [
+   "EWW"
+  ],
+  "source": "https://investing.com/news/stock-market-news/fitch-cuts-mexicos-rating-amid-fears-of-severe-recession-2141516"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2020-04-17",
+  "timing": "post",
+  "headline": "Moody's cuts Mexico to Baa1 from A3, outlook negative",
+  "tickers": [
+   "EWW"
+  ],
+  "source": "https://news.yahoo.com/mexico-downgraded-baa1-moody-weak-211547860.html"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2020-09-11",
+  "timing": "post",
+  "headline": "Moody's cuts Turkey to B2 from B1, outlook negative",
+  "tickers": [
+   "TUR"
+  ],
+  "source": "https://finance.yahoo.com/news/moodys-downgrades-turkeys-rating-b2-205042729.html"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2021-05-19",
+  "timing": "unknown",
+  "headline": "S&P cuts Colombia foreign-currency rating to BB+ (junk) from BBB- after fiscal reform withdrawn",
+  "tickers": [
+   "GXG"
+  ],
+  "source": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2021/5/s-p-downgrades-colombia-to-junk-after-government-withdraws-reform-proposal-64422393"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2021-07-01",
+  "timing": "unknown",
+  "headline": "Fitch cuts Colombia to BB+ (junk) from BBB-, second agency to strip investment grade",
+  "tickers": [
+   "GXG"
+  ],
+  "source": "https://ninetyone.com/en/insights/colombia-rating-update-reasons-to-be-upbeat-despite-the-downgrade"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2025-06-26",
+  "timing": "post",
+  "headline": "Moody's cuts Colombia to Baa3 from Baa2 (reported ~17:05 ET); S&P cuts to BB from BB+ same day",
+  "tickers": [
+   "GXG"
+  ],
+  "source": "https://www.portafolio.co/economia/finanzas/moody-s-baja-la-calificacion-de-colombia-a-baa3-y-cambia-la-perspectiva-a-estable-634019"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2025-12-16",
+  "timing": "unknown",
+  "headline": "Fitch cuts Colombia one notch deeper into junk (to BB) citing fiscal deficits",
+  "tickers": [
+   "GXG"
+  ],
+  "source": "https://www.bloomberg.com/news/articles/2025-12-16/fitch-pushes-colombia-further-into-junk-citing-fiscal-deficits"
+ },
+ {
+  "type": "em_sovereign_downgrade",
+  "date": "2026-04-08",
+  "timing": "post",
+  "headline": "S&P cuts Colombia to BB- from BB (outlook to stable); reported 19:00 Colombia time = 20:00 ET",
+  "tickers": [
+   "GXG"
+  ],
+  "source": "https://www.valoraanalitik.com/con-la-rebaja-de-sp-colombia-toca-su-peor-calificacion-en-su-historia-y-se-acerca-a-grado-de-alta-especulacion/"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2015-04-03",
+  "timing": "pre",
+  "headline": "March 2015 payrolls +126K vs +244K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2015-04-03"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2016-06-03",
+  "timing": "pre",
+  "headline": "May 2016 payrolls +38K vs +164K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2016-06-03"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2017-04-07",
+  "timing": "pre",
+  "headline": "March 2017 payrolls +98K vs +180K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2017-04-07"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2019-03-08",
+  "timing": "pre",
+  "headline": "February 2019 payrolls +20K vs +180K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2019-03-08"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2020-12-04",
+  "timing": "pre",
+  "headline": "November 2020 payrolls +245K vs +469K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2020-12-04"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2021-01-08",
+  "timing": "pre",
+  "headline": "December 2020 payrolls -140K vs +71K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2021-01-08"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2021-05-07",
+  "timing": "pre",
+  "headline": "April 2021 payrolls +266K vs +978K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2021-05-07"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2021-06-04",
+  "timing": "pre",
+  "headline": "May 2021 payrolls +559K vs +650K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2021-06-04"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2021-09-03",
+  "timing": "pre",
+  "headline": "August 2021 payrolls +235K vs +750K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2021-09-03"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2021-10-08",
+  "timing": "pre",
+  "headline": "September 2021 payrolls +194K vs +500K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2021-10-08"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2021-12-03",
+  "timing": "pre",
+  "headline": "November 2021 payrolls +210K vs +550K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2021-12-03"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2022-01-07",
+  "timing": "pre",
+  "headline": "December 2021 payrolls +199K vs +400K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2022-01-07"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2024-05-03",
+  "timing": "pre",
+  "headline": "April 2024 payrolls +175K vs +243K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2024-05-03"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2024-08-02",
+  "timing": "pre",
+  "headline": "July 2024 payrolls +114K vs +175K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2024-08-02"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2024-11-01",
+  "timing": "pre",
+  "headline": "October 2024 payrolls +12K vs +113K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2024-11-01"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2025-09-05",
+  "timing": "pre",
+  "headline": "August 2025 payrolls +22K vs +75K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2026-03-06",
+  "timing": "pre",
+  "headline": "February 2026 payrolls -92K vs +59K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2026-07-02",
+  "timing": "pre",
+  "headline": "June 2026 payrolls +57K vs +110K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2026-08-07",
+  "timing": "pre",
+  "headline": "July 2026 payrolls -23K vs +80K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "nfp_big_miss",
+  "date": "2026-10-02",
+  "timing": "pre",
+  "headline": "September 2026 payrolls +29K vs +90K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2016-01-08",
+  "timing": "pre",
+  "headline": "December 2015 payrolls +292K vs +200K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2016-01-08"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2018-03-09",
+  "timing": "pre",
+  "headline": "February 2018 payrolls +313K vs +200K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2018-03-09"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2019-01-04",
+  "timing": "pre",
+  "headline": "December 2018 payrolls +312K vs +177K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2019-01-04"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2019-02-01",
+  "timing": "pre",
+  "headline": "January 2019 payrolls +304K vs +165K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2019-02-01"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2022-02-04",
+  "timing": "pre",
+  "headline": "January 2022 payrolls +467K vs +150K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2022-02-04"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2022-07-08",
+  "timing": "pre",
+  "headline": "June 2022 payrolls +372K vs +268K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2022-07-08"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2022-08-05",
+  "timing": "pre",
+  "headline": "July 2022 payrolls +528K vs +250K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2022-08-05"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2023-02-03",
+  "timing": "pre",
+  "headline": "January 2023 payrolls +517K vs +185K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2023-02-03"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2023-03-10",
+  "timing": "pre",
+  "headline": "February 2023 payrolls +311K vs +205K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2023-03-10"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2023-06-02",
+  "timing": "pre",
+  "headline": "May 2023 payrolls +339K vs +190K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2023-06-02"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2023-10-06",
+  "timing": "pre",
+  "headline": "September 2023 payrolls +336K vs +170K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2023-10-06"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2024-02-02",
+  "timing": "pre",
+  "headline": "January 2024 payrolls +353K vs +180K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2024-02-02"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2024-04-05",
+  "timing": "pre",
+  "headline": "March 2024 payrolls +303K vs +200K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2024-04-05"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2024-06-07",
+  "timing": "pre",
+  "headline": "May 2024 payrolls +272K vs +185K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2024-06-07"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2024-10-04",
+  "timing": "pre",
+  "headline": "September 2024 payrolls +254K vs +140K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2024-10-04"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2025-01-10",
+  "timing": "pre",
+  "headline": "December 2024 payrolls +256K vs +160K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2025-01-10"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2025-04-04",
+  "timing": "pre",
+  "headline": "March 2025 payrolls +228K vs +135K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp/2025-04-04"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2025-11-20",
+  "timing": "pre",
+  "headline": "September 2025 payrolls +119K vs +50K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2026-02-11",
+  "timing": "pre",
+  "headline": "January 2026 payrolls +130K vs +70K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2026-04-03",
+  "timing": "pre",
+  "headline": "March 2026 payrolls +178K vs +60K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2026-05-08",
+  "timing": "pre",
+  "headline": "April 2026 payrolls +115K vs +62K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2026-06-05",
+  "timing": "pre",
+  "headline": "May 2026 payrolls +172K vs +85K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2026-09-04",
+  "timing": "pre",
+  "headline": "August 2026 payrolls +162K vs +56K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "nfp_strong_beat",
+  "date": "2026-11-06",
+  "timing": "pre",
+  "headline": "October 2026 payrolls +165K vs +65K consensus",
+  "source": "https://forexfundamentals.com/economic-calendar/nfp"
+ },
+ {
+  "type": "uk_snap_election",
+  "date": "2017-04-18",
+  "timing": "pre",
+  "headline": "Theresa May announces snap general election for 8 June 2017 (statement outside No 10 at 11:15 BST = 06:15 ET)",
+  "tickers": [
+   "EWU",
+   "GBPUSD=X"
+  ],
+  "source": "https://aa.com.tr/en/europe/uk-to-hold-snap-general-election-in-june-pm-may/799603"
+ },
+ {
+  "type": "uk_snap_election",
+  "date": "2019-10-29",
+  "timing": "pre",
+  "headline": "Labour drops opposition in the morning; Commons passes Early Parliamentary General Election Bill 438-20 that evening, setting 12 Dec 2019 election (Johnson first sought it Oct 24; Oct 28 FTPA motion failed)",
+  "tickers": [
+   "EWU",
+   "GBPUSD=X"
+  ],
+  "source": "https://www.itv.com/news/2019-10-29/mps-vote-on-december-election"
+ },
+ {
+  "type": "uk_snap_election",
+  "date": "2024-05-22",
+  "timing": "intraday",
+  "headline": "Rishi Sunak announces 4 July 2024 general election outside No 10 (~17:00 BST = 12:00 ET; speculation built during the morning)",
+  "tickers": [
+   "EWU",
+   "GBPUSD=X"
+  ],
+  "source": "https://itv.com/news/2024-05-22/uk-general-election-to-take-place-on-july-4-rishi-sunak-confirms"
+ },
+ {
+  "type": "us_china_trade_deal",
+  "date": "2018-12-01",
+  "timing": "nontrading",
+  "headline": "Trump-Xi Buenos Aires G20 dinner: 90-day truce, Jan 1 hike to 25% on $200B postponed",
+  "source": "https://www.scmp.com/economy/china-economy/article/2175987/trump-and-xi-agree-trade-war-truce-and-no-extra-tariffs"
+ },
+ {
+  "type": "us_china_trade_deal",
+  "date": "2019-06-29",
+  "timing": "nontrading",
+  "headline": "Trump-Xi Osaka G20 truce: talks restart, new tariffs on $300B held off",
+  "source": "https://www.scmp.com/news/china/diplomacy/article/3016636/xi-trump-summit-osaka-brings-trade-truce-more-talks-and-hope"
+ },
+ {
+  "type": "us_china_trade_deal",
+  "date": "2019-10-11",
+  "timing": "intraday",
+  "headline": "Trump announces 'very substantial phase one deal' with Liu He in Oval Office; Oct 15 tariff hike shelved",
+  "source": "https://www.cnbc.com/2019/10/11/what-happened-to-the-stock-market-friday-phase-one-trade-deal.html"
+ },
+ {
+  "type": "us_china_trade_deal",
+  "date": "2019-12-13",
+  "timing": "intraday",
+  "headline": "US and China announce Phase One agreement; Dec 15 tariffs suspended, List 4A cut to 7.5%",
+  "source": "https://www.cbsnews.com/amp/news/donald-trump-white-house-announces-phase-one-of-tentative-china-trade-deal-today-2019-12-13/"
+ },
+ {
+  "type": "us_china_trade_deal",
+  "date": "2020-01-15",
+  "timing": "intraday",
+  "headline": "Phase One trade agreement signed at White House by Trump and Liu He (signed ~1:05pm ET)",
+  "source": "https://www.presidency.ucsb.edu/documents/pool-reports-january-15-2020"
+ },
+ {
+  "type": "us_china_trade_deal",
+  "date": "2025-05-12",
+  "timing": "pre",
+  "headline": "Geneva joint statement: 90-day truce, US cuts China reciprocal tariff to 10% (145% to 30% total)",
+  "source": "https://www.whitehouse.gov/fact-sheets/2025/05/joint-statement-on-u-s-china-economic-and-trade-meeting-in-geneva/"
+ },
+ {
+  "type": "us_china_trade_deal",
+  "date": "2025-06-11",
+  "timing": "unknown",
+  "headline": "Trump says deal with China 'done' after London talks framework (rare earths, students)",
+  "source": "https://abcnews.com/International/china-appears-downplay-us-trade-deal-trump/story?id=122763770"
+ },
+ {
+  "type": "us_china_trade_deal",
+  "date": "2025-08-11",
+  "timing": "unknown",
+  "headline": "Trump signs order extending China reciprocal-tariff truce 90 days to Nov 10",
+  "source": "https://www.whitehouse.gov/presidential-actions/2025/08/further-modifying-reciprocal-tariff-rates-to-reflect-ongoing-discussions-with-the-peoples-republic-of-china/"
+ },
+ {
+  "type": "us_china_trade_deal",
+  "date": "2025-10-30",
+  "timing": "pre",
+  "headline": "Trump-Xi Busan meeting (11am KST = Oct 29 ~10pm ET): fentanyl tariff halved to 10%, truce extended one year, rare-earth controls paused",
+  "source": "https://time.com/7329777/trump-xi-meeting-korea-us-china-trade-deal-tariffs-takeaways/"
+ },
+ {
+  "type": "us_china_trade_deal",
+  "date": "2025-11-01",
+  "timing": "nontrading",
+  "headline": "White House fact sheet formalizes US-China deal (Saturday): soybean purchases, fentanyl tariff cut effective Nov 10, truce to Nov 10 2026",
+  "source": "https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-strikes-deal-on-economic-and-trade-relations-with-china/"
+ },
+ {
+  "type": "us_china_trade_deal",
+  "date": "2026-09-23",
+  "timing": "unknown",
+  "headline": "Bessent says US and China agree to extend Busan trade truce by two months (to Jan 10, 2027) ahead of Xi state visit",
+  "source": "https://www.cbsnews.com/live-updates/trump-china-xi-jinping-state-visit-dinner-tariffs-ai/"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2016-04-14",
+  "timing": "pre",
+  "headline": "March 2016 CPI: headline 0.9% YoY vs 1.1% est; core 2.2% YoY vs 2.3% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2016-04-14"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2017-04-14",
+  "timing": "pre",
+  "headline": "March 2017 CPI: headline 2.4% YoY vs 2.6% est; core 2% YoY vs 2.3% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2017-04-14"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2017-05-12",
+  "timing": "pre",
+  "headline": "April 2017 CPI: headline 2.2% YoY vs 2.3% est; core 1.9% YoY vs 2% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2017-05-12"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2019-03-12",
+  "timing": "pre",
+  "headline": "February 2019 CPI: headline 1.5% YoY vs 1.6% est; core 2.1% YoY vs 2.2% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2019-03-12"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2020-11-12",
+  "timing": "pre",
+  "headline": "October 2020 CPI: headline 1.2% YoY vs 1.3% est; core 1.6% YoY vs 1.8% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2020-11-12"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2021-02-10",
+  "timing": "pre",
+  "headline": "January 2021 CPI: headline 1.4% YoY vs 1.5% est; core 1.4% YoY vs 1.5% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2021-02-10"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2021-09-14",
+  "timing": "pre",
+  "headline": "August 2021 CPI: headline 5.3% YoY vs 5.3% est; core 4% YoY vs 4.2% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-core-cpi/2021-09-14"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2022-08-10",
+  "timing": "pre",
+  "headline": "July 2022 CPI: headline 8.5% YoY vs 8.7% est; core 5.9% YoY vs 6.1% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2022-08-10"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2022-11-10",
+  "timing": "pre",
+  "headline": "October 2022 CPI: headline 7.7% YoY vs 8% est; core 6.3% YoY vs 6.5% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2022-11-10"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2022-12-13",
+  "timing": "pre",
+  "headline": "November 2022 CPI: headline 7.1% YoY vs 7.3% est; core 6% YoY vs 6.1% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2022-12-13"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2023-04-12",
+  "timing": "pre",
+  "headline": "March 2023 CPI: headline 5% YoY vs 5.2% est; core 5.6% YoY vs 5.6% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2023-04-12"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2023-07-12",
+  "timing": "pre",
+  "headline": "June 2023 CPI: headline 3% YoY vs 3.1% est; core 4.8% YoY vs 5% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2023-07-12"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2023-08-10",
+  "timing": "pre",
+  "headline": "July 2023 CPI: headline 3.2% YoY vs 3.3% est; core 4.7% YoY vs 4.8% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2023-08-10"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2023-11-14",
+  "timing": "pre",
+  "headline": "October 2023 CPI: headline 3.2% YoY vs 3.3% est; core 4% YoY vs 4.1% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2023-11-14"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2024-06-12",
+  "timing": "pre",
+  "headline": "May 2024 CPI: headline 3.3% YoY vs 3.4% est; core 3.4% YoY vs 3.5% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2024-06-12"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2024-07-11",
+  "timing": "pre",
+  "headline": "June 2024 CPI: headline 3% YoY vs 3.1% est; core 3.3% YoY vs 3.4% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2024-07-11"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2025-01-15",
+  "timing": "pre",
+  "headline": "December 2024 CPI: headline 2.9% YoY vs 2.9% est; core 3.2% YoY vs 3.3% est (core MoM 0.2% vs 0.3% est)",
+  "source": "https://forexfundamentals.com/economic-calendar/us-core-cpi/2025-01-15"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2025-03-12",
+  "timing": "pre",
+  "headline": "February 2025 CPI: headline 2.8% YoY vs 2.9% est; core 3.1% YoY vs 3.2% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2025-03-12"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2025-04-10",
+  "timing": "pre",
+  "headline": "March 2025 CPI: headline 2.4% YoY vs 2.6% est; core 2.8% YoY vs 3% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2025-04-10"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2025-06-11",
+  "timing": "pre",
+  "headline": "May 2025 CPI: headline 2.4% YoY vs 2.5% est; core 2.8% YoY vs 2.9% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2025-06-11"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2025-10-24",
+  "timing": "pre",
+  "headline": "September 2025 CPI: headline 3% YoY vs 3.1% est; core 3% YoY vs 3.1% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2025-10-24"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2025-12-18",
+  "timing": "pre",
+  "headline": "November 2025 CPI (shutdown-delayed): headline 2.7% YoY vs 3.1% est; core 2.6% YoY, also below consensus",
+  "source": "https://fortune.com/2025/12/18/inflation-november-cpi-2-7-percent-cools-unexpectedly/"
+ },
+ {
+  "type": "us_cpi_cool",
+  "date": "2026-07-14",
+  "timing": "pre",
+  "headline": "June 2026 CPI: headline 3.5% YoY vs 3.8% est; core 2.6% YoY vs 2.8% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2026-07-14"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2016-02-19",
+  "timing": "pre",
+  "headline": "January 2016 CPI: headline 1.4% YoY vs 1.3% est; core 2.2% YoY vs 2.1% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2016-02-19"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2017-02-15",
+  "timing": "pre",
+  "headline": "January 2017 CPI: headline 2.5% YoY vs 2.4% est; core 2.3% YoY vs 2.1% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2017-02-15"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2018-02-14",
+  "timing": "pre",
+  "headline": "January 2018 CPI: headline 2.1% YoY vs 1.9% est; core 1.8% YoY vs 1.7% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2018-02-14"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2020-02-13",
+  "timing": "pre",
+  "headline": "January 2020 CPI: headline 2.5% YoY vs 2.4% est; core 2.3% YoY vs 2.2% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2020-02-13"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2020-08-12",
+  "timing": "pre",
+  "headline": "July 2020 CPI: headline 1% YoY vs 0.8% est; core 1.6% YoY vs 1.1% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2020-08-12"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2021-04-13",
+  "timing": "pre",
+  "headline": "March 2021 CPI: headline 2.6% YoY vs 2.5% est; core 1.6% YoY vs 1.5% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2021-04-13"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2021-05-12",
+  "timing": "pre",
+  "headline": "April 2021 CPI: headline 4.2% YoY vs 3.6% est; core 3% YoY vs 2.3% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2021-05-12"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2021-06-10",
+  "timing": "pre",
+  "headline": "May 2021 CPI: headline 5% YoY vs 4.7% est; core 3.8% YoY vs 3.4% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2021-06-10"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2021-07-13",
+  "timing": "pre",
+  "headline": "June 2021 CPI: headline 5.4% YoY vs 4.9% est; core 4.5% YoY vs 4% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2021-07-13"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2021-11-10",
+  "timing": "pre",
+  "headline": "October 2021 CPI: headline 6.2% YoY vs 5.8% est; core 4.6% YoY vs 4.3% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2021-11-10"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2022-02-10",
+  "timing": "pre",
+  "headline": "January 2022 CPI: headline 7.5% YoY vs 7.3% est; core 6% YoY vs 5.9% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2022-02-10"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2022-05-11",
+  "timing": "pre",
+  "headline": "April 2022 CPI: headline 8.3% YoY vs 8.1% est; core 6.2% YoY vs 6% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2022-05-11"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2022-06-10",
+  "timing": "pre",
+  "headline": "May 2022 CPI: headline 8.6% YoY vs 8.3% est; core 6% YoY vs 5.9% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2022-06-10"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2022-07-13",
+  "timing": "pre",
+  "headline": "June 2022 CPI: headline 9.1% YoY vs 8.8% est; core 5.9% YoY vs 5.7% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2022-07-13"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2022-09-13",
+  "timing": "pre",
+  "headline": "August 2022 CPI: headline 8.3% YoY vs 8.1% est; core 6.3% YoY vs 6.1% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2022-09-13"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2022-10-13",
+  "timing": "pre",
+  "headline": "September 2022 CPI: headline 8.2% YoY vs 8.1% est; core 6.6% YoY vs 6.5% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2022-10-13"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2023-02-14",
+  "timing": "pre",
+  "headline": "January 2023 CPI: headline 6.4% YoY vs 6.2% est; core 5.6% YoY vs 5.5% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2023-02-14"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2024-01-11",
+  "timing": "pre",
+  "headline": "December 2023 CPI: headline 3.4% YoY vs 3.2% est; core 3.9% YoY vs 3.8% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2024-01-11"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2024-02-13",
+  "timing": "pre",
+  "headline": "January 2024 CPI: headline 3.1% YoY vs 2.9% est; core 3.9% YoY vs 3.7% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2024-02-13"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2024-03-12",
+  "timing": "pre",
+  "headline": "February 2024 CPI: headline 3.2% YoY vs 3.1% est; core 3.8% YoY vs 3.7% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2024-03-12"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2024-04-10",
+  "timing": "pre",
+  "headline": "March 2024 CPI: headline 3.5% YoY vs 3.4% est; core 3.8% YoY vs 3.7% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2024-04-10"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2024-10-10",
+  "timing": "pre",
+  "headline": "September 2024 CPI: headline 2.4% YoY vs 2.3% est; core 3.3% YoY vs 3.2% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2024-10-10"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2025-02-12",
+  "timing": "pre",
+  "headline": "January 2025 CPI: headline 3% YoY vs 2.9% est; core 3.3% YoY vs 3.1% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2025-02-12"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2026-05-12",
+  "timing": "pre",
+  "headline": "April 2026 CPI: headline 3.8% YoY vs 3.7% est; core 2.8% YoY vs 2.7% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2026-05-12"
+ },
+ {
+  "type": "us_cpi_hot",
+  "date": "2026-10-14",
+  "timing": "pre",
+  "headline": "September 2026 CPI: headline 3.7% YoY vs 3.6% est; core 2.6% YoY vs 2.5% est",
+  "source": "https://forexfundamentals.com/economic-calendar/us-cpi/2026-10-14"
+ },
+ {
+  "type": "us_gov_shutdown",
+  "date": "1995-11-14",
+  "timing": "pre",
+  "headline": "Federal funding lapse begins (Clinton vs Gingrich budget fight); ~800K furloughed; lasted 5 days to Nov 19",
+  "source": "https://en.wikipedia.org/wiki/Government_shutdowns_in_the_United_States"
+ },
+ {
+  "type": "us_gov_shutdown",
+  "date": "1995-12-16",
+  "timing": "nontrading",
+  "headline": "Second 1995-96 shutdown begins (Saturday); ~284K furloughed; lasted 21 days to Jan 6, 1996",
+  "source": "https://en.wikipedia.org/wiki/Government_shutdowns_in_the_United_States"
+ },
+ {
+  "type": "us_gov_shutdown",
+  "date": "2013-10-01",
+  "timing": "pre",
+  "headline": "Full federal shutdown begins over ACA funding fight; ~800K furloughed; lasted 16 days",
+  "source": "https://en.wikipedia.org/wiki/Government_shutdowns_in_the_United_States"
+ },
+ {
+  "type": "us_gov_shutdown",
+  "date": "2018-01-20",
+  "timing": "nontrading",
+  "headline": "Shutdown begins Saturday over DACA dispute; ~692K furloughed; ended Jan 23 (Monday-Tuesday trading affected)",
+  "source": "https://en.wikipedia.org/wiki/Government_shutdowns_in_the_United_States"
+ },
+ {
+  "type": "us_gov_shutdown",
+  "date": "2018-02-09",
+  "timing": "pre",
+  "headline": "Brief overnight funding lapse (~9 hours, after Sen. Rand Paul delay) ended before business hours; minimal disruption",
+  "source": "https://en.wikipedia.org/wiki/Government_shutdowns_in_the_United_States"
+ },
+ {
+  "type": "us_gov_shutdown",
+  "date": "2018-12-22",
+  "timing": "nontrading",
+  "headline": "Partial shutdown begins Saturday over border wall funding; ~380K furloughed; lasted 35 days to Jan 25, 2019",
+  "source": "https://en.wikipedia.org/wiki/Government_shutdowns_in_the_United_States"
+ },
+ {
+  "type": "us_gov_shutdown",
+  "date": "2025-10-01",
+  "timing": "pre",
+  "headline": "Full federal shutdown begins 12:01am ET; ~900K furloughed; record 43 days to Nov 12, 2025",
+  "source": "https://en.wikipedia.org/wiki/Government_shutdowns_in_the_United_States"
+ },
+ {
+  "type": "us_gov_shutdown",
+  "date": "2026-01-31",
+  "timing": "nontrading",
+  "headline": "Partial shutdown (about half of departments) begins Saturday; ended Feb 3, 2026 when House passed spending package",
+  "source": "https://www.defenseone.com/policy/2026/02/partial-shutdown-ends-less-four-days-after-it-began/411162/"
+ },
+ {
+  "type": "us_gov_shutdown",
+  "date": "2026-02-14",
+  "timing": "nontrading",
+  "headline": "DHS-only funding lapse begins Saturday (ICE/CBP dispute); lasted ~76 days, ended Apr 30, 2026",
+  "source": "https://crfb.org/blogs/appropriations-watch-fy-2026"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2018-03-22",
+  "timing": "intraday",
+  "headline": "Trump signs Section 301 memorandum directing tariffs on up to $50-60B of Chinese imports; Dow falls 724 points",
+  "source": "https://www.cnbc.com/2018/03/22/the-stocks-leading-this-market-plunge-tell-you-this-is-all-about-trumps-trade-policies.html"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2018-04-03",
+  "timing": "post",
+  "headline": "USTR releases proposed list of ~1,300 Chinese products (~$50B) for 25% Section 301 tariffs",
+  "source": "https://ustr.gov/about-us/policy-offices/press-office/press-releases/2018/april/under-section-301-action-ustr"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2018-04-05",
+  "timing": "post",
+  "headline": "Trump instructs USTR to consider $100B of additional tariffs on China (announced after the close)",
+  "source": "https://www.cnbc.com/2018/04/05/trump-asks-us-trade-representative-to-consider-100-billion-in-additional-tariffs-on-chinese-products.html"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2018-06-15",
+  "timing": "pre",
+  "headline": "Trump administration finalizes 25% tariffs on $50B of Chinese goods ($34B effective July 6)",
+  "source": "https://www.investing.com/news/stock-market-news/trump-targets-50-billion-in-china-goods-vows-more-if-needed-1494615"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2018-07-10",
+  "timing": "post",
+  "headline": "USTR proposes 10% tariffs on additional $200B of Chinese imports (list unveiled after close)",
+  "source": "https://www.cnbc.com/2018/07/10/us-futures-slip-as-trump-administration-seeks-tariffs-on-200-billion-.html"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2018-09-17",
+  "timing": "post",
+  "headline": "Trump announces 10% tariffs on $200B of Chinese goods from Sept 24, rising to 25% Jan 1",
+  "source": "https://www.cnbc.com/2018/09/17/trump-puts-new-tariffs-on-china-as-trade-war-escalates.html"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2019-05-05",
+  "timing": "nontrading",
+  "headline": "Trump tweets (Sunday) that tariffs on $200B of Chinese goods rise from 10% to 25% on May 10, threatens remaining $325B",
+  "source": "https://www.axios.com/2019/05/05/trump-china-tariffs-25-percent"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2019-05-13",
+  "timing": "unknown",
+  "headline": "USTR proposes up to 25% tariffs on remaining ~$300B of Chinese imports (List 4)",
+  "source": "https://www.faegredrinker.com/en/insights/publications/2019/5/ustr-announces-fourth-list-of-chinese-imports-for-section-301-tariffs"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2019-08-01",
+  "timing": "intraday",
+  "headline": "Trump tweets 10% tariff on remaining $300B of Chinese imports from Sept 1; Dow reverses from +300 to -280",
+  "source": "https://www.pbs.org/newshour/world/trump-threatens-10-percent-tariffs-on-china-sending-stocks-plummeting"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2019-08-23",
+  "timing": "post",
+  "headline": "Trump announces (Friday evening tweets) tariff hikes to 30% on $250B and 15% on $300B after China's retaliation",
+  "source": "https://reason.com/?p=8020252"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2024-05-14",
+  "timing": "unknown",
+  "headline": "Biden raises Section 301 tariffs on Chinese EVs to 100%, plus chips, batteries, solar, steel",
+  "source": "https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2024/05/14/fact-sheet-president-biden-takes-action-to-protect-american-workers-and-businesses-from-chinas-unfair-trade-practices/"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2025-02-01",
+  "timing": "nontrading",
+  "headline": "Trump imposes additional 10% IEEPA (fentanyl) tariff on China (Saturday)",
+  "source": "https://www.whitehouse.gov/fact-sheets/2025/02/fact-sheet-president-donald-j-trump-imposes-tariffs-on-imports-from-canada-mexico-and-china/"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2025-02-27",
+  "timing": "pre",
+  "headline": "Trump Truth Social post: additional 10% tariff on China starting March 4 (fentanyl tariff to 20%)",
+  "source": "https://www.cnbc.com/2025/02/27/trump-says-mexico-canada-tariffs-will-start-march-4-plus-additional-10percent-on-china.html"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2025-03-03",
+  "timing": "unknown",
+  "headline": "Trump signs order doubling IEEPA fentanyl tariff on China from 10% to 20%",
+  "source": "https://www.whitehouse.gov/presidential-actions/2025/03/further-amendment-to-duties-addressing-the-synthetic-opioid-supply-chain-in-the-peoples-republic-of-china/"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2025-04-02",
+  "timing": "post",
+  "headline": "'Liberation Day' reciprocal tariffs announced, 34% on China (54% total)",
+  "source": "https://www.nbcnews.com/business/economy/goods-imported-china-are-now-facing-54-tariffs-rate-rcna199401"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2025-04-08",
+  "timing": "intraday",
+  "headline": "White House says China tariffs rise to 104% after Beijing missed deadline to drop retaliation",
+  "source": "https://www.foxbusiness.com/politics/white-house-says-china-missed-deadline-lift-retaliatory-tariffs-us-hike-china-tariffs-104"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2025-04-09",
+  "timing": "intraday",
+  "headline": "Trump pauses reciprocal tariffs for others but raises China reciprocal rate to 125% (145% total)",
+  "source": "https://www.whitehouse.gov/presidential-actions/2025/04/modifying-reciprocal-tariff-rates-to-reflect-trading-partner-retaliation-and-alignment/"
+ },
+ {
+  "type": "us_tariffs_on_china",
+  "date": "2025-10-10",
+  "timing": "intraday",
+  "headline": "Trump threatens 'massive increase' in China tariffs over rare-earth controls (intraday selloff); later sets additional 100% from Nov 1",
+  "source": "https://www.reuters.com/world/china/trump-says-weighing-massive-increase-tariffs-chinese-imports-no-reason-meet-with-2025-10-10"
+ }
+]

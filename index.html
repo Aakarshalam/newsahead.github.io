@@ -13,91 +13,90 @@
 <nav class="nav">
   <div class="nav-brand">NewsAlpha<span class="nav-tag">BETA</span></div>
   <div class="nav-links">
-    <a href="#" class="nav-link active" data-page="dashboard">Dashboard</a>
-    <a href="#" class="nav-link" data-page="backtest">Backtest</a>
-    <a href="#" class="nav-link" data-page="pipeline">Pipeline</a>
-    <a href="#" class="nav-link" data-page="impact">Impact Map</a>
-    <a href="#" class="nav-link" data-page="setup">API Setup</a>
+    <a href="#dashboard" class="nav-link active" data-page="dashboard">Signals</a>
+    <a href="#backtest" class="nav-link" data-page="backtest">Backtest</a>
+    <a href="#impact" class="nav-link" data-page="impact">Impact Map</a>
+    <a href="#pipeline" class="nav-link" data-page="pipeline">Pipeline</a>
+    <a href="#method" class="nav-link" data-page="method">Method</a>
   </div>
-  <div class="nav-status">
-    <span class="pulse-dot"></span><span id="nav-status-txt">Live</span>
+  <div class="nav-status" title="Time of the last pipeline run">
+    <span class="pulse-dot" id="nav-dot"></span><span id="nav-status-txt">loading…</span>
   </div>
 </nav>
 
 <main class="main">
-  <!-- DASHBOARD PAGE -->
+  <div class="notice" id="global-notice" hidden></div>
+
+  <!-- SIGNALS -->
   <div class="page active" id="page-dashboard">
     <div class="page-header">
       <div>
         <h1>Signal Dashboard</h1>
-        <p class="page-sub">Real-time news signals ranked by score. Click any signal to see full analysis.</p>
+        <p class="page-sub">Headlines from public news feeds, classified into event types and scored against how markets reacted to past events of that type. Prices are tracked after each signal.</p>
       </div>
       <div class="header-actions">
-        <select id="dash-mkt-filter" class="select-sm">
-          <option value="">All markets</option>
-          <option>US Equities</option><option>EU Equities</option><option>Asia Equities</option>
-          <option>Forex</option><option>Commodities</option><option>Crypto</option>
-        </select>
+        <select id="dash-mkt-filter" class="select-sm"><option value="">All markets</option></select>
         <select id="dash-score-filter" class="select-sm">
           <option value="0">All scores</option>
-          <option value="60">Score &gt; 60</option>
-          <option value="75">Score &gt; 75</option>
-          <option value="85">Score &gt; 85</option>
+          <option value="60">Score ≥ 60</option>
+          <option value="70">Score ≥ 70</option>
+          <option value="80">Score ≥ 80</option>
         </select>
-        <button class="btn-primary" id="sim-btn">Simulate ingest</button>
+        <button class="btn-ghost" id="refresh-btn" title="Reload the latest pipeline output">Refresh</button>
       </div>
     </div>
 
     <div class="metrics-row" id="dash-metrics"></div>
 
     <div class="two-col">
-      <div class="panel" style="flex:2">
+      <div class="panel">
         <div class="panel-header">
-          <span class="panel-title">Live signal feed</span>
-          <span class="badge-live"><span class="pulse-dot sm"></span>Auto-updating</span>
+          <span class="panel-title">Event signals (last 14 days)</span>
+          <span class="badge-live" id="feed-updated"></span>
         </div>
         <div id="signal-feed"></div>
       </div>
-      <div class="panel" style="flex:1">
+      <div class="panel">
         <div class="panel-header"><span class="panel-title">Signal breakdown</span></div>
-        <div style="position:relative;height:180px;margin-bottom:16px"><canvas id="dir-chart"></canvas></div>
-        <div style="position:relative;height:160px"><canvas id="cat-chart"></canvas></div>
+        <div class="chart-box" style="height:180px"><canvas id="dir-chart"></canvas></div>
+        <div class="chart-legend" id="dir-legend"></div>
+        <div class="chart-box" style="height:180px"><canvas id="cat-chart"></canvas></div>
+        <div class="panel-header" style="border-top:1px solid var(--border)"><span class="panel-title">Live track record</span></div>
+        <div id="track-record"></div>
       </div>
     </div>
 
-    <!-- Signal detail drawer -->
-    <div class="drawer" id="signal-drawer">
+    <div class="drawer" id="signal-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
       <div class="drawer-header">
         <span class="drawer-title" id="drawer-title">Signal detail</span>
-        <button class="drawer-close" onclick="closeDrawer()">×</button>
+        <button class="drawer-close" id="drawer-close" aria-label="Close">×</button>
       </div>
       <div id="drawer-body"></div>
     </div>
   </div>
 
-  <!-- BACKTEST PAGE -->
+  <!-- BACKTEST -->
   <div class="page" id="page-backtest">
     <div class="page-header">
       <div>
         <h1>Backtesting Engine</h1>
-        <p class="page-sub">Historical event analysis across all markets. Click any row for window-by-window breakdown.</p>
+        <p class="page-sub">Event study on daily closes for every researched historical event. Click a row to see each window, each instrument, and every individual event behind the numbers.</p>
       </div>
       <div class="header-actions">
-        <select id="bt-cat" class="select-sm"><option value="">All categories</option><option>Economic</option><option>Political</option><option>Geopolitical</option><option>Industrial</option><option>Technology</option><option>Social</option></select>
-        <select id="bt-mkt" class="select-sm"><option value="">All markets</option><option>US Equities</option><option>EU Equities</option><option>Asia Equities</option><option>Forex</option><option>Commodities</option><option>Crypto</option></select>
+        <select id="bt-cat" class="select-sm"><option value="">All categories</option></select>
+        <select id="bt-mkt" class="select-sm"><option value="">All markets</option></select>
         <select id="bt-conf" class="select-sm"><option value="">Any confidence</option><option value="High">High only</option><option value="Med">Med+</option></select>
-        <input type="text" id="bt-search" placeholder="Search events..." class="input-sm"/>
+        <input type="search" id="bt-search" placeholder="Search events…" class="input-sm"/>
       </div>
     </div>
     <div class="metrics-row" id="bt-metrics"></div>
     <div class="panel">
       <div class="table-wrap">
-        <table class="data-table" id="bt-table">
+        <table class="data-table">
           <thead>
             <tr>
-              <th></th><th>Event type</th><th>Geography</th><th>Market</th>
-              <th>Sector / Companies</th><th>Direction</th><th>Consistency</th>
-              <th>Avg move</th><th>Opt. window</th><th>Samples</th><th>Conf.</th>
+              <th></th><th>Event type</th><th>Market / basket</th><th>Direction</th><th>Hit rate</th>
+              <th>Avg move</th><th>Best window</th><th>t-stat</th><th>Events</th><th>Conf.</th>
             </tr>
           </thead>
           <tbody id="bt-tbody"></tbody>
@@ -106,66 +105,68 @@
     </div>
   </div>
 
-  <!-- PIPELINE PAGE -->
-  <div class="page" id="page-pipeline">
-    <div class="page-header">
-      <div>
-        <h1>Ingestion Pipeline</h1>
-        <p class="page-sub">News source health, classifier performance, and the output schema feeding the backtest engine.</p>
-      </div>
-    </div>
-    <div class="metrics-row" id="pipe-metrics"></div>
-    <div class="two-col">
-      <div class="panel" style="flex:1">
-        <div class="panel-header"><span class="panel-title">Source health</span></div>
-        <div id="source-cards"></div>
-      </div>
-      <div class="panel" style="flex:1">
-        <div class="panel-header"><span class="panel-title">Classifier accuracy</span></div>
-        <div id="classifier-bars"></div>
-      </div>
-    </div>
-    <div class="panel" style="margin-top:16px">
-      <div class="panel-header">
-        <span class="panel-title">Schema output — last classified event</span>
-        <button class="btn-ghost" id="pipe-sim-btn">Inject article</button>
-      </div>
-      <div id="schema-output"></div>
-    </div>
-  </div>
-
-  <!-- IMPACT MAP PAGE -->
+  <!-- IMPACT MAP -->
   <div class="page" id="page-impact">
     <div class="page-header">
       <div>
         <h1>Event → Impact Map</h1>
-        <p class="page-sub">Precise sector, company, and geographic targets for each event type — all verified against historical price reaction data.</p>
+        <p class="page-sub">For each event type, every market we measure and the instruments that reacted most, ranked by average move at the best window.</p>
       </div>
       <div class="header-actions">
-        <select id="im-cat" class="select-sm"><option value="">All categories</option><option>Economic</option><option>Political</option><option>Geopolitical</option><option>Industrial</option><option>Technology</option><option>Social</option></select>
-        <select id="im-geo" class="select-sm"><option value="">All geographies</option><option>United States</option><option>European Union</option><option>China</option><option>Japan</option><option>Emerging Markets</option><option>Global</option></select>
+        <select id="im-cat" class="select-sm"><option value="">All categories</option></select>
+        <select id="im-conf" class="select-sm"><option value="">Any confidence</option><option value="Med">Med+ only</option></select>
       </div>
     </div>
     <div id="impact-cards"></div>
   </div>
 
-  <!-- API SETUP PAGE -->
-  <div class="page" id="page-setup">
+  <!-- PIPELINE -->
+  <div class="page" id="page-pipeline">
     <div class="page-header">
       <div>
-        <h1>API Setup & Configuration</h1>
-        <p class="page-sub">Connect your data sources. All keys are stored locally in your browser — never sent to any server.</p>
+        <h1>Ingestion Pipeline</h1>
+        <p class="page-sub">Feed health and classifier output from the latest scheduled run, plus a box to test the classifier on any headline.</p>
       </div>
     </div>
-    <div class="setup-grid" id="setup-grid"></div>
+    <div class="metrics-row" id="pipe-metrics"></div>
+    <div class="panel" style="margin-bottom:16px">
+      <div class="panel-header"><span class="panel-title">Try the classifier</span><span class="badge-muted">same rules as the pipeline, run in your browser</span></div>
+      <div class="try-box">
+        <input type="text" id="try-input" class="input-sm" placeholder="Paste a headline, e.g. “OPEC+ agrees surprise cut of 1 million barrels per day”"/>
+        <button class="btn-primary" id="try-btn">Classify</button>
+      </div>
+      <div id="try-output"></div>
+    </div>
+    <div class="two-col even">
+      <div class="panel">
+        <div class="panel-header"><span class="panel-title">Source health</span></div>
+        <div id="source-cards"></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><span class="panel-title">Recent runs</span></div>
+        <div id="run-history"></div>
+        <div class="panel-header" style="border-top:1px solid var(--border)"><span class="panel-title">Unclassified sample (latest run)</span></div>
+        <div id="unclassified"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- METHOD -->
+  <div class="page" id="page-method">
+    <div class="page-header">
+      <div>
+        <h1>Method &amp; Setup</h1>
+        <p class="page-sub">How the numbers are produced, what they can't tell you, and how to run the pipeline.</p>
+      </div>
+    </div>
+    <div class="method-grid" id="method-body"></div>
     <div class="panel" style="margin-top:16px">
-      <div class="panel-header"><span class="panel-title">Score weights (signal_score composition)</span></div>
+      <div class="panel-header"><span class="panel-title">Signal score composition</span></div>
       <div id="score-weights"></div>
     </div>
   </div>
 </main>
 
-<script src="data.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

@@ -1,0 +1,702 @@
+[
+ {
+  "type": "middle_east_conflict",
+  "date": "2006-07-12",
+  "timing": "pre",
+  "headline": "Hezbollah cross-border raid captures two Israeli soldiers; Israel launches assault on Lebanon",
+  "source": "https://www.aljazeera.com/news/2006/7/12/hezbollah-captures-israeli-soldiers"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2011-02-21",
+  "timing": "nontrading",
+  "headline": "Libya violence escalates; oil surges on supply fears (US Presidents Day)",
+  "source": "https://m.washingtontimes.com/news/2011/feb/21/oil-prices-surge-on-fear-of-libyan-unrest/"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2011-03-19",
+  "timing": "nontrading",
+  "headline": "US/UK/France begin air and Tomahawk strikes on Libya (Operation Odyssey Dawn)",
+  "source": "https://www.mprnews.org/story/2011/03/19/libya-france-airraids"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2014-06-10",
+  "timing": "unknown",
+  "headline": "ISIS seizes Mosul, Iraq's second-largest city",
+  "source": "https://fortune.com/2014/06/12/oil-prices-at-three-month-high-as-iraq-chaos-threatens-supply"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2015-03-25",
+  "timing": "post",
+  "headline": "Saudi-led coalition launches airstrikes in Yemen (announced in Washington); Brent +6% next day",
+  "source": "https://english.ahram.org.eg/News/126115.aspx"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2019-09-14",
+  "timing": "nontrading",
+  "headline": "Drone/missile attack on Saudi Aramco Abqaiq and Khurais halves Saudi output",
+  "source": "https://www.worldoil.com/news/2019/9/14/coordinated-drone-attack-cuts-saudi-oil-production-in-half"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2020-01-02",
+  "timing": "post",
+  "headline": "US airstrike in Baghdad kills IRGC Quds Force commander Qassem Soleimani (Pentagon statement Thursday night)",
+  "source": "https://www.reviewjournal.com/news/nation-and-world/us-airstrike-kills-powerful-iranian-general-pentagon-says-1927183"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2020-01-07",
+  "timing": "post",
+  "headline": "Iran fires ballistic missiles at US bases in Iraq (Al Asad, Erbil) ~5:30pm EST",
+  "source": "https://www.thedefensepost.com/2020/01/08/iran-missiles-iraq-asad-base-erbil-us/"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2023-10-07",
+  "timing": "nontrading",
+  "headline": "Hamas launches surprise attack on Israel; Israel-Hamas war begins",
+  "source": "https://fortune.com/2023/10/09/oil-price-barrel-crude-impact-markets-israel-war-middle-east/"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2024-04-13",
+  "timing": "nontrading",
+  "headline": "Iran launches first direct drone and missile attack on Israel",
+  "source": "https://www.cnbc.com/2024/04/13/sirens-and-blasts-sound-across-israel-after-iran-launches-drone-attack.html"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2024-04-18",
+  "timing": "post",
+  "headline": "Israeli retaliatory strike near Isfahan, Iran (early Apr 19 local); oil briefly spikes in Asia",
+  "source": "https://krdo.com/news/2024/04/19/oil-prices-jump-on-escalating-tensions-in-the-middle-east/"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2024-10-01",
+  "timing": "intraday",
+  "headline": "Iran fires ~180 ballistic missiles at Israel; oil jumps, US stocks fall",
+  "source": "https://www.columbian.com/news/2024/oct/01/stock-market-today-wall-street-retreats-from-its-records-as-oil-prices-leap/"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2024-10-26",
+  "timing": "nontrading",
+  "headline": "Israel strikes military targets in Iran (Days of Repentance)",
+  "source": "https://www.rnz.co.nz/news/world/531968/israel-hits-back-at-iran-with-strikes-on-military-targets"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2025-06-12",
+  "timing": "post",
+  "headline": "Israel launches strikes on Iran nuclear sites and IRGC leadership (overnight into Jun 13 local); crude surges",
+  "source": "https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/061325-factbox-oil-surges-as-israel-strikes-iran-nuclear-sites-traders-eye-supply-risks"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2025-06-21",
+  "timing": "nontrading",
+  "headline": "US bombs Iranian nuclear sites Fordow, Natanz, Isfahan (Saturday night ET)",
+  "source": "https://fortune.com/2025/06/21/us-attack-nuclear-sites-iran-trump-israel-fordow-natanz-isfahan/"
+ },
+ {
+  "type": "middle_east_conflict",
+  "date": "2026-02-28",
+  "timing": "nontrading",
+  "headline": "US and Israel launch major strikes on Iran (Epic Fury/Roaring Lion); Khamenei killed; Iran warns ships off Hormuz",
+  "source": "https://www.goodmorningamerica.com/news/story/4-phases-iran-war-key-moments-start-epic-132703824"
+ },
+ {
+  "type": "russia_ukraine_escalation",
+  "date": "2014-03-01",
+  "timing": "nontrading",
+  "headline": "Russia's Federation Council authorises Putin to use military force in Ukraine (Crimea)",
+  "source": "https://en.wikipedia.org/wiki/Russian_invasion_of_Crimea"
+ },
+ {
+  "type": "russia_ukraine_escalation",
+  "date": "2014-03-18",
+  "timing": "pre",
+  "headline": "Putin signs treaty annexing Crimea",
+  "source": "https://en.wikipedia.org/wiki/Annexation_of_Crimea_by_the_Russian_Federation"
+ },
+ {
+  "type": "russia_ukraine_escalation",
+  "date": "2014-07-17",
+  "timing": "intraday",
+  "headline": "Malaysia Airlines MH17 shot down over eastern Ukraine (13:20 UTC)",
+  "source": "https://en.wikipedia.org/wiki/Malaysia_Airlines_Flight_17"
+ },
+ {
+  "type": "russia_ukraine_escalation",
+  "date": "2022-02-21",
+  "timing": "nontrading",
+  "headline": "Russia recognises DPR/LPR independence and orders troops in (US Presidents Day)",
+  "source": "https://en.wikipedia.org/wiki/Prelude_to_the_Russian_invasion_of_Ukraine"
+ },
+ {
+  "type": "russia_ukraine_escalation",
+  "date": "2022-02-23",
+  "timing": "post",
+  "headline": "Putin announces 'special military operation'; full-scale invasion of Ukraine begins (before 5am Kyiv Feb 24)",
+  "source": "https://en.wikipedia.org/wiki/2022_Russian_invasion_of_Ukraine"
+ },
+ {
+  "type": "russia_ukraine_escalation",
+  "date": "2022-09-21",
+  "timing": "pre",
+  "headline": "Putin announces partial mobilization (09:00 Moscow)",
+  "source": "https://en.wikipedia.org/wiki/2022_Russian_mobilization"
+ },
+ {
+  "type": "russia_ukraine_escalation",
+  "date": "2022-09-30",
+  "timing": "pre",
+  "headline": "Putin signs treaties annexing Donetsk, Luhansk, Kherson, Zaporizhzhia",
+  "source": "https://en.wikipedia.org/wiki/Russian_annexation_of_Donetsk,_Kherson,_Luhansk_and_Zaporizhzhia_oblasts"
+ },
+ {
+  "type": "russia_ukraine_escalation",
+  "date": "2022-10-08",
+  "timing": "nontrading",
+  "headline": "Crimean Bridge explosion",
+  "source": "https://en.wikipedia.org/wiki/October_2022_missile_strikes_on_Ukraine"
+ },
+ {
+  "type": "russia_ukraine_escalation",
+  "date": "2022-10-10",
+  "timing": "pre",
+  "headline": "Russia launches mass missile strikes on Kyiv and across Ukraine (84 cruise missiles)",
+  "source": "https://en.wikipedia.org/wiki/October_2022_missile_strikes_on_Ukraine"
+ },
+ {
+  "type": "russia_ukraine_escalation",
+  "date": "2024-11-21",
+  "timing": "pre",
+  "headline": "Russia strikes Dnipro with new Oreshnik intermediate-range ballistic missile",
+  "source": "https://en.wikipedia.org/wiki/Oreshnik_(missile)"
+ },
+ {
+  "type": "shipping_lane_disruption",
+  "date": "2019-05-12",
+  "timing": "nontrading",
+  "headline": "Four ships incl. two Saudi tankers sabotaged off Fujairah, near Hormuz",
+  "source": "https://en.wikipedia.org/wiki/May_2019_Gulf_of_Oman_incident"
+ },
+ {
+  "type": "shipping_lane_disruption",
+  "date": "2019-06-13",
+  "timing": "pre",
+  "headline": "Tankers Front Altair and Kokuka Courageous attacked in Gulf of Oman (03:12 GMT)",
+  "source": "https://en.wikipedia.org/wiki/June_2019_Gulf_of_Oman_incident"
+ },
+ {
+  "type": "shipping_lane_disruption",
+  "date": "2019-07-19",
+  "timing": "unknown",
+  "headline": "Iran's IRGC seizes British-flagged tanker Stena Impero in Strait of Hormuz",
+  "source": "https://en.wikipedia.org/wiki/Stena_Impero"
+ },
+ {
+  "type": "shipping_lane_disruption",
+  "date": "2021-03-23",
+  "timing": "unknown",
+  "headline": "Ever Given runs aground and blocks the Suez Canal (05:40 UTC)",
+  "source": "https://en.wikipedia.org/wiki/2021_Suez_Canal_obstruction"
+ },
+ {
+  "type": "shipping_lane_disruption",
+  "date": "2023-11-19",
+  "timing": "nontrading",
+  "headline": "Houthis hijack car carrier Galaxy Leader in Red Sea",
+  "source": "https://en.wikipedia.org/wiki/Hijacking_of_the_Galaxy_Leader"
+ },
+ {
+  "type": "shipping_lane_disruption",
+  "date": "2023-12-18",
+  "timing": "unknown",
+  "headline": "BP suspends all Red Sea shipments; US launches Operation Prosperity Guardian",
+  "source": "https://en.wikipedia.org/wiki/Red_Sea_crisis"
+ },
+ {
+  "type": "shipping_lane_disruption",
+  "date": "2024-01-11",
+  "timing": "post",
+  "headline": "US and UK launch first strikes on Houthi targets in Yemen (~6:30pm ET)",
+  "source": "https://en.wikipedia.org/wiki/2024_missile_strikes_in_Yemen"
+ },
+ {
+  "type": "shipping_lane_disruption",
+  "date": "2026-03-02",
+  "timing": "unknown",
+  "headline": "IRGC formally declares Strait of Hormuz closed, threatens to set ships ablaze",
+  "source": "https://www.marineinsight.com/irans-irgc-declares-strait-of-hormuz-closed-warns-it-will-set-ships-ablaze-if-they-attempt-transit/"
+ },
+ {
+  "type": "shipping_lane_disruption",
+  "date": "2026-04-08",
+  "timing": "unknown",
+  "headline": "Iran declares US ceasefire broken and closes Strait of Hormuz again",
+  "source": "https://www.goodmorningamerica.com/news/story/4-phases-iran-war-key-moments-start-epic-132703824"
+ },
+ {
+  "type": "shipping_lane_disruption",
+  "date": "2026-04-13",
+  "timing": "unknown",
+  "headline": "Trump announces US naval blockade of Iranian ports",
+  "source": "https://www.goodmorningamerica.com/news/story/4-phases-iran-war-key-moments-start-epic-132703824"
+ },
+ {
+  "type": "shipping_lane_disruption",
+  "date": "2026-07-12",
+  "timing": "nontrading",
+  "headline": "Iran says it has again closed Strait of Hormuz, attacks US facilities across Gulf states",
+  "source": "https://chronicle.lu/category/international/62349-iran-expands-attacks-on-gulf-states-after-us-strikes-says-strait-of-hormuz-closed"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2006-10-08",
+  "timing": "nontrading",
+  "headline": "North Korea first nuclear test (01:35 UT Oct 9)",
+  "source": "https://en.wikipedia.org/wiki/List_of_nuclear_weapons_tests_of_North_Korea"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2009-05-24",
+  "timing": "nontrading",
+  "headline": "North Korea second nuclear test (00:54 UT May 25; Memorial Day)",
+  "source": "https://en.wikipedia.org/wiki/List_of_nuclear_weapons_tests_of_North_Korea"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2013-02-11",
+  "timing": "post",
+  "headline": "North Korea third nuclear test (02:57 UT Feb 12)",
+  "source": "https://en.wikipedia.org/wiki/List_of_nuclear_weapons_tests_of_North_Korea"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2016-01-05",
+  "timing": "post",
+  "headline": "North Korea fourth nuclear test, claimed H-bomb (01:30 UT Jan 6)",
+  "source": "https://en.wikipedia.org/wiki/List_of_nuclear_weapons_tests_of_North_Korea"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2016-09-08",
+  "timing": "post",
+  "headline": "North Korea fifth nuclear test (00:30 UT Sep 9)",
+  "source": "https://en.wikipedia.org/wiki/List_of_nuclear_weapons_tests_of_North_Korea"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2017-09-02",
+  "timing": "nontrading",
+  "headline": "North Korea sixth nuclear test, claimed H-bomb (03:30 UT Sep 3)",
+  "source": "https://en.wikipedia.org/wiki/List_of_nuclear_weapons_tests_of_North_Korea"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2017-07-03",
+  "timing": "post",
+  "headline": "First ICBM test, Hwasong-14 (morning Jul 4 Pyongyang)",
+  "source": "https://www.38north.org/2017/07/panghyon070617"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2017-07-28",
+  "timing": "intraday",
+  "headline": "Second Hwasong-14 ICBM test (23:41 local = 14:41 UTC)",
+  "source": "https://en.wikipedia.org/wiki/Hwasong-14"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2017-11-28",
+  "timing": "intraday",
+  "headline": "Hwasong-15 ICBM test (~02:47 Pyongyang Nov 29)",
+  "source": "https://www.38north.org/2017/11/melleman112917/"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2022-03-24",
+  "timing": "pre",
+  "headline": "Hwasong-17 ICBM launch (14:34 Pyongyang)",
+  "source": "https://en.wikipedia.org/wiki/Hwasong-17"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2022-11-17",
+  "timing": "post",
+  "headline": "Hwasong-17 ICBM launch (10:14 Pyongyang Nov 18)",
+  "source": "https://en.wikipedia.org/wiki/Hwasong-17"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2023-02-18",
+  "timing": "nontrading",
+  "headline": "Hwasong-15 ICBM lands in Japan's EEZ (Saturday evening local)",
+  "source": "https://news.rthk.hk/rthk/en/component/k2/1688458-20230218.htm"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2023-03-15",
+  "timing": "post",
+  "headline": "Hwasong-17 ICBM launch (07:09 Pyongyang Mar 16)",
+  "source": "https://en.wikipedia.org/wiki/Hwasong-17"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2023-04-12",
+  "timing": "post",
+  "headline": "First solid-fuel ICBM Hwasong-18 (07:23 Pyongyang Apr 13)",
+  "source": "https://en.wikipedia.org/wiki/Hwasong-18"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2023-07-11",
+  "timing": "post",
+  "headline": "Hwasong-18 ICBM launch (~09:59 local Jul 12)",
+  "source": "https://thediplomat.com/2023/07/north-korea-says-it-successfully-tested-hwasong-18-icbm-for-a-second-time"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2023-12-17",
+  "timing": "nontrading",
+  "headline": "Hwasong-18 ICBM launch (08:24 Pyongyang Dec 18)",
+  "source": "https://en.wikipedia.org/wiki/Hwasong-18"
+ },
+ {
+  "type": "north_korea_missile",
+  "date": "2024-10-30",
+  "timing": "post",
+  "headline": "Hwasong-19 ICBM launch (07:11 Pyongyang Oct 31)",
+  "source": "https://en.wikipedia.org/wiki/Hwasong-19"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2006-10-19",
+  "timing": "post",
+  "headline": "OPEC Doha meeting agrees 1.2 mb/d cut (announced after 1am Doha Oct 20)",
+  "source": "https://en.mercopress.com/2006/10/19/opec-surprises-with-deeper-oil-cut"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2006-12-14",
+  "timing": "intraday",
+  "headline": "OPEC Abuja agrees further 500k b/d cut from Feb 1",
+  "source": "https://www.domain-b.com/industry/oil_gas/20061214_output.html"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2008-10-24",
+  "timing": "unknown",
+  "headline": "OPEC emergency Vienna meeting cuts output 1.5 mb/d",
+  "source": "https://www.arabnews.com/node/317608"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2008-12-17",
+  "timing": "unknown",
+  "headline": "OPEC Oran meeting agrees record 2.2 mb/d cut",
+  "source": "https://www.thenationalnews.com/business/opec-cuts-production-by-record-2-2m-bpd-1.535034"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2016-09-28",
+  "timing": "intraday",
+  "headline": "OPEC surprise Algiers deal to cap output at 32.5-33 mb/d",
+  "source": "https://www.nbcnews.com/business/energy/oil-soars-5-percent-opec-finally-reaches-agreement-curb-output-n656191"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2016-11-30",
+  "timing": "intraday",
+  "headline": "OPEC agrees first output cut since 2008 (~1.2 mb/d)",
+  "source": "https://www.npr.org/sections/thetwo-way/2016/11/30/503863756/opec-agrees-to-first-cut-in-oil-production-since-2008"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2018-12-07",
+  "timing": "intraday",
+  "headline": "OPEC+ agrees 1.2 mb/d joint cut",
+  "source": "https://247wallst.com/energy/2018/12/07/opec-and-partners-agree-to-1-2-million-barrel-per-day-production-cut/"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2019-12-05",
+  "timing": "unknown",
+  "headline": "OPEC panel agrees deeper 500k b/d cut for Q1 2020 (formally approved with allies Dec 6)",
+  "source": "https://247wallst.com/energy/2019/12/06/opec-agrees-to-cut-another-500000-barrels-of-production/"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2020-04-12",
+  "timing": "nontrading",
+  "headline": "OPEC+ finalises record 9.7 mb/d cut",
+  "source": "https://globalnews.ca/news/6810330/opec-oil-cuts-coronavirus/"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2022-09-05",
+  "timing": "nontrading",
+  "headline": "OPEC+ agrees token 100k b/d cut for October (US Labor Day)",
+  "source": "https://thenationalnews.com/business/energy/2022/09/05/opec-agrees-to-cut-october-crude-supply-by-100000-bpd-amid-demand-headwinds"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2022-10-05",
+  "timing": "intraday",
+  "headline": "OPEC+ agrees 2 mb/d headline cut from November",
+  "source": "https://nairametrics.com/2022/10/05/opec-formally-agrees-to-cut-oil-production-by-2-million-barrels-per-day"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2023-04-02",
+  "timing": "nontrading",
+  "headline": "Surprise OPEC+ voluntary cuts of ~1.16 mb/d from May",
+  "source": "https://www.aljazeera.com/news/2023/4/2/opec-oil-alliance-announces-surprise-production-cuts-from-may"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2023-06-04",
+  "timing": "nontrading",
+  "headline": "Saudi Arabia announces extra 1 mb/d voluntary cut for July; OPEC+ lowers 2024 targets",
+  "source": "https://www.ogj.com/general-interest/economics-markets/article/14294745/saudi-arabia-to-further-reduce-output-as-opec-sticks-to-2023-production-cut-target"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2023-07-03",
+  "timing": "unknown",
+  "headline": "Saudi extends 1 mb/d cut into August; Russia pledges 500k b/d export cut",
+  "source": "https://www.rappler.com/business/saudi-arabia-russia-deepen-oil-cuts-send-prices-higher-july-3-2023/"
+ },
+ {
+  "type": "opec_cut",
+  "date": "2023-11-30",
+  "timing": "intraday",
+  "headline": "OPEC+ members agree voluntary cuts totalling ~2.2 mb/d for Q1 2024",
+  "source": "https://www.opec.org/pr-detail/39-30-nov-2023.html"
+ },
+ {
+  "type": "opec_increase",
+  "date": "2007-09-11",
+  "timing": "unknown",
+  "headline": "OPEC agrees 500k b/d output increase from Nov 1",
+  "source": "https://en.mercopress.com/2007/09/11/opec-agrees-to-half-a-million-bpd-oil-production-hike"
+ },
+ {
+  "type": "opec_increase",
+  "date": "2018-06-22",
+  "timing": "intraday",
+  "headline": "OPEC+ agrees ~1 mb/d nominal output increase from July",
+  "source": "https://www.aljazeera.com/economy/2018/6/22/opec-reaches-deal-to-raise-oil-output"
+ },
+ {
+  "type": "opec_increase",
+  "date": "2021-07-18",
+  "timing": "nontrading",
+  "headline": "OPEC+ deal to raise output 400k b/d per month from August",
+  "source": "https://www.businesslive.co.za/bd/markets/2021-07-18-opec-agrees-to-deal-to-inject-more-oil-into-the-recovering-global-economy/"
+ },
+ {
+  "type": "opec_increase",
+  "date": "2022-06-02",
+  "timing": "intraday",
+  "headline": "OPEC+ agrees 648k b/d increases for July and August",
+  "source": "https://thenationalnews.com/business/energy/2022/06/02/opec-agrees-to-boost-july-crude-supply-to-648000-bpd-amid-rising-oil-prices"
+ },
+ {
+  "type": "opec_increase",
+  "date": "2025-04-03",
+  "timing": "intraday",
+  "headline": "OPEC+ eight surprise 411k b/d hike for May (triple increment)",
+  "source": "https://www.gulf-times.com/article/702925/business/opec-unexpectedly-speeds-up-output-hikes-oil-drops"
+ },
+ {
+  "type": "opec_increase",
+  "date": "2025-05-03",
+  "timing": "nontrading",
+  "headline": "OPEC+ eight agree another 411k b/d hike for June",
+  "source": "https://www.thejakartapost.com/business/2025/05/03/opec-agrees-another-accelerated-oil-output-hike-for-june"
+ },
+ {
+  "type": "opec_increase",
+  "date": "2025-05-31",
+  "timing": "nontrading",
+  "headline": "OPEC+ eight agree 411k b/d hike for July",
+  "source": "https://thenationalnews.com/business/energy/2025/05/31/opec-agrees-another-accelerated-oil-output-for-july"
+ },
+ {
+  "type": "opec_increase",
+  "date": "2025-07-05",
+  "timing": "nontrading",
+  "headline": "OPEC+ eight agree larger-than-expected 548k b/d hike for August",
+  "source": "https://www.thenationalnews.com/business/energy/2025/07/05/opec-agrees-to-bigger-than-expected-monthly-oil-output-increase"
+ },
+ {
+  "type": "opec_increase",
+  "date": "2025-08-03",
+  "timing": "nontrading",
+  "headline": "OPEC+ eight agree 547k b/d hike for September, completing 2.2 mb/d unwind",
+  "source": "https://www.thenationalnews.com/business/energy/2025/08/03/opec-agrees-to-raise-oil-output-for-september"
+ },
+ {
+  "type": "opec_increase",
+  "date": "2025-09-07",
+  "timing": "nontrading",
+  "headline": "OPEC+ eight begin unwinding 1.65 mb/d tranche: +137k b/d for October",
+  "source": "https://boereport.com/2025/09/07/eight-opec-members-agree-to-raise-oil-production-by-137000-bpd-in-october/amp/"
+ },
+ {
+  "type": "opec_increase",
+  "date": "2026-03-01",
+  "timing": "nontrading",
+  "headline": "OPEC+ eight agree 206k b/d increase for April (day after US-Israel strikes on Iran)",
+  "source": "https://www.businesstoday.in/world/middle-east/story/middle-east-tensions-eight-opec-nations-to-raise-output-retain-flexibility-amid-market-shifts-518680-2026-03-01"
+ },
+ {
+  "type": "port_strike_disruption",
+  "date": "2022-03-27",
+  "timing": "nontrading",
+  "headline": "Shanghai announces city-wide COVID lockdown (from Mar 28)",
+  "source": "https://en.wikipedia.org/wiki/2022_Shanghai_COVID-19_outbreak"
+ },
+ {
+  "type": "port_strike_disruption",
+  "date": "2022-08-21",
+  "timing": "nontrading",
+  "headline": "Port of Felixstowe dockworkers begin first strike in 30 years",
+  "source": "https://en.wikipedia.org/wiki/Port_of_Felixstowe"
+ },
+ {
+  "type": "port_strike_disruption",
+  "date": "2023-07-01",
+  "timing": "nontrading",
+  "headline": "British Columbia port workers (ILWU Canada) begin 13-day strike",
+  "source": "https://en.wikipedia.org/wiki/2023_British_Columbia_port_strike"
+ },
+ {
+  "type": "port_strike_disruption",
+  "date": "2024-03-26",
+  "timing": "pre",
+  "headline": "Francis Scott Key Bridge collapses (01:28 EDT), Port of Baltimore shipping suspended",
+  "source": "https://en.wikipedia.org/wiki/Francis_Scott_Key_Bridge_collapse"
+ },
+ {
+  "type": "port_strike_disruption",
+  "date": "2024-10-01",
+  "timing": "pre",
+  "headline": "ILA strike shuts US East and Gulf Coast ports (from 00:01 ET)",
+  "source": "https://en.wikipedia.org/wiki/2024_United_States_port_strike"
+ },
+ {
+  "type": "us_drought_crop",
+  "date": "2012-07-11",
+  "timing": "intraday",
+  "headline": "USDA WASDE cuts US corn yield 20 bu/acre to 146 on drought and heat",
+  "source": "https://www.farmprogress.com/corn/july-2012-wasde-corn-production-down-yield-down-20-buacre"
+ },
+ {
+  "type": "us_drought_crop",
+  "date": "2012-08-10",
+  "timing": "intraday",
+  "headline": "USDA cuts US corn yield to 123.4 bu/acre, crop 10.8 bn bu (drought)",
+  "source": "https://farmdocdaily.illinois.edu/2012/08/usda-august-crop-production-an.html"
+ },
+ {
+  "type": "us_drought_crop",
+  "date": "2013-01-11",
+  "timing": "intraday",
+  "headline": "USDA final 2012 Crop Production: output down due to drought",
+  "source": "https://www.nass.usda.gov/Newsroom/archive/2013/"
+ },
+ {
+  "type": "us_drought_crop",
+  "date": "2022-05-12",
+  "timing": "intraday",
+  "headline": "USDA first 2022 forecast: hard red winter wheat 590m bu, down 21% y/y",
+  "source": "https://www.nass.usda.gov/newsroom/archive/2022/05-12-2022.php"
+ },
+ {
+  "type": "us_drought_crop",
+  "date": "2022-08-12",
+  "timing": "intraday",
+  "headline": "USDA first 2022 cotton forecast 12.6m bales, down 28% y/y",
+  "source": "https://www.nass.usda.gov/newsroom/archive/2022/08-12-2022.php"
+ },
+ {
+  "type": "eu_gas_squeeze",
+  "date": "2006-01-01",
+  "timing": "nontrading",
+  "headline": "Russia cuts gas supplies to Ukraine, hitting transit to Europe",
+  "source": "https://en.wikipedia.org/wiki/Russia–Ukraine_gas_disputes"
+ },
+ {
+  "type": "eu_gas_squeeze",
+  "date": "2009-01-01",
+  "timing": "nontrading",
+  "headline": "Gazprom halts gas exports to Ukraine (10:00 MSK)",
+  "source": "https://en.wikipedia.org/wiki/Russia–Ukraine_gas_disputes"
+ },
+ {
+  "type": "eu_gas_squeeze",
+  "date": "2009-01-07",
+  "timing": "unknown",
+  "headline": "All Russian gas transit to Europe via Ukraine halted",
+  "source": "https://en.wikipedia.org/wiki/Russia–Ukraine_gas_disputes"
+ },
+ {
+  "type": "eu_gas_squeeze",
+  "date": "2014-06-16",
+  "timing": "unknown",
+  "headline": "Gazprom halts gas supplies to Ukraine after talks fail",
+  "source": "https://en.wikipedia.org/wiki/Russia–Ukraine_gas_disputes"
+ },
+ {
+  "type": "eu_gas_squeeze",
+  "date": "2022-04-26",
+  "timing": "unknown",
+  "headline": "Gazprom announces halt of gas deliveries to Poland and Bulgaria",
+  "source": "https://en.wikipedia.org/wiki/2022–2023_Russia–European_Union_gas_dispute"
+ },
+ {
+  "type": "eu_gas_squeeze",
+  "date": "2022-06-14",
+  "timing": "unknown",
+  "headline": "Gazprom announces cut of Nord Stream 1 flows citing turbine issue (to 40% by Jun 16)",
+  "source": "https://en.wikipedia.org/wiki/2022–2023_Russia–European_Union_gas_dispute"
+ },
+ {
+  "type": "eu_gas_squeeze",
+  "date": "2022-07-25",
+  "timing": "unknown",
+  "headline": "Gazprom announces Nord Stream 1 flows cut to 20% of capacity",
+  "source": "https://en.wikipedia.org/wiki/Nord_Stream_1"
+ },
+ {
+  "type": "eu_gas_squeeze",
+  "date": "2022-09-02",
+  "timing": "unknown",
+  "headline": "Gazprom says Nord Stream 1 will remain shut indefinitely",
+  "source": "https://en.wikipedia.org/wiki/Nord_Stream_1"
+ },
+ {
+  "type": "eu_gas_squeeze",
+  "date": "2022-09-26",
+  "timing": "unknown",
+  "headline": "Nord Stream 1 and 2 pipelines ruptured by explosions in Baltic Sea",
+  "source": "https://en.wikipedia.org/wiki/2022_Nord_Stream_pipeline_sabotage"
+ },
+ {
+  "type": "eu_gas_squeeze",
+  "date": "2025-01-01",
+  "timing": "nontrading",
+  "headline": "Ukraine ends all Russian gas transit as contract expires",
+  "source": "https://en.wikipedia.org/wiki/Russia–Ukraine_gas_disputes"
+ }
+]
