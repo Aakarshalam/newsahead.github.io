@@ -14,6 +14,7 @@
   <div class="nav-brand">NewsAlpha<span class="nav-tag">BETA</span></div>
   <div class="nav-links">
     <a href="#dashboard" class="nav-link active" data-page="dashboard">Signals</a>
+    <a href="#paper" class="nav-link" data-page="paper">Paper Trading</a>
     <a href="#backtest" class="nav-link" data-page="backtest">Backtest</a>
     <a href="#impact" class="nav-link" data-page="impact">Impact Map</a>
     <a href="#pipeline" class="nav-link" data-page="pipeline">Pipeline</a>
@@ -72,6 +73,28 @@
         <button class="drawer-close" id="drawer-close" aria-label="Close">×</button>
       </div>
       <div id="drawer-body"></div>
+    </div>
+  </div>
+
+  <!-- PAPER TRADING -->
+  <div class="page" id="page-paper">
+    <div class="page-header">
+      <div>
+        <h1>Paper Trading · ₹2,00,000 live test</h1>
+        <p class="page-sub">The signals traded mechanically through a simulated Indian LRS account (INDmoney/Vested-style) on US markets, 9–20 Nov 2026. Real prices, real market hours, forex and fees included. No discretion: the rules below decide everything.</p>
+      </div>
+    </div>
+    <div class="metrics-row" id="pp-metrics"></div>
+    <div class="two-col">
+      <div class="panel"><div class="panel-header"><span class="panel-title">Account value in INR (net of forex both ways) vs buying SPY</span></div>
+        <div class="chart-box" style="height:240px;margin-bottom:12px"><canvas id="pp-chart"></canvas></div></div>
+      <div class="panel"><div class="panel-header"><span class="panel-title">Rules (fixed for the whole test)</span></div><div id="pp-rules" class="pad-sm"></div></div>
+    </div>
+    <div class="panel" style="margin-top:16px"><div class="panel-header"><span class="panel-title">Open positions &amp; pending orders</span></div><div id="pp-open"></div></div>
+    <div class="panel" style="margin-top:16px"><div class="panel-header"><span class="panel-title">Closed trades: journal &amp; post-mortems</span></div><div id="pp-closed"></div></div>
+    <div class="two-col even" style="margin-top:16px">
+      <div class="panel"><div class="panel-header"><span class="panel-title">What we're learning</span></div><div id="pp-learn" class="pad-sm"></div></div>
+      <div class="panel"><div class="panel-header"><span class="panel-title">Every signal considered</span></div><div id="pp-decisions"></div></div>
     </div>
   </div>
 

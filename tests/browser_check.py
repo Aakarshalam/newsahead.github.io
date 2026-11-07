@@ -57,7 +57,13 @@ def hostile_fixture():
     bt = dict(bt, rows=[row] + bt["rows"][1:])
     pipe = load("pipeline.json")
     pipe = dict(pipe, unclassified_sample=[dict(title=HOSTILE, publisher=HOSTILE, feed="x")] + pipe["unclassified_sample"])
-    return {"data/signals.json": sig, "data/backtest.json": bt, "data/pipeline.json": pipe,
+    paper = load("paper/state.json")
+    t = dict(signal_id="x", title="Evil " + HOSTILE, event=HOSTILE, symbol="<b>X</b>", market="m", conf="Med", star=False,
+             exit_session="2026-11-10", ret_pct=-3.6, pnl_inr=-1800, exit_reason=HOSTILE, mfe_pct=0.5, mae_pct=-3.6,
+             lessons=[HOSTILE], url=HOSTILE_URL)
+    paper = dict(paper, closed=[t] + paper["closed"],
+                 decisions=[dict(time=paper["last_run"], action="skip", event=HOSTILE, reason=HOSTILE, score=1, title=HOSTILE)] + paper["decisions"])
+    return {"data/paper/state.json": paper, "data/signals.json": sig, "data/backtest.json": bt, "data/pipeline.json": pipe,
             "data/taxonomy.json": load("taxonomy.json"), "data/signal_history.json": load("signal_history.json"),
             "data/verification.json": load("verification.json") if os.path.exists(os.path.join(ROOT, "data", "verification.json")) else {}}
 
@@ -75,7 +81,7 @@ AFTER = r"""
 (async () => {
   const wait = ms => new Promise(r => setTimeout(r, ms));
   await wait(50);
-  const pages = ['dashboard', 'backtest', 'impact', 'pipeline', 'method'];
+  const pages = ['dashboard', 'paper', 'backtest', 'impact', 'pipeline', 'method'];
   for (const p of pages) { showPage(p); await wait(20); }
   showPage('dashboard'); document.querySelector('.signal-item')?.click(); await wait(20);
   showPage('backtest'); document.querySelector('#bt-tbody .bt-row')?.click(); await wait(20);

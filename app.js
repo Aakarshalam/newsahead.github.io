@@ -66,9 +66,11 @@ async function loadAll() {
   const res = await Promise.allSettled([
     getJSON('data/signals.json'), getJSON('data/backtest.json'), getJSON('data/pipeline.json'),
     getJSON('data/taxonomy.json'), getJSON('data/signal_history.json'), getJSON('data/verification.json'),
+    getJSON('data/paper/state.json'),
   ]);
-  const [sig, bt, pipe, tax, hist, ver] = res.map(r => r.status === 'fulfilled' ? r.value : null);
+  const [sig, bt, pipe, tax, hist, ver, paper] = res.map(r => r.status === 'fulfilled' ? r.value : null);
   state.verification = ver;
+  state.paper = paper;
   const failed = res.slice(0, 5).map((r, i) => r.status === 'rejected' ? ['signals', 'backtest', 'pipeline', 'taxonomy', 'history'][i] : null).filter(Boolean);
   state.signals = sig?.signals || [];
   state.sigMeta = sig;
@@ -117,6 +119,7 @@ function renderPage(pg) {
   if (pg === 'impact') renderImpact();
   if (pg === 'pipeline') renderPipeline();
   if (pg === 'method') renderMethod();
+  if (pg === 'paper') renderPaper();
 }
 
 // ─── navigation ──────────────────────────────────────────────────────────────
@@ -602,6 +605,68 @@ function renderVerification() {
       <p>${pl.fake_types} fake event types with random dates on real instruments: ${Math.round(pl.med_or_high_rate * 100)}% labelled Med/High, ${Math.round(pl.high_rate * 100)}% High (about 10% Med is expected by design).</p>` : ''}
     ${ln ? `<h4>Catalog sources</h4><p>${ln.ok}/${ln.urls} source links resolve, ${ln.bot_blocked} block automated checks, ${ln.broken.length} failing.</p>` : ''}
   </div>`;
+}
+
+// ─── PAPER TRADING ───────────────────────────────────────────────────────────
+const inr = n => n === null || n === undefined ? '—' : '₹' + Math.round(n).toLocaleString('en-IN');
+const istTime = iso => iso ? new Date(iso).toLocaleString('en-IN', {timeZone: 'Asia/Kolkata', day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit'}) + ' IST' : '—';
+
+function renderPaper() {
+  const P = state.paper;
+  if (!P) { el('pp-metrics').innerHTML = `<div class="empty">${state.loadedAt ? 'Paper trading has not started yet.' : 'Loading…'}</div>`; return; }
+  const S = P.summary, C = P.config, last = P.equity[P.equity.length - 1] || {};
+  const vsSpy = S.spy_bh_inr_net ? S.equity_inr_net - S.spy_bh_inr_net : null;
+  el('pp-metrics').innerHTML = `
+    <div class="mcard"><div class="lbl">Account (INR, if withdrawn now)</div><div class="val ${S.return_pct_net >= 0 ? 'green' : 'red'}">${inr(S.equity_inr_net)}</div><div class="sub">${sgn(S.return_pct_net, 2)}% net · ${sgn(S.return_pct_usd, 2)}% in USD terms</div></div>
+    <div class="mcard"><div class="lbl">vs just buying SPY</div><div class="val ${vsSpy >= 0 ? 'green' : 'red'}">${vsSpy === null ? '—' : (vsSpy >= 0 ? '+' : '−') + inr(Math.abs(vsSpy)).slice(1)}</div><div class="sub">SPY buy-and-hold: ${inr(S.spy_bh_inr_net)}</div></div>
+    <div class="mcard"><div class="lbl">Closed trades</div><div class="val">${S.trades}</div><div class="sub">win rate ${S.win_rate ?? '—'}% · profit factor ${S.profit_factor ?? '—'} · ${S.open} open</div></div>
+    <div class="mcard"><div class="lbl">Market (NYSE)</div><div class="val small">${P.market_open ? '<span class="pos">OPEN</span>' : 'closed'}</div><div class="sub">last step ${esc(ago(P.last_run))} · USD/INR ${fmt(last.usdinr, 2)}</div></div>`;
+  el('pp-rules').innerHTML = `<ul class="rules">
+    <li><b>Account:</b> ${inr(C.start_inr)} → $${fmt(P.account.funded_usd, 2)} at ₹${fmt(P.account.funding_rate, 2)} minus ${fmt(C.forex_markup * 100, 1)}% forex (${inr(P.account.forex_cost_inr)}). Same markup again when converting back.</li>
+    <li><b>Entry:</b> signal score ≥ ${C.min_score}; the traded market's backtest confidence ${C.allowed_conf.join('/')}; still within the reaction window; not already priced in.</li>
+    <li><b>Size:</b> ${inr(C.position_inr)} per trade, at most ${C.max_positions} open. Long-only (inverse ETFs for bearish views).</li>
+    <li><b>Stop:</b> −${fmt(C.stop_pct * 100, 1)}% always. Moves to breakeven once up +${fmt(C.breakeven_trigger * 100, 0)}%.</li>
+    <li><b>Target:</b> +${fmt(C.target_stock * 100, 0)}% single stocks, +${fmt(C.target_etf * 100, 0)}% ETFs.</li>
+    <li><b>Time exit:</b> after the backtest's best window (max ${C.max_hold_sessions} sessions). Everything flat on ${esc(C.test_end)}.</li>
+    <li><b>Circuit breakers:</b> no new entries after ${inr(C.daily_loss_cap_inr)} realised loss in a session; one-session cool-off after a stop.</li>
+    <li><b>Hours:</b> NYSE 8:00 PM–2:30 AM IST. Signals outside hours become orders for the next open.</li></ul>`;
+  if (typeof Chart !== 'undefined') {
+    state.ppChart?.destroy();
+    const pts = P.equity;
+    state.ppChart = new Chart(el('pp-chart'), {
+      type: 'line',
+      data: {labels: pts.map(p => istTime(p.time)), datasets: [
+        {label: 'Strategy', data: pts.map(p => p.equity_inr_net), borderColor: css('--accent'), pointRadius: 0, borderWidth: 2},
+        {label: 'SPY buy & hold', data: pts.map(p => p.spy_bh_inr_net), borderColor: css('--text3'), borderDash: [4, 4], pointRadius: 0, borderWidth: 1.5},
+        {label: 'Starting capital', data: pts.map(() => C.start_inr), borderColor: 'rgba(127,127,127,.35)', pointRadius: 0, borderWidth: 1},
+      ]},
+      options: {responsive: true, maintainAspectRatio: false, interaction: {mode: 'index', intersect: false},
+        plugins: {legend: {labels: {color: css('--text2'), boxWidth: 10}}},
+        scales: {x: {ticks: {color: css('--text3'), maxTicksLimit: 6}, grid: {display: false}},
+                 y: {ticks: {color: css('--text3'), callback: v => '₹' + (v / 1000).toFixed(0) + 'k'}, grid: {color: 'rgba(127,127,127,.12)'}}}},
+    });
+  }
+  const pend = P.pending.map(o => `<tr><td><b>${esc(o.symbol)}</b></td><td colspan="5" class="muted">order placed ${esc(istTime(o.decided))}: fills at next open · ${esc(o.why)}</td><td>${esc(o.title)}</td></tr>`).join('');
+  el('pp-open').innerHTML = (P.positions.length || P.pending.length) ? `<table class="mini-table pad-table"><thead><tr><th>Symbol</th><th>Entry</th><th>Last</th><th>P&amp;L</th><th>Stop / Target</th><th>Held</th><th>Signal</th></tr></thead><tbody>${
+    P.positions.map(p => `<tr><td><b>${esc(p.symbol)}</b><div class="muted">${esc(p.market)}</div></td><td>$${fmt(p.entry_px, 2)}<div class="muted">${esc(istTime(p.entry_time))}</div></td><td>$${fmt(p.last_px, 2)}</td>
+      <td class="${moveCls(p.unrealised_pct)}">${sgn(p.unrealised_pct, 2)}%</td><td>$${fmt(p.stop, 2)}${p.breakeven ? ' <span class="pos">(BE)</span>' : ''} / $${fmt(p.target, 2)}</td>
+      <td>${p.sessions_held.length}/${p.hold_sessions}</td><td>${esc(p.title)}<div class="muted">${esc(p.event)} · ${esc(p.conf)}${p.star ? ' ★' : ''}</div></td></tr>`).join('') + pend}</tbody></table>`
+    : '<div class="empty">No open positions. The bot waits for a signal that passes every rule.</div>';
+  el('pp-closed').innerHTML = P.closed.length ? `<table class="mini-table pad-table"><thead><tr><th>Exit</th><th>Symbol</th><th>Return</th><th>P&amp;L</th><th>Why exited</th><th>MFE / MAE</th><th>SPY same time</th><th>Post-mortem</th></tr></thead><tbody>${
+    P.closed.map(t => `<tr><td class="nowrap">${esc(t.exit_session)}</td><td><b>${esc(t.symbol)}</b><div class="muted">${esc(t.event)}</div></td>
+      <td class="${moveCls(t.ret_pct)}">${sgn(t.ret_pct, 2)}%</td><td class="${moveCls(t.pnl_inr)}">${inr(t.pnl_inr)}</td><td>${esc(t.exit_reason)}</td>
+      <td class="num">${sgn(t.mfe_pct, 1)} / ${sgn(t.mae_pct, 1)}</td><td class="num">${t.spy_same_window_pct !== undefined ? sgn(t.spy_same_window_pct, 2) + '%' : '—'}</td>
+      <td>${(t.lessons || []).map(l => `<div class="fine">• ${esc(l)}</div>`).join('') || '<span class="muted">rules worked as intended</span>'}</td></tr>`).join('')}</tbody></table>`
+    : '<div class="empty">No closed trades yet.</div>';
+  const lc = Object.entries(S.lesson_counts || {}).sort((a, b) => b[1] - a[1]);
+  const sk = Object.entries(S.skip_reasons || {}).sort((a, b) => b[1] - a[1]);
+  el('pp-learn').innerHTML = `
+    <p><b>${S.signals_seen}</b> signals considered → <b>${S.orders}</b> orders. Average signal → fill delay: ${S.avg_fill_delay_h ?? '—'} h. Average move that had already happened before we could buy: ${S.avg_pre_entry_move_pct !== null ? sgn(S.avg_pre_entry_move_pct, 2) + '%' : '—'}.</p>
+    <p><b>Why signals were skipped:</b></p>${sk.map(([k, n]) => `<div class="fine">${n} × ${esc(k)}</div>`).join('') || '<div class="fine">—</div>'}
+    <p style="margin-top:10px"><b>Recurring post-mortem findings:</b></p>${lc.map(([k, n]) => `<div class="fine">${n} × ${esc(k)}</div>`).join('') || '<div class="fine">none yet</div>'}
+    <p class="fine" style="margin-top:10px">Exit reasons: ${Object.entries(S.exit_reasons || {}).map(([k, n]) => `${esc(k)} ${n}`).join(' · ') || '—'} · max drawdown ${fmt(S.max_drawdown_pct, 2)}%</p>`;
+  el('pp-decisions').innerHTML = P.decisions.length ? P.decisions.slice(0, 60).map(d => `<div class="uncl"><span class="${d.action === 'order' ? 'pos' : 'muted'}">${d.action === 'order' ? 'ORDER' : 'skip'}</span> ${esc(d.event)}: ${esc(d.reason)}<div class="muted">${esc(istTime(d.time))} · score ${d.score} · ${esc(d.title)}</div></div>`).join('')
+    : '<div class="empty">No signals yet.</div>';
 }
 
 // ─── init ────────────────────────────────────────────────────────────────────

@@ -2,7 +2,7 @@ name: NewsAlpha pipeline
 
 on:
   schedule:
-    - cron: "*/30 * * * *"     # ingest news every 30 minutes
+    - cron: "*/15 * * * *"     # ingest news + paper-trading step every 15 minutes
     - cron: "15 22 * * 1-5"    # rebuild the backtest after the US close on weekdays
     - cron: "0 6 * * 0"        # weekly verification (data cross-checks, calibration, browser)
   workflow_dispatch:
@@ -62,6 +62,10 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python -m pipeline.run ${{ steps.mode.outputs.mode }}
+
+      - name: Paper-trading step (₹2L LRS account, mechanical rules)
+        if: always()
+        run: python -m pipeline.paper
 
       - name: Commit data
         run: |
