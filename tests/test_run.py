@@ -11,8 +11,10 @@ from pipeline import prices, run
 
 
 def _series(sym, start_price, daily):
+    # Extends a week past today so a reaction session exists even when the test runs on a
+    # weekend (articles published on Saturday react on Monday).
     d, rows, c = dt.date.today() - dt.timedelta(days=60), [], start_price
-    while d <= dt.date.today():
+    while d <= dt.date.today() + dt.timedelta(days=7):
         if d.weekday() < 5:
             c *= 1 + daily
             rows.append((d.isoformat(), c))

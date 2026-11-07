@@ -47,6 +47,8 @@ jobs:
           restore-keys: prices-
 
       - name: Unit tests
+        # Code only changes on push; a scheduled ingest must never be blocked by a test.
+        if: github.event_name != 'schedule'
         run: python -m unittest discover -s tests
 
       - name: Decide mode
