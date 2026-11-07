@@ -26,9 +26,8 @@ TIMINGS = {"pre", "intraday", "post", "nontrading", "unknown"}
 
 
 def fred_series(series_id):
-    url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}"
-    with urllib.request.urlopen(url, timeout=30) as r:
-        rows = list(csv.reader(io.StringIO(r.read().decode())))[1:]
+    from .prices import fred_csv
+    rows = list(csv.reader(io.StringIO(fred_csv(series_id))))[1:]
     out = []
     for d, v in rows:
         if v and v != ".":

@@ -65,10 +65,11 @@ async function getJSON(path) {
 async function loadAll() {
   const res = await Promise.allSettled([
     getJSON('data/signals.json'), getJSON('data/backtest.json'), getJSON('data/pipeline.json'),
-    getJSON('data/taxonomy.json'), getJSON('data/signal_history.json'),
+    getJSON('data/taxonomy.json'), getJSON('data/signal_history.json'), getJSON('data/verification.json'),
   ]);
-  const [sig, bt, pipe, tax, hist] = res.map(r => r.status === 'fulfilled' ? r.value : null);
-  const failed = res.map((r, i) => r.status === 'rejected' ? ['signals', 'backtest', 'pipeline', 'taxonomy', 'history'][i] : null).filter(Boolean);
+  const [sig, bt, pipe, tax, hist, ver] = res.map(r => r.status === 'fulfilled' ? r.value : null);
+  state.verification = ver;
+  const failed = res.slice(0, 5).map((r, i) => r.status === 'rejected' ? ['signals', 'backtest', 'pipeline', 'taxonomy', 'history'][i] : null).filter(Boolean);
   state.signals = sig?.signals || [];
   state.sigMeta = sig;
   state.backtest = bt;
@@ -320,10 +321,12 @@ function renderBacktest() {
   const rows = btRows();
   const nEvents = Object.values(bt.event_counts || {}).reduce((a, b) => a + b, 0);
   const sig = rows.filter(r => r.conf !== 'Low').length;
+  const all = bt.rows.length;
+  const robust = bt.rows.filter(r => r.q_value !== null && r.q_value !== undefined && r.q_value <= 0.10).length;
   el('bt-metrics').innerHTML = `
     <div class="mcard"><div class="lbl">Historical events</div><div class="val">${nEvents}</div><div class="sub">${Object.keys(bt.event_counts).length} event types</div></div>
     <div class="mcard"><div class="lbl">Market reactions tested</div><div class="val">${rows.length}</div><div class="sub">event type × market basket (filtered)</div></div>
-    <div class="mcard"><div class="lbl">Statistically reliable</div><div class="val green">${sig}</div><div class="sub">Med/High confidence after Bonferroni</div></div>
+    <div class="mcard"><div class="lbl">Med/High confidence</div><div class="val green">${sig}</div><div class="sub" title="Each row needs placebo p ≤ 0.10 for Med, so about 10% of rows reach Med/High by chance">≈${Math.round(all * 0.1)} of ${all} expected by chance · ${robust} survive FDR q ≤ 0.10</div></div>
     <div class="mcard"><div class="lbl">Backtest built</div><div class="val small">${esc(ago(bt.generated))}</div><div class="sub">${esc(new Date(bt.generated).toLocaleDateString())}</div></div>`;
   if (!rows.length) { el('bt-tbody').innerHTML = '<tr><td colspan="10" class="empty">No results match these filters.</td></tr>'; return; }
   el('bt-tbody').innerHTML = rows.map((r, i) => `
@@ -335,7 +338,7 @@ function renderBacktest() {
       <td>${barHtml(r.cons, dirColor(r.dir))}</td>
       <td class="num ${moveCls(r.move)}">${sgn(r.move, 2)}%</td>
       <td class="num accent">${esc(r.optW || '—')}</td>
-      <td class="num">${fmt(r.t, 2)}</td>
+      <td class="num" title="BMP t ${fmt(r.t_bmp, 2)} · sign-test p ${fmt(r.p_sign, 3)} · FDR q ${fmt(r.q_value, 3)}">${fmt(r.p_placebo, 3)}${r.q_value !== null && r.q_value <= 0.10 ? ' <span class="pos" title="survives false-discovery-rate control (q ≤ 0.10)">★</span>' : ''}</td>
       <td class="num muted">${r.samples}</td>
       <td class="${confCls(r.conf)}">${esc(r.conf)}</td>
     </tr>
@@ -349,7 +352,16 @@ function btDetail(r) {
     <div>
       <div class="d-section-title">By window (avg ${esc(r.adjustment)} move)</div>
       ${winBoxes(r.windows, r.optW)}
-      <div class="fine">Hover a window for n, median, hit rate and p-value. Best window = largest |t|. Adjusted p = ${fmt(r.p_adj, 4)}.</div>
+      <div class="fine">Hover a window for n, median, hit rate and p-value. Best window = largest volatility-standardised (BMP) |t|.</div>
+      <table class="mini-table stats-table"><tbody>
+        <tr><td>Placebo p (random dates, best-window search replayed)</td><td class="num">${fmt(r.p_placebo, 4)}</td></tr>
+        <tr><td>False-discovery q (Benjamini–Hochberg over all ${state.backtest.rows.length} rows)</td><td class="num ${r.q_value <= 0.10 ? 'pos' : ''}">${fmt(r.q_value, 3)}</td></tr>
+        <tr><td>BMP standardised t / classic t</td><td class="num">${fmt(r.t_bmp, 2)} / ${fmt(r.t, 2)}</td></tr>
+        <tr><td>Sign test p (nonparametric)</td><td class="num">${fmt(r.p_sign, 4)}</td></tr>
+        ${r.stability ? `<tr><td>Stability: before / from ${esc(r.stability.split_date)}</td><td class="num ${r.stability.same_sign ? '' : 'neg'}">${sgn(r.stability.early_mean, 2)}% / ${sgn(r.stability.late_mean, 2)}%${r.stability.same_sign ? '' : ' (flips)'}</td></tr>` : ''}
+        ${r.overlap_dropped?.length ? `<tr><td>Overlapping events merged</td><td class="num">${r.overlap_dropped.length}</td></tr>` : ''}
+        ${eventDayVerdict(r.type) ? `<tr><td>Event-day check</td><td>${esc(eventDayVerdict(r.type))}</td></tr>` : ''}
+      </tbody></table>
       ${r.persistence !== null && r.persistence !== undefined ? `<div class="fine">1-month move is ${fmt(r.persistence * 100, 0)}% of the best-window move (${r.persistence > 0.7 ? 'persists' : r.persistence < 0.3 ? 'fades' : 'partly fades'}).</div>` : ''}
       ${r.note ? `<div class="fine warn">${esc(r.note)}</div>` : ''}
       <div class="d-section-title" style="margin-top:12px">Instruments at ${esc(r.optW || '—')}</div>
@@ -363,6 +375,11 @@ function btDetail(r) {
           wl.map(w => `<td class="num ${moveCls(e.returns[w])}">${e.returns[w] !== undefined ? sgn(e.returns[w], 1) : '—'}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
     </div>
   </div>`;
+}
+
+function eventDayVerdict(type) {
+  const t = state.verification?.eventvol?.types?.find(x => x.type === type);
+  return t ? `${t.verdict} (median |z| on day 0: ${t.mean_abs_z['0']}, day −1: ${t.mean_abs_z['-1']})` : '';
 }
 
 el('bt-tbody').addEventListener('click', e => toggleBt(e.target.closest('.bt-row')));
@@ -456,9 +473,9 @@ function compileRules() {
   }));
   return state.compiled;
 }
-const AMBIGUOUS = new Set(['target', 'meta', 'apple', 'amazon', 'ford', 'lilly', 'stat', 'kla', 'gm', 'real', 'vertex', 'abbott']);
 const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 function findCompanies(text) {
+  const AMBIGUOUS = new Set(state.taxonomy.classifier.ambiguous_aliases);
   const out = [];
   const aliases = Object.entries(state.taxonomy.company_aliases).sort((a, b) => b[0].length - a[0].length);
   for (const [name, tkr] of aliases) {
@@ -470,7 +487,8 @@ function findCompanies(text) {
   return out;
 }
 function classifyHeadline(title) {
-  const MEGA = new Set(['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'META', 'NVDA', 'TSLA', 'NFLX']);
+  const cfg = state.taxonomy.classifier;
+  const MEGA = new Set(cfg.megacaps), LATER = new Set(cfg.resolvable_later);
   const results = [];
   for (const c of compileRules() || []) {
     const failed = c.all.findIndex(r => !r.test(title));
@@ -483,9 +501,10 @@ function classifyHeadline(title) {
       if (c.t.id.startsWith('megacap_earnings')) tickers = tickers.filter(t => MEGA.has(t));
     }
     const needsT = (c.t.company_specific && !c.t.default_tickers.length) || c.t.id.startsWith('megacap_earnings') || c.t.id === 'currency_devaluation';
+    const unresolved = needsT && !tickers.length && LATER.has(c.t.id);
     const boosts = c.boost.filter(r => r.test(title)).length;
-    const score = Math.min(97, 62 + 6 * c.all.length + 8 * boosts);
-    results.push({t: c.t, ok: failed < 0 && !veto && !(needsT && !tickers.length), failed, veto, tickers, score});
+    const score = Math.min(97, 62 + 6 * c.all.length + 8 * boosts) - (unresolved ? cfg.unresolved_penalty : 0);
+    results.push({t: c.t, ok: failed < 0 && !veto && !(needsT && !tickers.length && !unresolved), failed, veto, tickers, score, unresolved});
   }
   return results;
 }
@@ -501,7 +520,8 @@ function runTry() {
   if (hit) {
     const rows = (state.backtest?.rows || []).filter(r => r.type === hit.t.id);
     html += `<div class="try-hit"><div><b>${esc(hit.t.label)}</b> <span class="muted">${esc(hit.t.cat)} · match ${hit.score}</span>
-      ${hit.tickers.length ? hit.tickers.map(t => `<span class="co-chip">${esc(t)}</span>`).join('') : ''}</div>
+      ${hit.tickers.length ? hit.tickers.map(t => `<span class="co-chip">${esc(t)}</span>`).join('') : ''}
+      ${hit.unresolved ? '<span class="muted">company not named: the pipeline attaches this to a same-day cluster that names it</span>' : ''}</div>
       <table class="mini-table"><thead><tr><th>Market</th><th>Direction</th><th>Best</th><th>Avg move</th><th>Hit</th><th>Conf</th><th>Events</th></tr></thead><tbody>${
         rows.map(r => `<tr><td>${esc(r.mkt)} <span class="muted">${esc(r.name)}</span></td><td>${dirPill(r.dir)}</td><td>${esc(r.optW || '—')}</td><td class="${moveCls(r.move)}">${sgn(r.move, 2)}%</td><td>${fmt(r.cons, 0)}%</td><td class="${confCls(r.conf)}">${esc(r.conf)}</td><td>${r.samples}</td></tr>`).join('')}</tbody></table></div>`;
   } else {
@@ -533,8 +553,8 @@ function renderMethod() {
         <li>Daily closes only, so moves within the day are not measured. A "1d" move runs from the close before the event to the close of the first session that could react.</li>
         <li>Sample sizes are small (5–40 events per type). Most results are "Low" confidence, and the page says so instead of hiding it.</li>
         <li>The earnings, FDA, recall and AI-launch catalogs were partly picked because the stock moved a lot, so their magnitudes are inflated. These rows are flagged "selection-biased".</li>
-        <li>Picking the best of 5 windows inflates significance. Confidence levels use a Bonferroni-adjusted p-value, but no out-of-sample test was done.</li>
-        <li>Yahoo daily FX bars can sit about one day off around London midnight, so 1-day FX results are noisier than multi-day ones.</li>
+        <li>Confidence comes from a placebo test: the whole procedure, including picking the best of 5 windows, is re-run on 300 sets of random dates. On fake events about 10% of rows still reach Med, by design, so read Med as "worth a look" and the ★ (survives false-discovery control) as the robust set.</li>
+        <li>Major FX pairs use the Fed's 12:00 ET (H.10) rates, which have a known timestamp. Other currencies use Yahoo bars, whose close time isn't documented, so their 1-day window is not used.</li>
         <li>Event dates were researched by hand. Report errors by editing the catalog JSON.</li>
         <li>This is research tooling, not investment advice.</li>
       </ul></div>
@@ -545,6 +565,7 @@ python3 -m unittest discover -s tests
 python3 -m http.server 8000</pre>
       <p>The first rebuilds <code>backtest.json</code> (about 3 minutes, mostly price downloads). The second fetches news into <code>signals.json</code>. Then open <code>localhost:8000</code>.</p>
       <p>Python 3.9+ standard library only. The optional Claude layer needs <code>pip install anthropic</code> and <code>ANTHROPIC_API_KEY</code> (in GitHub: Settings → Secrets → Actions).</p></div>`;
+  el('method-body').insertAdjacentHTML('beforeend', renderVerification());
   el('score-weights').innerHTML = (state.taxonomy?.score_weights || []).map(w => `
     <div class="weight-row">
       <span class="weight-name">${esc(w.name)}</span>
@@ -552,6 +573,35 @@ python3 -m http.server 8000</pre>
       <span class="weight-pct">${w.pct}%</span>
       <span class="weight-desc">${esc(w.desc)}</span>
     </div>`).join('');
+}
+
+function renderVerification() {
+  const v = state.verification;
+  if (!v || !v.generated) return '<div class="panel pad"><div class="ig-title">Verification</div><p class="muted">No verification report yet. Run <code>python3 -m pipeline.verify</code>.</p></div>';
+  const c = v.classifier, x = v.xsource || [], e = v.eventvol, pl = v.placebo, ln = v.links;
+  const verdicts = {};
+  (e?.types || []).forEach(t => { verdicts[t.verdict] = (verdicts[t.verdict] || 0) + 1; });
+  return `
+  <div class="panel pad verify-panel"><div class="ig-title">Verification · run ${esc(ago(v.generated))}</div>
+    ${c ? `<h4>Classifier on blind held-out headlines</h4>
+      <p>${c.annotators.items} real headlines labelled independently by two annotators who never saw the rules (agreement ${Math.round(c.annotators.agreement * 100)}%, Cohen's κ ${fmt(c.annotators.cohen_kappa, 2)}). Rules were tuned on the dev half only.</p>
+      <table class="mini-table"><thead><tr><th>Split</th><th>Precision</th><th>Recall</th><th>F1</th></tr></thead><tbody>
+        <tr><td>Test (never tuned on)</td><td>${fmt(c.gold_test.precision, 2)}</td><td>${fmt(c.gold_test.recall, 2)}</td><td><b>${fmt(c.gold_test.f1, 2)}</b></td></tr>
+        <tr><td class="muted">Test, before tuning</td><td class="muted">${fmt(c.baseline_before_holdout_tuning.gold_test.precision, 2)}</td><td class="muted">${fmt(c.baseline_before_holdout_tuning.gold_test.recall, 2)}</td><td class="muted">${fmt(c.baseline_before_holdout_tuning.gold_test.f1, 2)}</td></tr>
+        <tr><td>Researched catalog headlines (recall)</td><td>—</td><td>${fmt(c.catalog.recall, 2)}</td><td>—</td></tr>
+      </tbody></table>` : ''}
+    ${x.length ? `<h4>Price data vs an independent source (FRED)</h4>
+      <table class="mini-table"><thead><tr><th>Yahoo</th><th>FRED</th><th>Corr lag −1 / 0 / +1</th><th>Event-day sign agree</th></tr></thead><tbody>${
+        x.filter(r => !r.error).map(r => `<tr><td>${esc(r.yahoo)}</td><td>${esc(r.fred)}</td><td class="num">${fmt(r.corr_by_lag['-1'], 2)} / <b>${fmt(r.corr_by_lag['0'], 2)}</b> / ${fmt(r.corr_by_lag['1'], 2)}</td><td class="num">${fmt(r.event_sign_agreement * 100, 0)}%</td></tr>`).join('')}</tbody></table>
+      <p class="fine">Equity indices match exactly. Yahoo FX bars only partly match the Fed's noon rates, so the backtest uses the FRED series for major FX.</p>` : ''}
+    ${e ? `<h4>Event dates: does the market move on the reaction day?</h4>
+      <p>Median |standardised move| from 2 sessions before to 2 after: ${['-2', '-1', '0', '1', '2'].map(k => `<span class="${k === '0' ? 'pos' : ''}">${k}: ${fmt(e.overall_median[k], 2)}</span>`).join(' · ')}</p>
+      <p class="fine">${Object.entries(verdicts).map(([k, n]) => `${n} types: ${esc(k)}`).join('<br>')}</p>
+      ${e.suspects.length ? `<details><summary class="fine">${e.suspects.length} events moved more the session before (anticipation or misdating)</summary>${e.suspects.map(s => `<div class="fine">${esc(s.date)} ${esc(s.type)}: ${esc(s.headline)} (|z| ${s.z_prev} before vs ${s.z_event} on the day)</div>`).join('')}</details>` : ''}` : ''}
+    ${pl ? `<h4>Calibration on real prices</h4>
+      <p>${pl.fake_types} fake event types with random dates on real instruments: ${Math.round(pl.med_or_high_rate * 100)}% labelled Med/High, ${Math.round(pl.high_rate * 100)}% High (about 10% Med is expected by design).</p>` : ''}
+    ${ln ? `<h4>Catalog sources</h4><p>${ln.ok}/${ln.urls} source links resolve, ${ln.bot_blocked} block automated checks, ${ln.broken.length} failing.</p>` : ''}
+  </div>`;
 }
 
 // ─── init ────────────────────────────────────────────────────────────────────

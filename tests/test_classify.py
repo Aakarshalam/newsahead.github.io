@@ -22,6 +22,8 @@ POSITIVE = [
     ("CPI inflation slows to 3.0%, below forecasts", "us_cpi_cool"),
     ("US nonfarm payrolls surge by 517,000 in January, smashing estimates", "nfp_strong_beat"),
     ("US October Nonfarm Payrolls Surge by 165,000", "nfp_strong_beat"),
+    # Both blind annotators labelled this the payrolls release, not Fed speculation:
+    ("Fed Rate Hike Bets Rise After Blowout Jobs Report", "nfp_strong_beat"),
     ("US job growth slows sharply as payrolls miss estimates, rising just 12,000", "nfp_big_miss"),
     ("Nvidia beats estimates as data center revenue soars", "megacap_earnings_beat"),
     ("Meta shares plunge after Facebook parent misses on earnings and gives weak guidance", "megacap_earnings_miss"),
@@ -71,7 +73,6 @@ NEGATIVE = [
     "Daly says Fed rate hike likely, despite 'painful' tech-stock dive",
     "Federal Reserve's Hammack, Barkin favour gradual rate-hike path to lower inflation",
     "The Federal Reserve is facing new pressures to raise interest rates following U.S. jobs data",
-    "Fed Rate Hike Bets Rise After Blowout Jobs Report",
     "Fed holds rates steady, signals two cuts later this year",
     "Will the Fed cut rates in September?",
     "What to expect from Thursday's CPI report",
@@ -131,8 +132,12 @@ class TestClassifier(unittest.TestCase):
         self.assertIn("TGT", classify.find_companies("Target shares slide"))
         self.assertIn("JNJ", classify.find_companies("Johnson & Johnson wins approval"))
 
-    def test_company_specific_requires_company(self):
-        self.assertIsNone(classify.classify_rules(dict(id="t", title="FDA approves new drug for rare disease", summary="")))
+    def test_company_specific_without_company(self):
+        # earnings need a named mega-cap
+        self.assertIsNone(classify.classify_rules(dict(id="t", title="Quarterly earnings beat estimates", summary="")))
+        # FDA events are kept but flagged unresolved, to be attached to a cluster naming the company
+        got = classify.classify_rules(dict(id="t", title="FDA approves new drug for rare disease", summary=""))
+        self.assertEqual((got["type"], got["unresolved"]), ("fda_approval", True))
 
     def test_megacap_only(self):
         got = classify.classify_rules(dict(id="t", title="Pfizer beats earnings estimates", summary=""))

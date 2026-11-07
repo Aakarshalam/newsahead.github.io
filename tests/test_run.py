@@ -90,5 +90,30 @@ class TestIngest(unittest.TestCase):
             self.assertTrue(os.path.exists(os.path.join(self.tmp, name)), name)
 
 
+
+class TestUnresolvedAttach(TestIngest):
+    # inherits fixtures; skip re-running the parent's tests
+    test_clusters_scores_and_tracks = test_rerun_is_idempotent = test_outputs_exist_for_frontend = None
+
+    def test_unresolved_fda_attaches_to_single_cluster(self):
+        self.articles = [
+            _article("Johnson & Johnson wins FDA approval for Rybrevant", "Reuters", 5),
+            _article("FDA approves amivantamab for head and neck cancer", "STAT", 4),
+        ]
+        prices._mem["JNJ"] = _series("JNJ", 150, 0.001)
+        prices._mem["XBI"] = _series("XBI", 90, 0.0005)
+        try:
+            sigs = self._ingest()
+        finally:
+            prices._mem.pop("JNJ", None)
+            prices._mem.pop("XBI", None)
+        self.assertEqual(len(sigs), 1)
+        self.assertEqual(sigs[0]["companies"], ["JNJ"])
+        self.assertEqual(sigs[0]["coverage"], 2)
+
+    def test_unresolved_alone_is_dropped(self):
+        self.articles = [_article("FDA approves amivantamab for head and neck cancer", "STAT", 4)]
+        self.assertEqual(self._ingest(), [])
+
 if __name__ == "__main__":
     unittest.main()

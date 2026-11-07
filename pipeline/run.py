@@ -55,6 +55,9 @@ def export_taxonomy():
         markets=taxonomy.MARKETS, windows=[w for w, _ in backtest.WINDOWS],
         score_weights=taxonomy.SCORE_WEIGHTS,
         company_aliases=taxonomy.COMPANY_ALIASES, currency_aliases=taxonomy.CURRENCY_ALIASES,
+        # constants the in-browser classifier must share with pipeline/classify.py
+        classifier=dict(megacaps=sorted(classify.MEGACAPS), ambiguous_aliases=sorted(classify.AMBIGUOUS),
+                        resolvable_later=sorted(classify.RESOLVABLE_LATER), unresolved_penalty=classify.UNRESOLVED_PENALTY),
         source_credibility=taxonomy.SOURCE_CREDIBILITY, geo_scope=taxonomy.GEO_SCOPE,
         types=[{k: t[k] for k in ("id", "label", "cat", "geo", "patterns", "company_specific", "default_tickers", "benchmark", "note", "outcome_selected")}
                | {"impacts": [{"mkt": i["mkt"], "name": i["name"], "instruments": i["instruments"]} for i in t["impacts"]]}
@@ -76,9 +79,11 @@ def cmd_backtest(log=print):
         generated=now_utc().isoformat(timespec="seconds"),
         method=dict(windows=[w for w, _ in backtest.WINDOWS],
                     description="Event study on daily closes. Reference = close before the first session able to react. "
-                                "Company-specific types are market-adjusted vs a benchmark; others are drift-adjusted "
-                                "(minus the instrument's average return over the same horizon). Optimal window = largest |t|; "
-                                "confidence uses a Bonferroni-adjusted p-value across windows."),
+                            "Company-specific types are market-adjusted vs a benchmark; others are drift-adjusted. Major FX "
+                            "pairs use the Fed's 12:00 ET H.10 rates. Same-type events within 4 days are merged (their windows "
+                            "overlap). Best window = largest volatility-standardised (BMP) |t|. Confidence comes from a placebo "
+                            "test that re-runs the whole procedure on random dates; q-values control the false discovery rate "
+                            "across all rows."),
         event_counts=counts, catalog_problems=len(problems), rows=rows))
     export_taxonomy()
     log(f"Wrote data/backtest.json ({len(rows)} rows) in {time.time() - t0:.0f}s")
@@ -242,12 +247,26 @@ def cmd_ingest(log=print, use_claude=None):
     log(f"Classified {len(cls_map)} of {len(new_articles)} new articles as events"
         + (" (rules + Claude)" if claude_used else " (rules only)"))
 
-    added, dups = 0, 0
-    for a in sorted(new_articles, key=lambda x: x["published"]):
+    added, dups, unresolved = 0, 0, 0
+    # Resolved articles first, so unresolved ones ("FDA approves amivantamab") can
+    # attach to the cluster that names the company.
+    ordered = sorted(new_articles, key=lambda x: (bool((cls_map.get(x["id"]) or {}).get("unresolved")), x["published"]))
+    for a in ordered:
         cls = cls_map.get(a["id"])
         if not cls:
             continue
         pub = dt.datetime.fromisoformat(a["published"])
+        if cls.get("unresolved"):
+            cands = [s for s in signals if s["type"] == cls["type"]
+                     and abs((pub - dt.datetime.fromisoformat(s["published"])).total_seconds()) < 86400]
+            if len(cands) != 1:
+                unresolved += 1   # can't tell which company: don't guess
+                continue
+            cands[0]["coverage"] = cands[0].get("coverage", 1) + 1
+            if a["publisher"] not in cands[0]["also_reported_by"] and a["publisher"] != cands[0]["publisher"]:
+                cands[0]["also_reported_by"].append(a["publisher"])
+            dups += 1
+            continue
         key = cluster_key(cls["type"], cls)
         dup = next((s for s in signals if s.get("cluster_key", s["type"]) == key
                     and 0 <= (pub - dt.datetime.fromisoformat(s["published"])).total_seconds() < 86400), None)
@@ -269,7 +288,7 @@ def cmd_ingest(log=print, use_claude=None):
                  if s["type"] == cls["type"] and 86400 <= (pub - dt.datetime.fromisoformat(s["published"])).total_seconds() < 7 * 86400}
         signals.append(build_signal(a, cls, bt_rows, list(prior)))
         added += 1
-    log(f"Added {added} signals ({dups} articles merged into existing event clusters)")
+    log(f"Added {added} signals ({dups} articles merged into existing event clusters, {unresolved} unresolved dropped)")
 
     log("Tracking realized moves")
     prices.CACHE_HOURS = 0.5  # live tracking needs today's closes, not the backtest's 12h cache
@@ -291,7 +310,7 @@ def cmd_ingest(log=print, use_claude=None):
     run_stats = dict(
         finished=now_utc().isoformat(timespec="seconds"), duration_s=round(time.time() - t0, 1),
         articles=len(articles), new_articles=len(new_articles), classified=len(cls_map),
-        signals_added=added, duplicates=dups, claude=claude_used,
+        signals_added=added, duplicates=dups, unresolved_dropped=unresolved, claude=claude_used,
         by_type={t: sum(1 for c in cls_map.values() if c["type"] == t) for t in {c["type"] for c in cls_map.values()}})
     pipe = read_json("pipeline.json", {"runs": []})
     runs = ([run_stats] + pipe.get("runs", []))[:50]

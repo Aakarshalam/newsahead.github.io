@@ -63,6 +63,61 @@ def _fetch(symbol, start=dt.date(2000, 1, 1)):
     raise PriceError(f"{symbol}: {last}")
 
 
+# FRED's CDN stalls requests with a browser-like UA that isn't a browser; an honest
+# bot UA is answered immediately (verified 2026-11-07). Yahoo is the opposite.
+BOT_UA = {"User-Agent": "NewsAlpha/1.0 (+https://newsahead.github.io)"}
+
+
+def fetch_text(url, attempts=4, timeout=40, headers=BOT_UA):
+    """GET with retries and exponential backoff; raises PriceError after the last attempt."""
+    last = None
+    for k in range(attempts):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=timeout) as r:
+                return r.read().decode()
+        except Exception as e:  # noqa: BLE001 - network errors of every kind
+            last = e
+            time.sleep(2 ** k)
+    raise PriceError(f"{url}: {type(last).__name__}: {last}")
+
+
+FRED_CACHE = os.path.join(os.path.dirname(__file__), ".cache", "fred")
+
+
+def fred_csv(series_id, max_age_hours=12):
+    """FRED CSV text, cached on disk. If FRED is unreachable, fall back to the last
+    good copy (however old) rather than failing the whole run."""
+    os.makedirs(FRED_CACHE, exist_ok=True)
+    path = os.path.join(FRED_CACHE, series_id + ".csv")
+    fresh = os.path.exists(path) and time.time() - os.path.getmtime(path) < max_age_hours * 3600
+    if not fresh:
+        try:
+            text = fetch_text(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}", attempts=3)
+            if text.count("\n") > 10:
+                with open(path, "w") as f:
+                    f.write(text)
+                return text
+        except PriceError:
+            if not os.path.exists(path):
+                raise
+            print(f"  FRED {series_id} unreachable; using cached copy from "
+                  f"{time.strftime('%Y-%m-%d %H:%M', time.localtime(os.path.getmtime(path)))}", flush=True)
+    with open(path) as f:
+        return f.read()
+
+
+def _fetch_fred(series_id):
+    lines = fred_csv(series_id).splitlines()[1:]
+    out = []
+    for ln in lines:
+        d, _, v = ln.partition(",")
+        if v and v != "." and d >= "2000-01-01":
+            out.append((d, float(v)))
+    if not out:
+        raise PriceError(f"FRED:{series_id}: empty")
+    return out
+
+
 def get_series(symbol, max_age_hours=None):
     """Return [(iso_date, close), ...] for symbol, using the disk cache."""
     if max_age_hours is None:
@@ -76,7 +131,7 @@ def get_series(symbol, max_age_hours=None):
             raise PriceError(cached["error"])
         return [tuple(x) for x in cached["series"]]
     try:
-        series = _fetch(symbol)
+        series = _fetch_fred(symbol[5:]) if symbol.startswith("FRED:") else _fetch(symbol)
     except PriceError as e:
         with open(path, "w") as f:
             json.dump({"error": str(e)}, f)

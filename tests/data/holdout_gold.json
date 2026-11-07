@@ -1,0 +1,3702 @@
+{
+ "created": "2026-11-06",
+ "description": "Real headlines from 19 feeds (5-6 Nov 2026), labelled blind by two independent annotators who saw only event-type definitions. gold = agreed label; disputed items have gold=null and are excluded from metrics. Rules may be tuned on split=dev only; split=test is reported.",
+ "items": [
+  {
+   "title": "Workers' rights 'second place' to economic growth",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "NI weapons giant recruiting for dozens of roles amid Ukraine missile ramp-up",
+   "publisher": "Belfast Telegraph",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Data centers run on debt. That was a problem for bonds this year — and it’s only going to get worse.",
+   "publisher": "MarketWatch",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Stable Labor Market Keeps Fed on Track to Raise Rates Gradually",
+   "publisher": "The New York Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "FDA Grants Accelerated Approval to Rybrevant Faspro in Head and Neck Cancer",
+   "publisher": "Pharmaceutical Executive",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "dev"
+  },
+  {
+   "title": "Euro Slips Toward 1.12 Ahead of ECB & US Jobs Report",
+   "publisher": "TradingPedia",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Global Partners LP Q3 2026 Earnings Call Summary",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Europe’s Escalation-Control Gap",
+   "publisher": "RealClearWorld",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Iran Tells Houthis to Close Red Sea Gateway if US Hits Power Network, Sources Say",
+   "publisher": "EnergyNow.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "America's economy delivers stunning surprise as 165,000 new jobs offer Wall Street a lifeline after historic market crash",
+   "publisher": "Daily Mail",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "'I've taken an extra job to pay for heating oil'",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Welsh aviation firm AerFin bought in £475m deal",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "IEA Sees 4,800 GW of New Renewables by 2031",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Charlie Bilello Says “Some Sanity Has Returned to the Market.” What That Means for Your Portfolio",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Bab al-Mandab ship traffic shows signs of recovery: report",
+   "publisher": "Gulf News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Zelenskyy pushes for 'clear' postwar security guarantees in Ukraine",
+   "publisher": "PBS",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Vistra Corp. Q3 2026 Earnings Call Summary",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "US Payroll Revisions Boost December Rate-Hike Bets",
+   "publisher": "Blockonomi",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The US economy added 165,000 jobs in October and the unemployment rate fell",
+   "publisher": "CNN",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "Trump’s Iran Strategy Reaches a Critical Crossroads After Midterm Defeat",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Asia fuel oil benchmarks slump as market prices in potential Iran war de-escalation",
+   "publisher": "TradingView",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "What Black Hills (BKH) Said on Its Q3 Earnings Call",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The AI boom isn't wiping out white-collar workers — but it's changing the skills you need to get ahead",
+   "publisher": "Business Insider",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Verdicts for Summit/Akeso, Capricor, Vertex mark FDA’s stacked November",
+   "publisher": "BioSpace",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "'Risk Of New Escalation': Russia Warns Its Citizens To Avoid Crowds & Military Sites In New Alert",
+   "publisher": "The Times of India",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "US economy added 165,000 jobs in October, beating expectations",
+   "publisher": "The Hill",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "ONGC Moves to Take Over Venezuelan Oilfields, Recover $500 Million",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "J&J Wins FDA Accelerated Approval for Rybrevant Faspro in Head and Neck Cancer, First New Option in a Decade",
+   "publisher": "BigGo Finance",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "Nvidia Stock, Other AI Names Rebound After Sell-Off",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The Fed Begins Transition to Holding Fewer Policy Meetings a Year",
+   "publisher": "Bloomberg.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Interpath executive in talks over Grant Thornton switch after tensions",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Israel closes Hebron’s Ibrahimi Mosque to Palestinians for Jewish holiday",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Why Amivantamab's Approval Matters to Formulators",
+   "publisher": "PharmTech.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Fed policymakers consider rate hike after strong jobs report",
+   "publisher": "Reuters",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "MORE ECB'S LANE: GOVERNING COUNCIL CONSIDERED TIGHTER FINANCIAL CONDITIONS AND REDUCED FUTURE FISCAL SPENDING WHEN DECIDING TO HOLD RATES IN OCT",
+   "publisher": "TradingView",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Why smoky bacon crisps threaten to reignite rows over EU rules",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "October jobs shock seals case for December Fed rate hike",
+   "publisher": "Mortgage Professional America",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "UK retail investors buy the dip after bruising tech sell-off",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "FDA Grants Accelerated Approval to Amivantamab and Hyaluronidase for Previously Treated HNSCC",
+   "publisher": "The ASCO Post",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "Boryung advances 3rd-generation targeted cancer drug BR1500 toward US FDA approval",
+   "publisher": "머니투데이",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "US city votes to divest from Israel",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5%",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "St. Louis Fed President Warns Inflation Is a \"Regressive Tax\"; December Rate Hike Expectations Strengthen",
+   "publisher": "BigGo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Piero Cipollone: Shaping the future of money",
+   "publisher": "ECB",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "How does it affect me if share prices fall?",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Tanzanian opposition leader jailed in ‘politically motivated’ case",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Protesters break into Microsoft data centre site in Amsterdam",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "A disturbing employment trend is hiding beneath the latest strong job numbers",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Nasdaq rebounds 1% following worst session in 18 months as traders snap up tech shares: Live updates",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Winter support for residents facing cost pressures",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Anthropic to press ahead with IPO targeting $1.5tn valuation",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Crossmark Global's Bob Doll on jobs report: The economy is in good shape",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Micron’s stock is dirt cheap — and that’s igniting a fierce online debate",
+   "publisher": "MarketWatch",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Food bank to close amid rising costs",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "An Adventurous Amazon ETF Worth Examining",
+   "publisher": "ETF Database",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "US job growth exceeds expectations in October despite economic uncertainty",
+   "publisher": "The Guardian",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "UAE foreign minister urges de-escalation in call with Iranian counterpart — The National",
+   "publisher": "UA.NEWS",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Nvidia Stock Forecast: China Shipment Delays Put $173.69 in Focus",
+   "publisher": "TradingKey",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "U.S. continues to generate jobs, yet inflation is eroding Americans' spending power",
+   "publisher": "PBS",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Dollar surges after robust jobs report fuels rate hike expectations",
+   "publisher": "The San Joaquin Valley Sun",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "Johnson & Johnson secures FDA approval for RYBREVANT FASPRO in head and neck cancer",
+   "publisher": "Manufacturing Chemist",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "Watch the Annual Meeting: Cramer on the fate of the AI buildout and stocks to buy now",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Jobs report shows hiring accelerated in October - ABC News",
+   "publisher": "ABC News - Breaking News, Latest News and Videos",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "Tariff-free extension with China brings Canadian producers ‘certainty in an uncertain time’",
+   "publisher": "CTV News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Egypt, UAE Discuss Sudan, Iran Crises, and Urge Efforts to Prevent Regional Escalation",
+   "publisher": "Sada Elbalad English",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "ECB Eyes Data Before December Rate Decision",
+   "publisher": "Briefs Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Sen. Chris Murphy released from hospital after stroke, will miss votes for 'several weeks' as he rehabs",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Trump says Stephen Miller to replace Susie Wiles as White House chief of staff",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Mediazona names at least 350 Russian conscripts killed in Ukraine despite official Kremlin policy against sending them into combat",
+   "publisher": "Meduza",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Trump Dials Qatar to Discuss Iran War De-Escalation as Tehran Sets 7 Demands for U.S. Talks, Tells JD Van",
+   "publisher": "Benzinga",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Rocket launcher deal illustrates deepening Russia-Iran relations",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Intellia: Quiet Q3 Earnings As All Eyes Turn To March 2027 Approval Decision",
+   "publisher": "Seeking Alpha",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "AI stocks climb after trillions wiped from market values",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Bank Of America Sets $370 Target On Apple (NASDAQ: AAPL) Anchored To 2028 Earnings Outlook",
+   "publisher": "Foreign Policy Journal",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Missile War Monitor: Ukrainian drones reportedly set Russia's Afipsky refinery ablaze as Russia sends 227 drones at Ukraine",
+   "publisher": "IntelliNews",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "US October Nonfarm Payrolls Surge by 165,000; Traders Bet on Fed Rate Hike in December",
+   "publisher": "BigGo Finance",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "U.S. economy added 165,000 jobs in October, way more than expected; unemployment rate slips to 4.1%",
+   "publisher": "CNBC",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "FDA Approves SC Amivantamab for Recurrent/Metastatic HNSCC",
+   "publisher": "CancerNetwork",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "October jobs report shows strong hiring on the back of robust growth",
+   "publisher": "The Real Economy Blog",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "Food, fuel and taxes – can the Democrats actually make life cheaper?",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "A Trump-Xi Deal Could Revive US Energy Exports to China",
+   "publisher": "EnergyNow.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "What to Expect From the October Jobs Report",
+   "publisher": "Kiplinger",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Should You Be Worried About Booking Holdings Stock?",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Apple Defends Google Search Payments as US Antitrust Appeal Advances - Brand Spur",
+   "publisher": "Brand Spur",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "India successfully tests its own quasi-ballistic missile: Launch video",
+   "publisher": "RBC-Ukraine",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Lack of political will in US behind delays in Patriot missile supplies to Ukraine – Finnish defense minister",
+   "publisher": "Ukrinform",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Word on Wall Street: Solid Economic Readings but Inflation Remains a Concern | Wyncote Wealth Management Group",
+   "publisher": "Glenside Local",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "S&P Global cuts Poland’s outlook to negative on surging debt and political impasse",
+   "publisher": "Yahoo Finance Singapore",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Federal Reserve rate hike bets strengthen as US jobs growth beats estimates",
+   "publisher": "The Economic Times",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "Death toll from Russian airstrike on Ukraine aid distribution site rises to 53",
+   "publisher": "Hromadske",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Shipping Firms Seek Houthi Approval to Cross Bab el-Mandeb",
+   "publisher": "Demokratis.co.id",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "US presses China to honor Busan trade truce as rare earth shipments fall short.",
+   "publisher": "investingLive",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Hiring rebound expected in new US jobs data, though inflation is eroding the American paycheck",
+   "publisher": "myMotherLode.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Monzo explores fundraising at £7.5bn valuation as private equity talks stall",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Soybeans Market: China Links US Farm Buys to Tariff Deal — CMB News",
+   "publisher": "CMB News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "China Extends Tariff-Free Canadian Canola Meal Access to 2028 - News and Statistics",
+   "publisher": "IndexBox",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Ukraine needs German missiles to hunt Russian launchers",
+   "publisher": "The New Voice of Ukraine",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "China to keep anti-dumping, anti-subsidy tariffs on US n-Propanol imports for five more years By Reuters",
+   "publisher": "Investing.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Anthropic IPO announcement odds drop on Kalshi following midterms and AI sell-off",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "14 New Weight Loss Drugs",
+   "publisher": "GoodRx",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Google-backed miner reveals $710M profit, operating loss surges 257%",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "How will the US midterm elections impact Washington's policy in Asia?",
+   "publisher": "Vietnam.vn",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Markets fret over growth and inflation, just as tech rout gains speed",
+   "publisher": "Reuters",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "To Cross the Red Sea, Shippers Email Houthi Rebels. Read Their Inbox.",
+   "publisher": "WSJ",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Oil nears $100 as US-Iran military escalation fears grow",
+   "publisher": "Mettis Global",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Japanese stocks post biggest one-day fall since ‘liberation day’ chaos",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Lebanese pack bags and stock up amid fears of new Israeli escalation",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Oil prices rise amid risk of escalation between the US and Iran — CNBC",
+   "publisher": "UA.NEWS",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The AI gamble strains for more cash",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "When does Nvidia report earnings? Tuesday, November 17, after this week's AI stock rout",
+   "publisher": "Nacionale",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Russia’s land gains in Ukraine dwindle as its diesel reportedly goes unsold",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Trump to NTD: ‘A Lot of Things Are Cooking’ to Protect Tariffs and Preserve His Legacy",
+   "publisher": "NTD News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "TGS Reports Higher Nine-Month Revenue Despite Transport Decline",
+   "publisher": "The Globe and Mail",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "What does the raise in interest rates mean?",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The Federal Reserve is facing new pressures to raise interest rates following U.S. jobs data",
+   "publisher": "المتداول العربي",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "US-China Trade: Washington Presses Beijing on Soybean Purchases Ahead of Trump-Xi Talks",
+   "publisher": "AgroLatam",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Voters say the economy drove them to the polls — and blame Trump for their troubles",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "European Buyers Hold Talks to Ship Canadian LNG via Panama Canal to Diversify Supply",
+   "publisher": "EnergyNow",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "US sanctions Nigeria-based entity over Iran missile procurement",
+   "publisher": "Daily Post Nigeria",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Sheinbaum flies to China for APEC — and a date with Xi that could shake everything up",
+   "publisher": "Latin Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "US stocks recover after tech rout",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Russia secretly bolstered Iran's missile arsenal before war with US, records uncover",
+   "publisher": "Fox News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Europe's Grid Spending Is Up 155% Since 2019",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Fed’s Williams says inflation too high, targets 2 percent",
+   "publisher": "The Hill",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Shipping Firms Seek Houthi Approval Before Bab el-Mandab Transit",
+   "publisher": "SuaraGarut.ID",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Drunk and dangerous e-bike riders face on-the-spot fines under crackdown",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Wall Street's fear gauge may be flashing a buy sign",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Telecoms entrepreneur behind ‘breathtaking fraud’ hit with freezing orders",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Stock Market Today, Nov. 6: AMD Surges 11% on Record Quarterly Revenue and Stronger Growth Outlook",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Trump Calls Qatar's Emir Amid Fears Of Renewed US-Iran War, Discusses De-Escalation",
+   "publisher": "Times Now",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "A Retiree Who Bought 1,000 Oracle Shares at $39 Just Watched Microsoft Walk Away",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Further turmoil could be in store for tech stocks. What to watch in the week ahead",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Federal Reserve’s Hammack, Barkin favour gradual rate-hike path to lower inflation",
+   "publisher": "The Business Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Somalia targets China’s 1.4 billion-consumer market with tariff-free access",
+   "publisher": "Dawan Africa",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "US Adds 165,000 Jobs, Topping All Forecasts in Broad Advance",
+   "publisher": "Bloomberg.com",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "IonQ CEO Doubles Down on Vision for Quantum Dominance After Blowout Earnings",
+   "publisher": "Barron's",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Can Democrats challenge Trump’s tariffs on China?",
+   "publisher": "Modern Ghana",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "US LNG Producers Eye Bonanza If Trump and Xi Can Ease Tariffs",
+   "publisher": "EnergyNow.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Apple Hospitality REIT Q3 2026 Earnings Call Transcript",
+   "publisher": "Benzinga",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The AI ‘credit card’ is getting costlier as CoreWeave bond yield tops 16%",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Energy Aspects Slashes Forecast of China’s November Diesel Exports",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "AI, Inflation and National Debt: What’s Next for the Economy?",
+   "publisher": "WIBC 93.1 FM",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Second Generic Venetoclax Wins Final FDA Approval for Leukemia, but Launch Date and Price Remain Unannounced",
+   "publisher": "Medical Daily",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "Trump’s crushing midterm defeat could be a big issue for China.",
+   "publisher": "Dagens.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Satellite Analysis Reveals Iran Fast-Tracking Underground Bunkers and Rebuilding Missile Sites Amid Regional Escalation",
+   "publisher": "OODA Loop",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Iran Warns Against New Escalation by US and Allies - Energy News, Top Headlines, Commentaries, Features & Events",
+   "publisher": "EnergyNow.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "With the U.S. Federal Reserve System (Fed) expected to raise interest rates further, Beth Hammack, p..",
+   "publisher": "매일경제",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Maersk and Hapag-Lloyd Expand Return to Suez Canal Shipping Routes",
+   "publisher": "Beckchoice",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Russian losses in the war with Ukraine. Mediazona count, updated",
+   "publisher": "Mediazona",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Ukraine’s intelligence says Russia holds over 700 ballistic missiles and produces about 110 a month",
+   "publisher": "Defence Industry Europe",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "U.S. October Payrolls Rise 165,000, Beating Forecasts; December Rate Hike Odds Climb to 80%",
+   "publisher": "BigGo Finance",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "FDA Approves Amivantamab for Recurrent or Metastatic HNSCC",
+   "publisher": "Oncology Nursing News",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "dev"
+  },
+  {
+   "title": "Microsoft plans to use fewer neoclouds as AI buildout shows signs of strain",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Anthropic lines up UK retail offer as AI stocks wobble",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Why the US midterms sparked an AI stock selloff",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Jobs blowout shows strength of Trump economy, but wages trail inflation",
+   "publisher": "Politico",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "‘I have no financial safety net’: I’m 66, rely on Social Security and have just $500 in savings. What hope do I have?",
+   "publisher": "MarketWatch",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Week ahead: US inflation, UK GDP and political shifts put markets to the test",
+   "publisher": "Equiti Global",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "FDA Grants Accelerated Approval to Rybrevant Faspro | PharmExec",
+   "publisher": "Pharmaceutical Executive",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "dev"
+  },
+  {
+   "title": "US Economy Adds 165,000 Jobs as December Fed Rate Hike Odds Rise",
+   "publisher": "FinanceFeeds",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "Handguns to missile launchers: The officer leading the IDF's equipment return operation",
+   "publisher": "Israel National News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Coreline Soft's AVIEW Aorta Metrics Gets FDA Approval",
+   "publisher": "www.dicardiology.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "DraftKings slashes earnings guidance as it bets on new prediction-market business",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Who is Stephen Miller, Trump’s new White House chief of staff?",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Shell-Led LNG Canada Could Approve Phase 2 Expansion By Early October",
+   "publisher": "EnergyNow",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "US urges China to honour Busan trade deal commitments",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Chart of the Day: EURUSD Between a Hawkish ECB and a Cautious Fed",
+   "publisher": "XTB.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Conflicting numbers complicate Fed's monetary policy decisions",
+   "publisher": "Axios",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Trump Discusses Ukraine Peace Talks, Potential Escalation in Iran, and Backing Pete Hegseth (Video)",
+   "publisher": "South Florida Reporter",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Jobs report to provide latest snapshot of hiring days after midterms - ABC News",
+   "publisher": "ABC News - Breaking News, Latest News and Videos",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Houthis Say They Targeted Saudi East-West Oil Transport",
+   "publisher": "EnergyNow",
+   "label_a": "middle_east_conflict",
+   "label_b": "middle_east_conflict",
+   "gold": "middle_east_conflict",
+   "split": "dev"
+  },
+  {
+   "title": "Shafaq News..Gold prices drop ahead of US jobs report",
+   "publisher": "شفق نيوز",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The details show October’s jobs report was impressively strong",
+   "publisher": "Washington Examiner",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "Nvidia, AMD and other chip stocks rebound — but is relief from the ‘violent’ selloff only temporary?",
+   "publisher": "MarketWatch",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Experts warn of long-standing economic challenges as inflation rises",
+   "publisher": "NTV Uganda",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Tom Cavanaugh: Johnson & Johnson Announces FDA Approval for New Head and Neck Cancer Treatment",
+   "publisher": "Oncodaily",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "dev"
+  },
+  {
+   "title": "Jensen Huang Says Nvidia's Next-Gen Vera Rubin Chips Will Generate $40 Billion in Revenue per Gigawatt, Up From $25 Billion for Grace Blackwell. What That Means for Nvidia's Growth Runway?",
+   "publisher": "The Motley Fool",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Interest rate hike will damage economy while doing little to fight inflation",
+   "publisher": "New Economics Foundation",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Satellite images point to construction near Iran’s missile bases — BBC News",
+   "publisher": "UA.NEWS",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Kospi Slides as Markets Look to CoreWeave, Nvidia Earnings for AI Outlook",
+   "publisher": "bloomingbit",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "U.S. employers added 165K jobs in October; unemployment rate dips",
+   "publisher": "PennLive.com",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "Farsnews | IRGC Adviser: Iranian Missile Capabilities Indigenous, Enemy Targets within Range",
+   "publisher": "خبرگزاری فارس",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Goats on weed-clearing duty become unlikely Tokyo celebrities",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "This pharmaceutical ETF is outperforming. Why it could keep climbing",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Cenobamate cut generalized tonic-clonic seizures by 71.9% in a Phase 3 trial, but the FDA has not yet approved its expanded use",
+   "publisher": "Medical Daily",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Valencia vs Real Madrid: La Liga – preview, team news, predictions",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Apple Says ICloud User Years Too Late For Antitrust Suit",
+   "publisher": "Law360",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Weekly roundup. Ukraine resists Russia’s invasion. Days 1,713-1,717",
+   "publisher": "Uacrisis.org",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "U.S. adds 165,000 jobs, but wage growth struggles to keep up with inflation",
+   "publisher": "Scripps News",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "Houthis Seize a Key Red Sea Island, Threatening Yet Another Global Oil Route",
+   "publisher": "GV Wire",
+   "label_a": "middle_east_conflict",
+   "label_b": "shipping_lane_disruption",
+   "gold": null,
+   "split": "test"
+  },
+  {
+   "title": "Oil traffic in Suez increases despite conflicts and sanctions",
+   "publisher": "Inspenet",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Major construction near Iran missile sites, satellite images show",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Tesla Stock Has Fallen 29% From Its Record. I Think the Stock Is Overvalued.",
+   "publisher": "The Motley Fool",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "J&J Announces US FDA Approval Of Rybrevant Faspro As First And Only Dual-Targeted Therapy For Advanced Head And Neck Cancer",
+   "publisher": "TradingView",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "dev"
+  },
+  {
+   "title": "PM Carney welcomes ‘any moves’ to restore free trade, Hoekstra predicts deal could come soon",
+   "publisher": "CTV News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Nasdaq drops into correction territory — here’s what typically happens next",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Apple, Alphabet, and Meta: 3 Big Takeaways from Recent Earnings",
+   "publisher": "Zacks Investment Research",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Ukraine prepares new response to Russian strikes on energy infrastructure, Zelenskyy says",
+   "publisher": "RBC-Ukraine",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Migrants arrive in Spain’s Canary Islands after being rescued at sea",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "After a Decade Without a New Option, FDA Approves Amivantamab for Head and Neck Cancer",
+   "publisher": "Oncodaily",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "dev"
+  },
+  {
+   "title": "Credit feels harder to get. Here’s what to do before applying for a new credit card",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Revealed: The hidden cost of the oil price spikes",
+   "publisher": "Gulf News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Robust US jobs market boosts December rate hike chances",
+   "publisher": "ing think",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "Nvidia Shares Trade at $188.41 Ahead of Nov. 17 Earnings Report",
+   "publisher": "www.tokenpost.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Earnings event approaches as Nvidia stock holds gains after heavy selling",
+   "publisher": "Traders Union",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Financial Times: Iran ordered 90 missile launch systems from Russia in 2024-2025",
+   "publisher": "Haberler.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "FDA Approval for RYBREVANT FASPRO issued to JANSSEN BIOTECH",
+   "publisher": "Quantisnow",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "How ‘Street Medics’ protect French protesters",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "India-US trade deal: Democrats may challenge Trump's tariff policies, but will exporters get relief?",
+   "publisher": "Business Today",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Australia's oldest department store David Jones folds after 188 years",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Stock Market Outlook: Nvidia Earnings, Anthropic’s IPO, and the Fed Rate Decision",
+   "publisher": "Barron's",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "ECB Is Gathering Data for Rate Decision in December, Lane Says",
+   "publisher": "Yahoo Finance UK",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "October Jobs Report: Strong Economy, Higher Rates, Trouble For Stocks (SPX)",
+   "publisher": "Seeking Alpha",
+   "label_a": "none",
+   "label_b": "nfp_strong_beat",
+   "gold": null,
+   "split": "test"
+  },
+  {
+   "title": "Trump, Qatar’s Emir Discuss De-Escalation as Saudi Strike Yemen",
+   "publisher": "La Voce di New York",
+   "label_a": "middle_east_conflict",
+   "label_b": "middle_east_conflict",
+   "gold": "middle_east_conflict",
+   "split": "test"
+  },
+  {
+   "title": "My adviser recommended an annuity. Is it the right move in this market environment?",
+   "publisher": "MarketWatch",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Pope Leo arrives in Uruguay starting 12-day Latin America tour",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "'A blowout': US added 165,000 jobs in October, trouncing expectations",
+   "publisher": "Yahoo Finance",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "Oil Prices Tumble On Iran De-Escalation Hopes",
+   "publisher": "Finimize",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Economy Jobs-Report",
+   "publisher": "TelegraphHerald.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "My portfolio returns went from hero to zero (actually I’d take zero)",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "US prosecutor who led Trump-backed election probe exits Justice Department",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "inTEST Corporation Q3 2026 Earnings Call Summary",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Elon Musk announces Tesla will wind down Cybertruck production at Texas factory to make room for Cybercab",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Iran says it downed US MQ-1 drone over Qeshm Island",
+   "publisher": "The Jerusalem Post",
+   "label_a": "middle_east_conflict",
+   "label_b": "middle_east_conflict",
+   "gold": "middle_east_conflict",
+   "split": "test"
+  },
+  {
+   "title": "Economy latest: Tech stocks rebound, October jobs report, gas prices",
+   "publisher": "WQAD",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Asia fuel oil benchmarks slump as market prices in potential Iran war de-escalation, Money News",
+   "publisher": "AsiaOne.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "North Korea Has Its Own S-300 Clone, KN-06, but What Is Known About Its Missiles?",
+   "publisher": "Defense Express",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Oil Traders Want U.S. to Release Sanctioned Tankers as Freight Costs Soar",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "‘I cannot remain neutral’: Lagarde explains early ECB departure",
+   "publisher": "EU Perspectives",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Death toll from Russian bombing of Ukrainian aid point rises to 53, governor says",
+   "publisher": "New York Post",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Arini’s credit troubles suggest roach-hunting season is back",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "The Iran War Isn't Over, but Oil Traders Are Already Pricing In Peace",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Nova Scotia seafood industry relieved as China extends tariff relief for Canadian lobster, crab exports",
+   "publisher": "PNI Atlantic News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "India-US trade deal: What midterm elections mean for trade policy, tariff and export sectors? Experts explain",
+   "publisher": "Livemint",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Friday’s jobs report is expected to show the labor market chugging along",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Mississippi Senate: Longshot Ty Pinkins says he aimed to spoil Hyde-Smith, boost Colom vote",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Trump holds call with mediator Qatar's Emir on de-escalation in Iran war | World News",
+   "publisher": "Hindustan Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Top House Oversight Democrat warns Trump family to 'lawyer up'",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "China to extend anti-dumping, anti-subsidy tariffs on US NPA imports for five years",
+   "publisher": "State Council Information Office",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "How Trump’s unconvincing narrative on Iran lost him the US midterms",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Johnson & Johnson wins FDA approval for Rybrevant cancer treatment",
+   "publisher": "Investing.com",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "US Halts Digital Exchange Activities Over Transactions Linked to Iran, North Korea and Russia",
+   "publisher": "Daily Beirut",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "AI crush is powering one stock to sky-high valuations",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Moderna (MRNA) Wins Canada Approval For Two MRNA Flu Vaccines",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "After midterms, Trump is left to weigh his next move in Iran war that contributed to GOP loss",
+   "publisher": "PBS",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Shipping firms are now emailing Houthis to cross Red Sea safely. Here's how it works",
+   "publisher": "India Today",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "WISEN-Ukraine: tracking four years of wartime environmental harm",
+   "publisher": "The Conflict and Environment Observatory",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Meta Pauses Data-Scraping Terms Following Publisher Criticism",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Moderna (MRNA) Stock Hits 52-Week Highs After Q3 Earnings: Buy, Hold, or Sell?",
+   "publisher": "Zacks Investment Research",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Russia to UAE, Iran steps up diplomacy amid Trump threats: What we know",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Second buyer makes rescue bid for Poundland as retailer faces collapse",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "US Proposes New European Security Framework",
+   "publisher": "Kyiv Post",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "How Russia and China Support the Houthis",
+   "publisher": "The National Interest",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "FDA expands J&J’s Rybrevant Faspro label with head and neck cancer approval",
+   "publisher": "Pharmaceutical Technology",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "dev"
+  },
+  {
+   "title": "Moderna raises 2026 outlook as CEO says newer vaccines are gaining traction",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "The R-word returns: why Australia faces a recession-like squeeze",
+   "publisher": "AFR",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Trump Gets Major Jobs Report Boost After Midterms Rattle Markets",
+   "publisher": "Newsweek",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "Trump mulls three options for Iran - War or de-escalation could come within days",
+   "publisher": "RBC-Ukraine",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Ukraine to resume medical air evacuation flights by year-end, PM says",
+   "publisher": "The Kyiv Independent",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Fed Officials Pointing Toward Additional Interest Rates Hikes to Beat Inflation",
+   "publisher": "TradingView",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Meghan Markle’s father arrested in US over alleged child sex abuse photos",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Two ‘lame ducks’ and the risk of another war with Iran",
+   "publisher": "Ynetnews",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "EU says ‘a lot of work’ remains as US pushes broader Ukraine peace deal",
+   "publisher": "Türkiye Today",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Ukraine again gets U.S. early warnings on missile strikes",
+   "publisher": "朝日新聞",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Three ways the interest rate rise could affect you",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Kenyan officials laud China's zero-tariff policy, eye more cooperation at CIIE",
+   "publisher": "People's Daily Online",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Swinging oil prices highlight majors’ high-quality problem",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Spanish farmers told to keep olive oil off the market after bumper harvest",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "FDA Grants Brukinsa Priority Review After Chemo-Free Regimen Beats Standard Care in Mantle Cell Lymphoma",
+   "publisher": "Tech Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "China’s midterm dilemma: A weaker Trump could mean a tougher Washington for Xi",
+   "publisher": "Firstpost",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "‘It seems bizarre’: We’re in our 80s with $950,000 in traditional IRAs. Why is our adviser pushing Roth conversions?",
+   "publisher": "MarketWatch",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Amivantamab Becomes First FDA-Approved Therapy in 10 Years for Pretreated Recurrent or Metastatic HNSCC",
+   "publisher": "Pharmacy Times",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "America’s Nuclear Revival Is Running Into a Fuel Supply Wall",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Market sell-off hits hard: Advisors say 'stay the course with an eye on buying'",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Wall Street’s “Energy Transition” Funds Are Packed With Natural Gas",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Blowout October payrolls data sets up Federal Reserve December rate rise",
+   "publisher": "Financial Times",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "'Twilight' Adult Animated Series 'Midnight Sun' Gets 2 Season Order at Netflix, According to Lionsgate Earnings Call!",
+   "publisher": "Just Jared",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Trump discusses Middle East de-escalation with Qatar’s emir",
+   "publisher": "Spectrum News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "OpenAI bugging suspect Alfozan pleads not guilty",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "China extends tariffs on propyl alcohol imported from the United States until 2031",
+   "publisher": "Informat.ro",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Spain and the Netherlands battle over ECB presidency",
+   "publisher": "POLITICO.eu",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "ECB publishes consolidated banking data for end-June 2026",
+   "publisher": "ECB",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Iran war latest: UN maritime agency condemns Houthi attacks on international shipping",
+   "publisher": "The National",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Egypt Gas, Cargas Target UAE Expansion With Virtual Gas Pipeline Deal",
+   "publisher": "ChemAnalyst",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Interest rates hiked to 4% in first increase in over three years",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Jobs Report Live Updates: U.S Adds 165,000 Jobs in October, Unemployment Falls to 4.1%",
+   "publisher": "The New York Times",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "Major construction ongoing near Iran missile bases | BBC News",
+   "publisher": "Modern Ghana",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Zacks Research Has Pessimistic Opinion of Tesla Q4 Earnings",
+   "publisher": "MarketBeat",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Suez Canal Revenue Surges 94% to $724 Million as Shipping Traffic Rebounds",
+   "publisher": "Sada Elbalad English",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Stock Market Today: Nasdaq Rallies In Tech Turnaround; Airbnb Rockets Higher",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "A new phase in the tech market correction",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "What the US midterms mean for ties with China",
+   "publisher": "JIJI PRESS",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Poundland owner in crunch talks as retailer's collapse looms",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "China Links $17 Billion US Farm Purchases to Implementation of Reciprocal Tariff Cuts",
+   "publisher": "Tekedia",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Russia moves to let airlines keep flying foreign-leased planes they never returned after the full-scale invasion of Ukraine",
+   "publisher": "Meduza",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Isabel Schnabel: Navigating stormy waters: reflections on monetary policy",
+   "publisher": "ECB",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "FDA Grants Rybrevant Faspro Accelerated Approval for HNSCC",
+   "publisher": "Medscape",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "dev"
+  },
+  {
+   "title": "PM tells firms to publish salaries in job adverts ahead of new law",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "What latest jobs report says about the economy",
+   "publisher": "Modern Ghana",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "FDA Approval for AMJEVITA issued to AMGEN INC",
+   "publisher": "Quantisnow",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "dev"
+  },
+  {
+   "title": "AI stocks like Meta, Nvidia and Microsoft are sliding. Is it time to buy the dip?",
+   "publisher": "The Business Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Microsoft Is Winding Down Oracle Deal to Rent AI Cloud Capacity",
+   "publisher": "Bloomberg.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Ringgit gains as oil prices plunge on hopes of Iran conflict de-escalation",
+   "publisher": "The Vibes",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "FDA Approves Amivantamab and Hyaluronidase for Metastatic HNSCC",
+   "publisher": "OncLive",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "dev"
+  },
+  {
+   "title": "Is the AI stock bubble finally bursting?",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Investors brace for lower Anthropic valuation, calling $1.5 trillion a 'stretch'",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Gulf of Oman Ship-to-Ship Oil Transfers Reach Limit as Saudi Exports Surge",
+   "publisher": "EnergyNow",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Norway’s Oil and Gas Industry Faces a Major Decline Without New Discoveries",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Xeneta forecasts 30% decline in ocean freight spot rates in 2027",
+   "publisher": "safety4sea",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Why Malaysia may still face trade uncertainty after US midterms",
+   "publisher": "South China Morning Post",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Russian Mi-28 Attack Helicopters Are Now Firing Cruise Missiles",
+   "publisher": "TWZ",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Jobs report for October is positive, but economy hasn’t fully recovered: CEI analysis",
+   "publisher": "Competitive Enterprise Institute",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Hot October Jobs Report Raises Odds of December Rate Hike",
+   "publisher": "Morningstar",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "AI debt concerns grow as ING reportedly seeks buyers for $500 million of data center loans",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "NATO Expansion: Root Cause of Russia’s Invasion of Ukraine",
+   "publisher": "CounterPunch.org",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Hyperscalers: AI Investment Will Outpace Near-Term Earnings",
+   "publisher": "Morningstar",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Forget Nvidia. Here’s the Company Behind the Chips",
+   "publisher": "24/7 Wall St.",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Elon Musk appears to signal the end of the road for Cybertruck",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "‘De-extinction’ start-up Colossal accuses ex-staffer of stealing secrets",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Here's a rapid-fire update on all 31 of our stocks, including 2 to buy now",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "My 93-year-old father changed his will at the 11th hour, leaving my brother his entire $500,000 estate. Can I challenge it?",
+   "publisher": "MarketWatch",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Chinese Cars Can’t Cross From Canada to U.S., Trump’s Envoy Says",
+   "publisher": "EnergyNow",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Op-Ed: Canada trade deal would hurt European aluminum buyers",
+   "publisher": "Mining.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The sell-off gets deep",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Iran Warns Its Missiles Could Reach Europe After US Attack",
+   "publisher": "Военное дело",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "U.S. FDA Approves RYBREVANT FASPRO™ (amivantamab and hyaluronidase-lpuj) Co-Formulated with Halozyme's ENHANZE® Technology for the Treatment of Advanced Head and Neck Cancer",
+   "publisher": "PR Newswire",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "October US Jobs Report: 165,000 Rise in Payrolls, Beating Expectations",
+   "publisher": "Morningstar",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "More ships attacked in Persian Gulf, oil prices rebound slightly after post-midterm plunge",
+   "publisher": "CBS News",
+   "label_a": "middle_east_conflict",
+   "label_b": "shipping_lane_disruption",
+   "gold": null,
+   "split": "test"
+  },
+  {
+   "title": "Inflation, tariffs and a voter revolt: The midterm verdict on Trump's economy",
+   "publisher": "Hays Post",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "U.S., Iran Threaten Escalation as Diplomacy Stalls",
+   "publisher": "Arms Control Association",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "FGE NexantECA Sees Slim Chance of U.S.-Iran Deal",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Captains obtain permission from the Houthis by e-mail to safely pass through the Red Sea",
+   "publisher": "ProtoThema English",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Netflix stock slips 4% below prior Xetra close as ad test persists",
+   "publisher": "ad-hoc-news.de",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "U.S. Oil, Gas Drillers See Minor Uptick as Oil Prices Crash",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "ROI-US-Canada trade deal would hurt European aluminium buyers: Andy Home",
+   "publisher": "Devdiscourse",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Johnson & Johnson announces U.S. FDA Approval of RYBREVANT FASPRO™ (amivantamab and hyaluronidase-lpuj) as First and Only Dual-Targeted Therapy for Advanced Head and Neck Cancer",
+   "publisher": "Yahoo Finance",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "Why investors soured on the Democrats",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Same Tariffs, New Gavels: What the Midterms Mean for US-China Trade Relations",
+   "publisher": "The US-China Business Council",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Trump holds call with mediator Qatar about Iran de-escalation",
+   "publisher": "The Economic Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The U.S. added 165,000 jobs in October, a bright spot for the economy",
+   "publisher": "NBC News",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "Blocking EU deal akin to Trump tariffs, Coalition warned",
+   "publisher": "The Nightly",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Trump talks to Qatar’s emir, who cautions him against further escalation with Iran",
+   "publisher": "The Times of Israel",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The Heat: US-Iran Conflict | Deal or escalation?",
+   "publisher": "Modern Ghana",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Ukraine raises Russian casualties to more than 1.6 million since the start of the invasion in 2022",
+   "publisher": "Demócrata",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The Yanbu Oil Hub",
+   "publisher": "INSIGHTS IAS",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Could Trump’s veto stop the Democratic majority?",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "A long-term Elon Musk backer is cashing out of Tesla — and cutting its SpaceX exposure",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Chip rally may be time for investors to 'harvest cash and wait'",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "October jobs report suggests economy is healthy, says former Minneapolis Fed president Gary Stern",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Massive Job Gains of 165,000 in October Bolster Case for More Fed Rate Hikes",
+   "publisher": "Realtor.com",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "Warren Buffett Says This 1 Investing Move Is Key After a Midterm Election. History Says He's Right.",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Yemeni gov’t forces, Houthis trade blame for deadly strikes on Taiz market",
+   "publisher": "Al Jazeera",
+   "label_a": "middle_east_conflict",
+   "label_b": "none",
+   "gold": null,
+   "split": "test"
+  },
+  {
+   "title": "Fake job interview scams like the one that hit Binance are getting more sophisticated. Here are the new signs to watch for",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Daly says Fed rate hike likely, despite 'painful' tech-stock dive",
+   "publisher": "Reuters",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "MBDA’s METEOR missile completes first jettison trials from F-35",
+   "publisher": "Defensehere",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Apple Vs. Alphabet: The Midterms Just Separated Them from The Mag 7 Pack",
+   "publisher": "24/7 Wall St.",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Malaga Port launches ship-to-ship liquefied gas refuelling with luxury cruise ship",
+   "publisher": "Sur in English",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "General Staff: Russia has lost 1,601,830 troops in Ukraine since Feb. 24, 2022",
+   "publisher": "The Kyiv Independent",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Investors Heavily Search Netflix, Inc. (NFLX): Here is What You Need to Know",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Cathie Wood buys $47 million of popular semiconductor stock",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Bispecific J&J Drug Wins Speedy FDA Approval for Treating Head & Neck Cancer",
+   "publisher": "MedCity News",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "US urges China to meet rare-earths commitments ahead of Trump-Xi meetings",
+   "publisher": "Nikkei Asia",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Hoekstra downplays Democrats’ sway on tariffs, but predicts deal could come soon",
+   "publisher": "CTV News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "F-16s Build on Iran Combat Lessons to Prepare for China Threat",
+   "publisher": "Lexington Institute",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Greece - Oil & Gas Laws and Regulations 2026",
+   "publisher": "ICLG",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Pound rises to its highest level since the Brexit referendum",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Live Updates: U.S. Jobs Report Shows Strength After Stock Market Falls",
+   "publisher": "The New York Times",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "Media watchdog warns of ‘rapid escalation’ as Israel detains 4 journalists in 4 days",
+   "publisher": "Arab News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Here's what the Democratic election rout could mean for the U.S. economy",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "North Korea remains silent for domestic audience on flurry of weapons tests",
+   "publisher": "NK News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Yemen armed forces say Houthis struck market in Taiz with ballistic missile",
+   "publisher": "Al Arabiya English",
+   "label_a": "middle_east_conflict",
+   "label_b": "none",
+   "gold": null,
+   "split": "test"
+  },
+  {
+   "title": "Elon Musk's Net Worth Drops Nearly $80 Billion In A Day As Tesla And SpaceX Stock Crater During Tech Wipe-Out",
+   "publisher": "24/7 Wall St.",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Israel’s Election Dispute Escalates Amid Claims of Foreign Interference",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Russia demonstrated the launch of a small cruise missile from a Mi-28 helicopter",
+   "publisher": "UA.NEWS",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Why is Britain refusing to pay slavery reparations?",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Week Ahead: Fed, ECB and BoE Decisions in Focus",
+   "publisher": "Equiti Global",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Fed Rate Hike Bets Rise After Blowout Jobs Report",
+   "publisher": "Newsmax",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "Faisal Islam: How high will interest rates go?",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Bitcoin drops after every Fed rate hike followi...",
+   "publisher": "Pluang",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Seafarer Killed in Suspected Missile Attack on Tanker in Gulf",
+   "publisher": "gCaptain",
+   "label_a": "middle_east_conflict",
+   "label_b": "shipping_lane_disruption",
+   "gold": null,
+   "split": "test"
+  },
+  {
+   "title": "PH economy under siege from inflation, corruption and political warfare",
+   "publisher": "The Manila Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "News | Apple REIT raises full-year outlook, citing strong business and leisure demand",
+   "publisher": "CoStar",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "VeonGen Therapeutics Secures FDA Alignment on Phase 3 Development of VG801 for Stargardt Disease",
+   "publisher": "Eyewire+",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "US economy outstrips forecasts to add 165,000 jobs in October",
+   "publisher": "Financial Times",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "Iren’s Earnings Outperform Expectations Despite Microsoft",
+   "publisher": "Cryptonews.net",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "J&J Wins FDA Approval for RYBREVANT FASPRO in Cancer",
+   "publisher": "grafa.com",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "Plains All American Pipeline, L.P. Q3 2026 Earnings Call Summary",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Israeli settlers seize Palestinian homes in Jericho, displacing dozens",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Netanyahu's office hails shift from US military aid to partnership after Trump announces cutoff",
+   "publisher": "Ynetnews",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Democratic sweep gives markets a reason to rethink path of interest rates",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The October jobs report is out Friday. Here's everything to expect",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Russia Agrees to Supply 90 Advanced Missile Launchers to Iran",
+   "publisher": "RTV News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Palestinian couples tie the knot in mass wedding in Gaza",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Alarming satellite images show construction near Iran missile bases: report",
+   "publisher": "New York Post",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Barkin, Hammack Both Back Gradual Rate Hikes as Market Odds of December Increase Top 80%",
+   "publisher": "BigGo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Why Is Ukraine Exporting Electricity While Kyiv Faces Blackouts?",
+   "publisher": "Kyiv Post",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Death Toll Rises to 53 After Russian Strike on Zaporizhzhia School Used for Humanitarian Aid",
+   "publisher": "UNITED24 Media",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Why Airbnb Stock Popped Today",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Alternative Routes for Middle East Oil and Gas Due to Hormuz Disruption",
+   "publisher": "EnergyNow.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Elon Musk opens the door for a big SpaceX acquisition",
+   "publisher": "MarketWatch",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "What They Are Saying: Blowout October Jobs Report Smashes Expectations",
+   "publisher": "The White House (.gov)",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "test"
+  },
+  {
+   "title": "Taking stock of the flight-to-quality",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Yemen sets up email-based clearance system to screen vessels seeking Red Sea passage for Israel ties",
+   "publisher": "thecradle.co",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "The Week Ahead: Tariffs, Import Compliance, Carbon Border Charges",
+   "publisher": "Sandler, Travis & Rosenberg, P.A.",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Ukraine Invasion Day 1,716: more feints/faints at peace",
+   "publisher": "Daily Kos",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Tesla to wind down Cybertruck production in Texas next year to ramp Cybercab, Musk says",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Oil Prices Plunge as U.S. Elections Shake Up the Iran War",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Democrats’ victory could constrain US military escalation in Iran: American sociologist",
+   "publisher": "Tehran Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Euro strengthens as ECB hints interest rate rise",
+   "publisher": "The Portugal News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "ECB President Candidates: Hernández de Cos vs Klaas Knot",
+   "publisher": "CEO Magazyn",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "US warns China it must ‘immediately’ meet terms of Busan trade deal",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "US economy adds 165,000 jobs in October, blowing past expectations",
+   "publisher": "Fox Business",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "EU tells TikTok to fix ‘harmful’ For You feed, threatens fines",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Wisconsin Farm And Forestry Exports Hit Record Despite Tariff Turmoil",
+   "publisher": "Urban Milwaukee",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "NY Fed's John Williams flags need to gather more information on inflation risks before rate decisions",
+   "publisher": "The Economic Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "EyeWorld Weekly, November 6, 2026",
+   "publisher": "EyeWorld",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Trump names Stephen Miller as new chief of staff, replacing Susie Wiles",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "The engine parts that 'fight the laws of the universe'",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Apple's earnings report delivered mixed results; what is the... - Futubull Community",
+   "publisher": "富途牛牛",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Federal Reserve holds interest rates steady in face of persistent inflation",
+   "publisher": "WGN Radio 720",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "If I Could Buy and Hold Only 1 Artificial Intelligence (AI) Stock Through a Democratic Congress, It Would Be This One",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Russian airstrike on Komyshuvakha kills 53 as search and rescue efforts continue for fifth day",
+   "publisher": "The New Voice of Ukraine",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "'I was asked if I was a crier': Your worst job interviews revealed",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "J&J's drug is first in this head and neck cancer setting to target two proteins. FDA granted accelerated approval.",
+   "publisher": "Stock Titan",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "FDA Approves Rybrevant Faspro for Advanced Head and Neck Cancer",
+   "publisher": "Cure Today",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "FDA Grants Accelerated Approval to a New Treatment for Head and Neck Squamous Cell Carcinoma",
+   "publisher": "FDA",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "dev"
+  },
+  {
+   "title": "Johnson & Johnson (JNJ) Stock: Rises to $273 as FDA Approves RYBREVANT FASPRO for Head and Neck Cancer",
+   "publisher": "Blockonomi",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "Starwood Property Trust, Inc. Q3 2026 Earnings Call Summary",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Trump discusses Middle East de-escalation with Qatar’s emir, and other Mideast news",
+   "publisher": "AP News",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "AFRICA FINANCE IN BRIEF: Bigger GDP figures, sticky inflation and new credit ratings",
+   "publisher": "Business News Nigeria",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Why is Paraguay facing a banking and political crisis?",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "U.S. posts huge jobs report in October, adding 165,000 positions",
+   "publisher": "Washington Times",
+   "label_a": "nfp_strong_beat",
+   "label_b": "nfp_strong_beat",
+   "gold": "nfp_strong_beat",
+   "split": "dev"
+  },
+  {
+   "title": "S&P 500 Forecast: SPX flat ahead of FOMC rate decision and tech earnings",
+   "publisher": "StoneX",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "More than 50 killed in Russian airstrike on Komyshuvakha, Zaporizhzhia region",
+   "publisher": "RBC-Ukraine",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Egypt, Iran FMs Talk Regional De-escalation in Phone Call",
+   "publisher": "Fana News -",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Russia agreed to supply Iran with 90 helicopter missile launchers",
+   "publisher": "BreakingNews.ie",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Trump promotes Stephen Miller to Chief of Staff ‘to run things well’",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Yemen Warns against Houthis Using Red Sea to Extort Int’l Community",
+   "publisher": "شبكة تواصل الإخبارية",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "OpenAI, Arm and Qualcomm executives react to post-midterm AI sell-off",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Asia's Fuel Oil Market Signals Hopes of U.S.-Iran De-Escalation",
+   "publisher": "Crude Oil Prices Today | OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "China Extends Tariff Relief on Canadian Peas Through 2028",
+   "publisher": "NivervilleOnline",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "How Paraguay’s Ueno collapse is only its latest banking crisis",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Armed men kill at least 33 in village in Ebola-hit eastern DRC",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Cybertruck’s run comes to an end as Musk kills off pricey pet project",
+   "publisher": "MarketWatch",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Data center double-down: Hassett says blue wave won't stop AI build-out",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Jay Rockefeller, heir to famed dynasty and healthcare advocate in U.S. Senate, dies at 89",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "U.S. economy resilient but inflation too high: Fed's Williams",
+   "publisher": "TradingView",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Regime Infighting Intensifies as Rival Factions Clash Over Negotiations and Nuclear Escalation - National Council of Resistance of Iran",
+   "publisher": "National Council of Resistance of Iran - NCRI",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "‘It feels like he’s quietly building a separate life’: My husband inherited $500,000, but he refuses to spend it on our home",
+   "publisher": "MarketWatch",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Middle East Crude Premiums Surge, Asian Refiners Seeking Alternatives",
+   "publisher": "EnergyNow.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "New Treatment for Onychomycosis: FDA Approval and Reviews - View 44PbK8I6p",
+   "publisher": "Prefeitura de São José do Rio Preto",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Major construction ongoing near Iran missile bases, satellite images suggest",
+   "publisher": "BBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "US stocks stage tepid recovery after $3.2tn rout fuelled by AI fears",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "Russia’s Air Defenses Just Got Handed a Massive Overnight Test: Moscow Says It Shot Down More Than Seven Hundred Ukrainian Drones",
+   "publisher": "National Security Journal",
+   "label_a": "none",
+   "label_b": "russia_ukraine_escalation",
+   "gold": null,
+   "split": "dev"
+  },
+  {
+   "title": "Ark Invest wants to bring some ‘disruptive innovation’ to interval funds",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "‘Message to the West’ bomb threats target European newsrooms, travel",
+   "publisher": "Al Jazeera",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Energy Reliability Is Becoming More Important Than Energy Politics",
+   "publisher": "OilPrice.com",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Dow Jones Futures: Market Needs Repair But Sandisk, Micron Broken; Apple, Amazon, Microsoft Strong",
+   "publisher": "Yahoo Finance",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  },
+  {
+   "title": "New Therapy for Head and Neck Squamous Cell Carcinoma Receives Accelerated FDA Approval",
+   "publisher": "Mega Doctor News",
+   "label_a": "fda_approval",
+   "label_b": "fda_approval",
+   "gold": "fda_approval",
+   "split": "test"
+  },
+  {
+   "title": "OpenAI will keep investing in AI data centers despite election results, CFO tells CNBC",
+   "publisher": "CNBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Copper prices fall on fears of AI backlash",
+   "publisher": "Financial Times",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "dev"
+  },
+  {
+   "title": "Canada's foreign minister urges G7 to turn up heat on Putin after deadly Ukraine strike",
+   "publisher": "CBC",
+   "label_a": "none",
+   "label_b": "none",
+   "gold": "none",
+   "split": "test"
+  }
+ ]
+}

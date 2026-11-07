@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 out_dir = os.path.join(ROOT, "tests", ".ui")
 os.makedirs(out_dir, exist_ok=True)
 fixture = {}
-for name in ("signals", "backtest", "pipeline", "taxonomy", "signal_history"):
+for name in ("signals", "backtest", "pipeline", "taxonomy", "signal_history", "verification"):
     with open(os.path.join(ROOT, "data", name + ".json")) as f:
         fixture[f"data/{name}.json"] = json.load(f)
 # ?act=bt-expand | drawer | try:<headline>  simulates a user interaction for screenshots

@@ -13,7 +13,27 @@ Classifier patterns (case-insensitive regex, Python & JS compatible):
 MARKETS = ["US Equities", "EU Equities", "Asia Equities", "Rates", "Forex", "Commodities", "Crypto", "Single Stocks"]
 
 # Region of each instrument's primary session, used to align event timing.
+# Federal Reserve H.10 noon (12:00 ET) buying rates. Verification showed Yahoo's daily
+# FX bars correlate only ~0.45 with these on the same day (their "close" time is not
+# documented), while H.10 has a known timestamp, so the backtest uses H.10 for FX.
+FRED_FX = {
+    "EURUSD=X": "DEXUSEU", "GBPUSD=X": "DEXUSUK", "AUDUSD=X": "DEXUSAL",
+    "JPY=X": "DEXJPUS", "USDJPY=X": "DEXJPUS", "CNY=X": "DEXCHUS", "USDCNY=X": "DEXCHUS",
+    "MXN=X": "DEXMXUS", "USDMXN=X": "DEXMXUS", "BRL=X": "DEXBZUS", "USDBRL=X": "DEXBZUS",
+    "INR=X": "DEXINUS", "USDINR=X": "DEXINUS", "KRW=X": "DEXKOUS", "USDKRW=X": "DEXKOUS",
+    "CHF=X": "DEXSZUS", "USDCHF=X": "DEXSZUS", "ZAR=X": "DEXSFUS", "USDZAR=X": "DEXSFUS",
+    "CAD=X": "DEXCAUS", "USDCAD=X": "DEXCAUS",
+}
+
+
+def backtest_symbol(symbol: str) -> str:
+    """Price series used for historical event studies (live tracking keeps Yahoo)."""
+    return "FRED:" + FRED_FX[symbol] if symbol in FRED_FX else symbol
+
+
 def region_of(symbol: str) -> str:
+    if symbol.startswith("FRED:DEX"):
+        return "fxnoon"
     asia = (".HK", ".T", ".KS", ".KQ", ".TW", ".SS", ".SZ", ".AX", ".NS", ".BO")
     eu = (".PA", ".DE", ".L", ".AS", ".MC", ".MI", ".CO", ".SW", ".ST", ".BR", ".OL", ".HE", ".IR", ".LS", ".VI")
     if symbol.endswith(asia) or symbol in ("^N225", "^HSI", "^KS11", "^TWII", "000001.SS", "^AXJO"):
@@ -25,12 +45,17 @@ def region_of(symbol: str) -> str:
 
 # Applied to every type unless spec_ok=True: speculation, previews, explainers,
 # retrospectives and questions are not "an event just happened".
-GLOBAL_NONE = [
+GLOBAL_NONE_CORE = [
     r"\?",
     r"^(what|why|how|when|where|who|is|are|will|can|should|could|here's|here is|explainer|analysis|opinion|watch|live:?|podcast)\b",
     r"\b(could|might|would|should|may (cut|raise|hike|boost|impose|launch|approve|be|have|not|soon|need|face|delay)|likely|unlikely|possible|possibly|potential(ly)?|(is|are|was|were|seen|widely) expected to|expected to (raise|hike|cut|lower|hold|keep|announce|approve|reject|rise|fall|increase|decrease|reach|remain|launch|impose|sign)|set to|poised to|on track to|plans? to|seeks? to|aims? to)\b",
+]
+# Commentary words: fine around a data release or company news, but for policy and
+# geopolitical types they mark speculation rather than an event.
+GLOBAL_NONE_SPEC = [
     r"\b(case for|odds|bets?|betting|wagers?|pric(e|es|ed|ing) in|fears?|feared|risk of|risks|threat(en|ens|ened)?|weigh(s|ing)?|consider(s|ing)?|mull(s|ing)?|debat(e|es|ing)|calls? for|urges?|presses|pressures?|pushes for|pointing toward|path|ahead of|preview|week ahead|what to (know|expect|watch)|lessons|history shows|since the|after every|years? after|anniversary|roundup|recap|timeline|explained)\b",
 ]
+GLOBAL_NONE = GLOBAL_NONE_CORE + GLOBAL_NONE_SPEC
 
 
 # Types whose historical catalog was partly chosen *because* the stock moved a lot
@@ -42,11 +67,12 @@ BIAS_NOTE = "Catalog partly selected by price reaction: direction is informative
 
 
 def T(id, label, cat, geo, all_, impacts, boost=(), none=(), company_specific=False,
-      default_tickers=(), benchmark=None, source="catalog", note="", spec_ok=False):
+      default_tickers=(), benchmark=None, source="catalog", note="", spec_ok=False, commentary_ok=False):
     if id in OUTCOME_SELECTED:
         note = (note + " " + BIAS_NOTE).strip()
     return dict(id=id, label=label, cat=cat, geo=geo, source=source, note=note, outcome_selected=id in OUTCOME_SELECTED,
-                patterns=dict(all=list(all_), boost=list(boost), none=list(none) + ([] if spec_ok else GLOBAL_NONE)),
+                patterns=dict(all=list(all_), boost=list(boost),
+                              none=list(none) + ([] if spec_ok else GLOBAL_NONE_CORE if commentary_ok else GLOBAL_NONE)),
                 impacts=impacts, company_specific=company_specific,
                 default_tickers=list(default_tickers), benchmark=benchmark)
 
@@ -101,8 +127,9 @@ EVENT_TYPES = [
       impacts=[I("US Equities", "Banks & cyclicals", {"XLF": "Financials", "KBE": "Bank ETF", "XLI": "Industrials", "SPY": "S&P 500"})]),
     T("us_cpi_hot", "US CPI above forecast", "Economic", "United States",
       [r"\b(cpi|consumer prices?|inflation)\b", r"\b(hotter|higher|above|beats?|tops?|exceeds?|accelerat\w*|surges?|jumps?|rises? more)\b"],
-      none=[r"\b(cooler|slows?|below|eases?|softer|misses?)\b", r"\b(uk|britain|euro|eurozone|china|japan|india|germany|canada|australia)\b"],
+      none=[r"\b(officials?|beat inflation|fight\w* inflation|tame inflation|pointing|target)\b", r"\b(cooler|slows?|below|eases?|softer|misses?)\b", r"\b(uk|britain|euro|eurozone|china|japan|india|germany|canada|australia)\b"],
       boost=[r"\b(expect|forecast|estimate|consensus)", r"\bcore\b", r"\b(us|u\.s\.)\b"],
+      commentary_ok=True,
       impacts=[I("US Equities", "Broad & growth", {"SPY": "S&P 500", "QQQ": "Nasdaq 100", "IWM": "Small caps", "XHB": "Homebuilders"}),
                I("Rates", "Treasuries", {"TLT": "20y+ Treasuries", "IEF": "7-10y Treasuries", "SHY": "1-3y Treasuries"}),
                I("Forex", "USD", {"DX-Y.NYB": "Dollar index", "JPY=X": "USD/JPY"}),
@@ -110,24 +137,29 @@ EVENT_TYPES = [
                I("Crypto", "Bitcoin", {"BTC-USD": "Bitcoin"})]),
     T("us_cpi_cool", "US CPI below forecast", "Economic", "United States",
       [r"\b(cpi|consumer prices?|inflation)\b", r"\b(cooler|cools|slows?|slowed|below|eases?|eased|softer|misses?|decelerat\w*)\b"],
-      none=[r"\b(hotter|above|beats?|accelerat\w*)\b", r"\b(uk|britain|euro|eurozone|china|japan|india|germany|canada|australia)\b"],
+      none=[r"\b(officials?|beat inflation|fight\w* inflation|tame inflation|pointing|target)\b", r"\b(hotter|above|beats?|accelerat\w*)\b", r"\b(uk|britain|euro|eurozone|china|japan|india|germany|canada|australia)\b"],
       boost=[r"\b(expect|forecast|estimate|consensus)", r"\bcore\b", r"\b(us|u\.s\.)\b"],
+      commentary_ok=True,
       impacts=[I("US Equities", "Broad & growth", {"SPY": "S&P 500", "QQQ": "Nasdaq 100", "IWM": "Small caps", "XHB": "Homebuilders"}),
                I("Rates", "Treasuries", {"TLT": "20y+ Treasuries", "IEF": "7-10y Treasuries", "SHY": "1-3y Treasuries"}),
                I("Forex", "USD", {"DX-Y.NYB": "Dollar index", "JPY=X": "USD/JPY"}),
                I("Commodities", "Gold", {"GC=F": "Gold"}),
                I("Crypto", "Bitcoin", {"BTC-USD": "Bitcoin"})]),
     T("nfp_strong_beat", "Strong US payrolls (beat)", "Economic", "United States",
-      [r"\b(payrolls?|nonfarm|non-farm|jobs report|jobs data|hiring)\b", r"\b(beats?|tops?|surges?|stronger|blowout|above|jumps?|smashes?|strong)\b"],
-      none=[r"\b(misses?|weaker|below|slows?|disappoint\w*|cuts?)\b"],
+      [r"\b(payrolls?|nonfarm|non-farm|jobs report|jobs data|jobs? growth|job gains|jobs market|hiring|employers|(add(s|ed|ing)?|creat(es|ed)|posts?) [\d,.]+ ?(k|,000|thousand)? ?(new )?(jobs|positions)|jobs blowout)\b",
+       r"\b(beats?|beating|tops?|topping|surges?|stronger|blowout|above|jumps?|smash(es|ed)?|strong|robust|hot|huge|exceeds?|outstrips?|blow(s|ing)? past|trounc\w*|accelerat\w*|(1[5-9]\d|[2-9]\d\d)(,000| ?k| thousand))\b"],
+      none=[r"\b(misses?|weaker|below|slows?|disappoint\w*|cuts?|layoffs?|lay off)\b", r"\b(uk|britain|canada|australia|germany|china|japan|india|eurozone)\b"],
+      commentary_ok=True,
       boost=[r"\b(expect|forecast|estimate|consensus)", r"\b\d{2,3},?000\b|\b\d{2,3}k\b"],
       impacts=[I("US Equities", "Banks, cyclicals & small caps", {"SPY": "S&P 500", "XLF": "Financials", "IWM": "Small caps", "XLY": "Cons. discretionary"}),
                I("Rates", "Treasuries", {"TLT": "20y+ Treasuries", "IEF": "7-10y Treasuries", "SHY": "1-3y Treasuries"}),
                I("Forex", "USD", {"DX-Y.NYB": "Dollar index", "JPY=X": "USD/JPY"}),
                I("Commodities", "Gold", {"GC=F": "Gold"})]),
     T("nfp_big_miss", "Weak US payrolls (miss)", "Economic", "United States",
-      [r"\b(payrolls?|nonfarm|non-farm|jobs report|jobs data|hiring|job growth)\b", r"\b(misses?|weaker|below|slows?|slowed|disappoint\w*|stalls?|falls? short|weak)\b"],
-      none=[r"\b(beats?|tops?|stronger|blowout)\b"],
+      [r"\b(payrolls?|nonfarm|non-farm|jobs report|jobs data|hiring|job growth|job gains|employers|(add(s|ed|ing)?|creat(es|ed)|posts?) [\d,.]+ ?(k|,000|thousand)? ?(new )?(jobs|positions))\b",
+       r"\b(misses?|missed|weaker|below|slows?|slowed|disappoint\w*|stalls?|falls? short|weak|shed|lost|negative)\b"],
+      none=[r"\b(beats?|tops?|stronger|blowout)\b", r"\b(uk|britain|canada|australia|germany|china|japan|india|eurozone)\b"],
+      commentary_ok=True,
       boost=[r"\b(expect|forecast|estimate|consensus)", r"\b\d{2,3},?000\b|\b\d{2,3}k\b"],
       impacts=[I("US Equities", "Banks, cyclicals & small caps", {"SPY": "S&P 500", "XLF": "Financials", "IWM": "Small caps", "XLY": "Cons. discretionary"}),
                I("Rates", "Treasuries", {"TLT": "20y+ Treasuries", "IEF": "7-10y Treasuries", "SHY": "1-3y Treasuries"}),
@@ -136,7 +168,7 @@ EVENT_TYPES = [
     T("megacap_earnings_beat", "Mega-cap earnings beat", "Economic", "United States",
       [r"\b(earnings|profit|revenue|results|quarter|eps|sales)\b", r"\b(beats?|tops?|surpass\w*|exceeds?|crush\w*|above (estimates|expectations)|record)\b"],
       none=[r"\b(misses?|disappoint\w*|falls? short|below|weak guidance|cuts? (guidance|forecast))\b"],
-      company_specific=True, benchmark="QQQ",
+      commentary_ok=True, company_specific=True, benchmark="QQQ",
       default_tickers=["AAPL", "MSFT", "GOOGL", "AMZN", "META", "NVDA", "TSLA", "NFLX"],
       impacts=[I("Single Stocks", "Reporting company (vs Nasdaq 100)", {})],
       note="Measured as abnormal return vs QQQ from the first session after the report."),
@@ -186,7 +218,7 @@ EVENT_TYPES = [
     # ── GEOPOLITICAL ─────────────────────────────────────────────────────────
     T("middle_east_conflict", "Middle East military escalation", "Geopolitical", "Middle East / Global",
       [r"\b(israel|iran|gaza|hamas|hezbollah|saudi|iraq|syria|yemen|houthis?|lebanon|tehran|middle east|gulf)\b",
-       r"\b(strikes|struck|attacks|attacked|launch(es|ed)|fires|fired|bombs|bombed|bombing|invades?|invaded|airstrikes?|retaliat(es|ed)|shoots? down|shot down|downed|declares? war|hits|enters?)\b"],
+       r"\b(strikes|struck|attacks|attacked|target(s|ed)|launch(es|ed)|fires|fired|bombs|bombed|bombing|invades?|invaded|airstrikes?|retaliat(es|ed)|shoots? down|shot down|downed|declares? war|hits|enters?)\b"],
       none=[r"\b(ceasefire|truce|peace|talks|hostage deal|de-?escalat\w*|sanction\w*|satellite|election|diplomacy)\b", r"\b(red sea|shipping|tankers?|vessels?|suez)\b",
             r"\b(central bank|bank of england|fed|ecb|interest rates?|oil prices?)\b"],
       boost=[r"\boil\b", r"\b(launch\w*|killed|declares?)\b"],
@@ -273,13 +305,14 @@ EVENT_TYPES = [
     # ── SOCIAL / REGULATORY ──────────────────────────────────────────────────
     T("fda_approval", "FDA drug approval", "Social", "United States",
       [r"\b(fda|food and drug administration)\b", r"\b(approv\w*|clear\w*|green ?light\w*|authoriz\w*|grants?)\b"],
-      none=[r"\b(rejects?|declin\w*|complete response|crl|fail\w*|delay\w*|recall\w*|warns?|warning)\b"],
-      company_specific=True, benchmark="XBI",
+      none=[r"\b(rejects?|declin\w*|complete response|crl|fail\w*|delay\w*|recall\w*|warns?|warning)\b",
+            r"\b(toward|towards|advances|seeks|submits?|files? for|accepts? (filing|application)|priority review|breakthrough (therapy )?designation|path to)\b"],
+      commentary_ok=True, company_specific=True, benchmark="XBI",
       impacts=[I("Single Stocks", "Sponsor company (vs biotech index)", {})]),
     T("fda_trial_failure", "FDA rejection / Phase 3 failure", "Social", "United States",
       [r"\b(fda|phase 3|phase iii|trial|study|complete response|crl)\b",
        r"\b(fail\w*|rejects?|rejected|declin\w*|halt\w*|misses? .{0,15}(endpoint|goal)|did not meet|futility|complete response letter|crl|discontinu\w*)\b"],
-      company_specific=True, benchmark="XBI",
+      commentary_ok=True, company_specific=True, benchmark="XBI",
       impacts=[I("Single Stocks", "Sponsor company (vs biotech index)", {})]),
     T("major_recall", "Major product recall / grounding", "Social", "United States / Global",
       [r"\b(recall\w*|grounds?|grounded|grounding)\b"],

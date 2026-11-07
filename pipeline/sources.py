@@ -66,8 +66,10 @@ FEEDS = [
 def _text(el, *tags):
     for t in tags:
         x = el.find(t)
-        if x is not None and (x.text or "").strip():
-            return x.text.strip()
+        if x is not None:
+            txt = "".join(x.itertext()).strip()  # includes text inside embedded (X)HTML children
+            if txt:
+                return txt
         # Atom link
         if t.endswith("link") and x is not None and x.get("href"):
             return x.get("href")
@@ -90,7 +92,10 @@ def _parse_date(s):
 
 
 def clean(s):
-    s = html.unescape(re.sub(r"<[^>]+>", " ", s or ""))
+    # strip real HTML tags only, so literal text like "<cuts>" inside CDATA survives
+    s = re.sub(r"</?(a|b|i|u|p|br|hr|div|span|em|strong|img|font|small|sup|sub|h[1-6]|li|ul|ol|table|tr|td|figure|figcaption|iframe|blockquote)\b[^>]*>",
+               " ", s or "", flags=re.I)
+    s = html.unescape(re.sub(r"<!--.*?-->", " ", s, flags=re.S))
     return re.sub(r"\s+", " ", s).strip()
 
 

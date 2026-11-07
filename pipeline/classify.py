@@ -13,6 +13,8 @@ import re
 from . import taxonomy
 
 CLAUDE_MODEL = os.environ.get("NEWSALPHA_CLAUDE_MODEL", "claude-haiku-5-5")
+UNRESOLVED_PENALTY = 10
+RESOLVABLE_LATER = {"fda_approval", "fda_trial_failure", "major_recall"}
 MEGACAPS = {"AAPL", "MSFT", "GOOGL", "AMZN", "META", "NVDA", "TSLA", "NFLX"}
 _compiled = {}
 
@@ -93,9 +95,15 @@ def classify_rules(article):
         needs_tickers = et["company_specific"] and not et["default_tickers"]
         if et["id"].startswith("megacap_earnings") or et["id"] == "currency_devaluation":
             needs_tickers = True
+        unresolved = False
         if needs_tickers and not tickers:
-            continue
-        cand = dict(type=et["id"], match=score, hits=hits, tickers=tickers or et["default_tickers"], method="rules")
+            if et["id"] not in RESOLVABLE_LATER:
+                continue
+            # e.g. "FDA approves amivantamab": the event is clear but the company is
+            # only named by other outlets. The pipeline attaches it to that cluster.
+            unresolved = True
+        cand = dict(type=et["id"], match=score - (UNRESOLVED_PENALTY if unresolved else 0), hits=hits,
+                    tickers=tickers or et["default_tickers"], method="rules", unresolved=unresolved)
         if best is None or cand["match"] > best["match"]:
             best = cand
     return best
