@@ -287,7 +287,7 @@ def consider_signals(state, signals, bt_by_key, now, clock, daily_dates):
                      star=(row.get("q_value") or 1) <= 0.10, backtest_dir=row["dir"], best_window=row["optW"],
                      expected_move=row["move"], hold_sessions=hold, reaction_session=r0.isoformat(),
                      signal_published=sig["published"], decided=now.isoformat(timespec="seconds"),
-                     score=sig["score"], publisher=sig["publisher"], url=sig.get("url"))
+                     score=sig["score"], publisher=sig["publisher"], url=sig.get("url"), method=sig.get("method", "rules"))
         state["pending"].append(order)
         log_decision(state, now, sig, "order", f"{'buy now' if is_open else 'after-market order for next open'}: {sym} ({pick['why']})", extra)
     state["seen_signals"] = sorted(seen)[-2000:]
@@ -305,6 +305,25 @@ def daily_closes(symbol):
         return s
     except prices.PriceError:
         return None
+
+
+def recheck_pending(state, now):
+    """Cancel unfilled orders whose headline the current rule classifier no longer maps to the
+    same event (a classifier bug fixed after the order was queued). A real trader would cancel
+    a mistaken pending order before the open; the cancellation is logged as a decision."""
+    from . import classify
+    keep = []
+    for o in state["pending"]:
+        if o.get("method", "rules") == "rules":
+            c = classify.classify_rules(dict(id=o["signal_id"], title=o["title"], summary=""))
+            if not c or c["type"] != o["type"]:
+                log_decision(state, now, dict(id=o["signal_id"], title=o["title"], event=o["event"], score=o["score"],
+                                              published=o["signal_published"]), "cancel",
+                             f"classifier no longer confirms '{o['event']}' (now: {c['type'] if c else 'not an event'}); "
+                             f"order for {o['symbol']} cancelled before fill", dict(symbol=o["symbol"]))
+                continue
+        keep.append(o)
+    state["pending"] = keep
 
 
 def fill_pending(state, now, clock):
@@ -562,6 +581,7 @@ def step(now=None, log=print):
     if state["last_run"] is None or now >= dt.datetime.fromisoformat(state["last_run"]):
         manage_positions(state, now, clock, daily_dates)
         consider_signals(state, sig, bt_by_key, now, clock, daily_dates)
+        recheck_pending(state, now)
         fill_pending(state, now, clock)
         manage_positions(state, now, clock, daily_dates)  # new fills may already hit levels this session
     enrich_closed(state)

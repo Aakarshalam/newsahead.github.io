@@ -67,6 +67,11 @@ POSITIVE = [
 ]
 
 NEGATIVE = [
+    # live false positives from the first scheduled runs (7 Nov 2026)
+    "Ukraine's economy slips into contraction as inflation hits 10%, trade gap tops $10bn",
+    "Apple Hospitality REIT (NYSE:APLE) Issues Quarterly Earnings Results, Beats Expectations",
+    "Turkish inflation surges above forecast",
+    "Canada adds 60,000 jobs, beating forecasts",
     # speculation / previews / odds
     "October jobs shock seals case for December Fed rate hike",
     "Fed Officials Pointing Toward Additional Interest Rates Hikes to Beat Inflation",

@@ -487,7 +487,13 @@ function findCompanies(text) {
       : new RegExp(`(?<![\\w])${reEsc(name)}(?![\\w])`, 'i');
     if (re.test(text) && !out.includes(tkr)) out.push(tkr);
   }
-  return out;
+  // explicit $TICKER / (NYSE: XYZ) tags win over name aliases (mirrors pipeline/classify.py)
+  const explicit = [];
+  for (const m of text.matchAll(/\$([A-Z]{1,5})\b|\((?:NASDAQ|NYSE|Nasdaq|NYSE American)\s*:\s*([A-Z.]{1,6})\)/g)) {
+    const t = m[1] || m[2];
+    if (!explicit.includes(t)) explicit.push(t);
+  }
+  return explicit.length ? explicit : out;
 }
 function classifyHeadline(title) {
   const cfg = state.taxonomy.classifier;

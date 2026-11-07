@@ -81,6 +81,18 @@ def I(mkt, name, instruments, note=""):
     return dict(mkt=mkt, name=name, instruments=instruments, note=note)
 
 
+# Non-US places/demonyms: US-macro types (CPI, payrolls) are vetoed when the headline is about
+# another economy ("Ukraine's economy slips into contraction as inflation hits 10%").
+NON_US = (r"\b(uk|britain|british|england|euro ?(zone|area)|euro|europe(an)?|china|chinese|japan(ese)?|india(n)?|"
+          r"german(y)?|canad(a|ian)|australia(n)?|new zealand|france|french|ital(y|ian)|spain|spanish|swed(en|ish)|"
+          r"norw(ay|egian)|swiss|switzerland|poland|polish|russia(n)?|ukrain(e|ian)|turk(ey|ish|iye)|argentin(a|e|ian)|"
+          r"brazil(ian)?|mexic(o|an)|colombia(n)?|chile(an)?|peru(vian)?|venezuela(n)?|south africa(n)?|nigeria(n)?|"
+          r"egypt(ian)?|kenya(n)?|ghana(ian)?|pakistan(i)?|sri lanka(n)?|bangladesh(i)?|indonesia(n)?|vietnam(ese)?|"
+          r"philippines?|filipino|thai(land)?|malaysia(n)?|singapore(an)?|korea(n)?|taiwan(ese)?|hong kong|iran(ian)?|"
+          r"israel(i)?|saudi|uae|emirati|qatar|zimbabwe(an)?|ethiopia(n)?|lebanon|lebanese|belarus|kazakhstan|"
+          r"scotland|scottish|ireland|irish|netherlands|dutch|belgi(um|an)|austria(n)?|denmark|danish|finland|finnish|"
+          r"greece|greek|portugal|portuguese|czech|hungar(y|ian)|romania(n)?|uruguay|ecuador|bolivia)\b")
+
 FED = r"\b(fed|federal reserve|fomc|powell)\b"
 ECB = r"\b(ecb|european central bank|lagarde)\b"
 HIKE = r"\b(hikes?|hiked|hiking|raises?|raised|raising|increases?|lifts?)\b"
@@ -127,7 +139,7 @@ EVENT_TYPES = [
       impacts=[I("US Equities", "Banks & cyclicals", {"XLF": "Financials", "KBE": "Bank ETF", "XLI": "Industrials", "SPY": "S&P 500"})]),
     T("us_cpi_hot", "US CPI above forecast", "Economic", "United States",
       [r"\b(cpi|consumer prices?|inflation)\b", r"\b(hotter|higher|above|beats?|tops?|exceeds?|accelerat\w*|surges?|jumps?|rises? more)\b"],
-      none=[r"\b(officials?|beat inflation|fight\w* inflation|tame inflation|pointing|target)\b", r"\b(cooler|slows?|below|eases?|softer|misses?)\b", r"\b(uk|britain|euro|eurozone|china|japan|india|germany|canada|australia)\b"],
+      none=[r"\b(officials?|beat inflation|fight\w* inflation|tame inflation|pointing|target)\b", r"\b(cooler|slows?|below|eases?|softer|misses?)\b", NON_US],
       boost=[r"\b(expect|forecast|estimate|consensus)", r"\bcore\b", r"\b(us|u\.s\.)\b"],
       commentary_ok=True,
       impacts=[I("US Equities", "Broad & growth", {"SPY": "S&P 500", "QQQ": "Nasdaq 100", "IWM": "Small caps", "XHB": "Homebuilders"}),
@@ -137,7 +149,7 @@ EVENT_TYPES = [
                I("Crypto", "Bitcoin", {"BTC-USD": "Bitcoin"})]),
     T("us_cpi_cool", "US CPI below forecast", "Economic", "United States",
       [r"\b(cpi|consumer prices?|inflation)\b", r"\b(cooler|cools|slows?|slowed|below|eases?|eased|softer|misses?|decelerat\w*)\b"],
-      none=[r"\b(officials?|beat inflation|fight\w* inflation|tame inflation|pointing|target)\b", r"\b(hotter|above|beats?|accelerat\w*)\b", r"\b(uk|britain|euro|eurozone|china|japan|india|germany|canada|australia)\b"],
+      none=[r"\b(officials?|beat inflation|fight\w* inflation|tame inflation|pointing|target)\b", r"\b(hotter|above|beats?|accelerat\w*)\b", NON_US],
       boost=[r"\b(expect|forecast|estimate|consensus)", r"\bcore\b", r"\b(us|u\.s\.)\b"],
       commentary_ok=True,
       impacts=[I("US Equities", "Broad & growth", {"SPY": "S&P 500", "QQQ": "Nasdaq 100", "IWM": "Small caps", "XHB": "Homebuilders"}),
@@ -148,7 +160,7 @@ EVENT_TYPES = [
     T("nfp_strong_beat", "Strong US payrolls (beat)", "Economic", "United States",
       [r"\b(payrolls?|nonfarm|non-farm|jobs report|jobs data|jobs? growth|job gains|jobs market|hiring|employers|(add(s|ed|ing)?|creat(es|ed)|posts?) [\d,.]+ ?(k|,000|thousand)? ?(new )?(jobs|positions)|jobs blowout)\b",
        r"\b(beats?|beating|tops?|topping|surges?|stronger|blowout|above|jumps?|smash(es|ed)?|strong|robust|hot|huge|exceeds?|outstrips?|blow(s|ing)? past|trounc\w*|accelerat\w*|(1[5-9]\d|[2-9]\d\d)(,000| ?k| thousand))\b"],
-      none=[r"\b(misses?|weaker|below|slows?|disappoint\w*|cuts?|layoffs?|lay off)\b", r"\b(uk|britain|canada|australia|germany|china|japan|india|eurozone)\b"],
+      none=[r"\b(misses?|weaker|below|slows?|disappoint\w*|cuts?|layoffs?|lay off)\b", NON_US],
       commentary_ok=True,
       boost=[r"\b(expect|forecast|estimate|consensus)", r"\b\d{2,3},?000\b|\b\d{2,3}k\b"],
       impacts=[I("US Equities", "Banks, cyclicals & small caps", {"SPY": "S&P 500", "XLF": "Financials", "IWM": "Small caps", "XLY": "Cons. discretionary"}),
@@ -158,7 +170,7 @@ EVENT_TYPES = [
     T("nfp_big_miss", "Weak US payrolls (miss)", "Economic", "United States",
       [r"\b(payrolls?|nonfarm|non-farm|jobs report|jobs data|hiring|job growth|job gains|employers|(add(s|ed|ing)?|creat(es|ed)|posts?) [\d,.]+ ?(k|,000|thousand)? ?(new )?(jobs|positions))\b",
        r"\b(misses?|missed|weaker|below|slows?|slowed|disappoint\w*|stalls?|falls? short|weak|shed|lost|negative)\b"],
-      none=[r"\b(beats?|tops?|stronger|blowout)\b", r"\b(uk|britain|canada|australia|germany|china|japan|india|eurozone)\b"],
+      none=[r"\b(beats?|tops?|stronger|blowout)\b", NON_US],
       commentary_ok=True,
       boost=[r"\b(expect|forecast|estimate|consensus)", r"\b\d{2,3},?000\b|\b\d{2,3}k\b"],
       impacts=[I("US Equities", "Banks, cyclicals & small caps", {"SPY": "S&P 500", "XLF": "Financials", "IWM": "Small caps", "XLY": "Cons. discretionary"}),

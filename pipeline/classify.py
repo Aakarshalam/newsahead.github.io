@@ -29,6 +29,9 @@ def _rx(p):
 AMBIGUOUS = {"target", "meta", "apple", "amazon", "ford", "lilly", "stat", "kla", "gm", "real", "vertex", "abbott"}
 
 
+EXPLICIT_TICKER = re.compile(r"\$([A-Z]{1,5})\b|\((?:NASDAQ|NYSE|Nasdaq|NYSE American)\s*:\s*([A-Z.]{1,6})\)")
+
+
 def find_companies(text):
     found = []
     low = text.lower()
@@ -39,12 +42,14 @@ def find_companies(text):
             hit = re.search(r"(?<![\w])" + re.escape(name) + r"(?![\w])", low)
         if hit and tkr not in found:
             found.append(tkr)
-    # explicit $TICKER or (NASDAQ: XYZ) mentions
-    for m in re.finditer(r"\$([A-Z]{1,5})\b|\((?:NASDAQ|NYSE|Nasdaq|NYSE American)\s*:\s*([A-Z.]{1,6})\)", text):
+    # Explicit $TICKER or (NASDAQ: XYZ) mentions are authoritative: "Apple Hospitality REIT
+    # (NYSE:APLE)" is APLE, not Apple, so name-alias hits are dropped when a tag is present.
+    explicit = []
+    for m in EXPLICIT_TICKER.finditer(text):
         t = m.group(1) or m.group(2)
-        if t not in found:
-            found.append(t)
-    return found
+        if t not in explicit:
+            explicit.append(t)
+    return explicit or found
 
 
 def find_currencies(text):

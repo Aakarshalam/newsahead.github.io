@@ -149,6 +149,14 @@ class Engine(unittest.TestCase):
         self.assertEqual(st["positions"], [])
         self.assertIn("priced in", st["decisions"][0]["reason"])
 
+    def test_pending_order_cancelled_when_classifier_no_longer_confirms(self):
+        # a headline that was (wrongly) queued as an event, then the rule was fixed
+        self.write([signal(title="Chevron REIT quarterly results")])
+        st = self.go(OPEN - dt.timedelta(hours=1), [], is_open=False)
+        self.assertEqual(st["pending"], [])
+        self.assertEqual(st["decisions"][0]["action"], "cancel")
+        self.assertIn("no longer confirms", st["decisions"][0]["reason"])
+
     def test_stale_signal_skipped(self):
         # Monday's news first seen before Wednesday's open: 2 sessions late for a 3d edge
         self.write([signal()])
