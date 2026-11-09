@@ -9,6 +9,8 @@ import unittest
 from pipeline import classify
 
 POSITIVE = [
+    ("US consumer prices cool more than expected in September", "us_cpi_cool"),
+    ("US inflation accelerates to 3.4%, hotter than expected", "us_cpi_hot"),
     ("Fed raises interest rates by 75 basis points, the largest hike since 1994", "fed_hike"),
     ("Federal Reserve hikes rates by a quarter point, signals more increases", "fed_hike"),
     ("Fed cuts rates by half a percentage point in emergency move", "fed_cut"),
@@ -72,6 +74,8 @@ NEGATIVE = [
     "Apple Hospitality REIT (NYSE:APLE) Issues Quarterly Earnings Results, Beats Expectations",
     "Turkish inflation surges above forecast",
     "Canada adds 60,000 jobs, beating forecasts",
+    "Gold edges up as softer crude tempers inflation concerns",
+    "US Fed rate hike in December faces uncertainty as jobs surge, but CPI and oil hold the key",
     # speculation / previews / odds
     "October jobs shock seals case for December Fed rate hike",
     "Fed Officials Pointing Toward Additional Interest Rates Hikes to Beat Inflation",

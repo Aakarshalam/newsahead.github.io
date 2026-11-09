@@ -203,6 +203,55 @@ def reaction_session(sig, daily_dates):
     return nxt[0] if nxt else start
 
 
+# ── scheduled-event sanity checks ────────────────────────────────────────────
+# US CPI and payrolls are scheduled releases, and mega-cap earnings come in known seasons.
+# A "CPI" or "earnings beat" headline outside those windows is commentary or old news
+# (live examples: "softer crude tempers inflation concerns", "Netflix Q2 EPS beat" in November).
+RELEASE_FAMILY = {"us_cpi_hot": "cpi", "us_cpi_cool": "cpi", "nfp_strong_beat": "nfp", "nfp_big_miss": "nfp"}
+EARNINGS_TYPES = {"megacap_earnings_beat", "megacap_earnings_miss"}
+# NVDA's fiscal year ends late January, so it reports ~4 weeks after the other mega-caps.
+LATE_REPORTERS = {"NVDA"}
+
+
+def in_earnings_season(symbol, d):
+    if symbol in LATE_REPORTERS:
+        return (d.month in (2, 5, 8, 11) and d.day >= 15) or (d.month in (3, 6, 9, 12) and d.day <= 3)
+    return (d.month in (1, 4, 7, 10) and d.day >= 13) or (d.month in (2, 5, 8, 11) and d.day <= 6)
+
+
+def calendar_reason(etype, published, symbol=None):
+    """Why a scheduled-event signal can't be a fresh release, or None if it can."""
+    d = published.astimezone(ET).date()
+    fam = RELEASE_FAMILY.get(etype)
+    if fam == "cpi" and not 10 <= d.day <= 24:
+        return "outside the US CPI release window (BLS publishes on the 10th-24th): commentary, not a release"
+    if fam == "nfp" and d.day > 12:
+        return "outside the payrolls release window (first ~10 days of the month): commentary, not a release"
+    if etype in EARNINGS_TYPES and symbol and not in_earnings_season(symbol, d):
+        return f"{symbol} is not in its earnings season: old results or commentary"
+    return None
+
+
+def first_release_date(state, etype, published):
+    """Earliest time the same scheduled release (CPI or payrolls) was seen in the 6 days up to
+    `published`. Follow-up coverage of Friday's jobs report is not a new event on Monday."""
+    fam = RELEASE_FAMILY.get(etype)
+    if not fam:
+        return published
+    labels = {taxonomy.TYPES_BY_ID[t]["label"] for t, f in RELEASE_FAMILY.items() if f == fam}
+    best = published
+    for dcs in state["decisions"]:
+        if dcs.get("event") in labels and dcs.get("published"):
+            p = dt.datetime.fromisoformat(dcs["published"])
+            if published - dt.timedelta(days=6) <= p < best:
+                best = p
+    return best
+
+
+def sessions_late(r0, entry_session, daily_dates):
+    return len([d for d in daily_dates if r0 < d <= entry_session]) if entry_session > r0 else 0
+
+
 # ── fills and costs ──────────────────────────────────────────────────────────
 def buy_fill(px, sym):
     return px * (1 + CONFIG["slippage"][asset_class(sym)])
@@ -251,13 +300,20 @@ def consider_signals(state, signals, bt_by_key, now, clock, daily_dates):
             log_decision(state, now, sig, "skip", why_not)
             continue
         row, sym = pick["row"], pick["symbol"]
+        cal = calendar_reason(sig["type"], pub, sym)
+        if cal:
+            log_decision(state, now, sig, "skip", cal, dict(symbol=sym))
+            continue
         r0 = reaction_session(sig, daily_dates)
+        first = first_release_date(state, sig["type"], pub)
+        if first < pub:
+            r0 = min(r0, next((d for d in daily_dates if d >= first.astimezone(ET).date()), r0))
         entry_session = session if is_open else next((d for d in daily_dates if d > session), session + dt.timedelta(days=1))
         if not is_open and now < s_open:
             entry_session = session
         hold = min(CONFIG["max_hold_sessions"], WINDOW_SESSIONS.get(row["optW"], 5))
         lag_ok = 0 if hold == 1 else 1
-        trading_days_late = len([d for d in daily_dates if r0 < d <= entry_session]) if entry_session > r0 else 0
+        trading_days_late = sessions_late(r0, entry_session, daily_dates)
         extra = dict(symbol=sym, market=row["mkt"], conf=row["conf"], best_window=row["optW"], expected_move=row["move"],
                      detected_lag_min=round((now - pub).total_seconds() / 60))
         if trading_days_late > lag_ok:
@@ -307,40 +363,53 @@ def daily_closes(symbol):
         return None
 
 
-def recheck_pending(state, now):
-    """Cancel unfilled orders whose headline the current rule classifier no longer maps to the
-    same event (a classifier bug fixed after the order was queued). A real trader would cancel
-    a mistaken pending order before the open; the cancellation is logged as a decision."""
+def recheck_pending(state, now, daily_dates):
+    """Cancel unfilled orders that today's checks would not have placed: the rule classifier no
+    longer maps the headline to the same event, or a scheduled-event check fails (bug fixes made
+    after the order was queued). A real trader cancels a mistaken order before the open; each
+    cancellation is logged as a decision."""
     from . import classify
     keep = []
     for o in state["pending"]:
+        why = None
+        pub = dt.datetime.fromisoformat(o["signal_published"])
         if o.get("method", "rules") == "rules":
             c = classify.classify_rules(dict(id=o["signal_id"], title=o["title"], summary=""))
             if not c or c["type"] != o["type"]:
-                log_decision(state, now, dict(id=o["signal_id"], title=o["title"], event=o["event"], score=o["score"],
-                                              published=o["signal_published"]), "cancel",
-                             f"classifier no longer confirms '{o['event']}' (now: {c['type'] if c else 'not an event'}); "
-                             f"order for {o['symbol']} cancelled before fill", dict(symbol=o["symbol"]))
-                continue
+                why = f"classifier no longer confirms '{o['event']}' (now: {c['type'] if c else 'not an event'})"
+        why = why or calendar_reason(o["type"], pub, o["symbol"])
+        if not why:
+            first = first_release_date(state, o["type"], pub)
+            if first < pub:
+                r0 = next((d for d in daily_dates if d >= first.astimezone(ET).date()), None)
+                decided = dt.datetime.fromisoformat(o["decided"]).astimezone(ET)
+                entry = next((d for d in daily_dates if d > decided.date() or (d == decided.date() and decided.hour < 16)), None)
+                if r0 and entry and sessions_late(r0, entry, daily_dates) > (0 if o["hold_sessions"] == 1 else 1):
+                    why = f"stale: same release first seen {first.date()} (reaction session {r0})"
+        if why:
+            log_decision(state, now, dict(id=o["signal_id"], title=o["title"], event=o["event"], score=o["score"],
+                                          published=o["signal_published"]), "cancel",
+                         f"{why}; order for {o['symbol']} cancelled before fill", dict(symbol=o["symbol"]))
+            continue
         keep.append(o)
     state["pending"] = keep
 
 
 def fill_pending(state, now, clock):
-    is_open, session, s_open, s_close = clock
-    if not is_open:
-        return
+    # GitHub's scheduler runs this every 15 min in theory and every few hours in practice, so
+    # orders are filled from the minute bars at the first regular-session bar after the order
+    # was placed (the open for after-market orders), not at whatever time the job wakes up.
     rate = usdinr()
     keep = []
     for o in state["pending"]:
         b, _ = bars(o["symbol"])
-        today = [x for x in b if x[0] >= s_open]
         decided = dt.datetime.fromisoformat(o["decided"])
-        # after-market orders fill at the first bar of the session; live orders at the bar after decision
-        fill_bar = next((x for x in today if x[0] >= max(decided, s_open)), None) if decided >= s_open else (today[0] if today else None)
+        fill_bar = next((x for x in b if x[0] >= decided), None)
         if not fill_bar:
             keep.append(o)
             continue
+        session = fill_bar[0].astimezone(ET).date()
+        first_of_session = next(x for x in b if x[0].astimezone(ET).date() == session)
         px = buy_fill(fill_bar[1], o["symbol"])
         budget = min(CONFIG["position_inr"] / rate, state["cash_usd"])
         if budget < 50:
@@ -370,7 +439,7 @@ def fill_pending(state, now, clock):
                          dict(symbol=o["symbol"]))
             continue
         pos = dict(o, qty=qty, entry_px=round(px, 4), entry_time=fill_bar[0].isoformat(), entry_session=session.isoformat(),
-                   entry_fill="market-on-open" if fill_bar is today[0] and decided < s_open else "market",
+                   entry_fill="market-on-open" if fill_bar is first_of_session and decided < fill_bar[0] - dt.timedelta(minutes=1) else "market",
                    fill_delay_min=round((fill_bar[0] - dt.datetime.fromisoformat(o["signal_published"])).total_seconds() / 60),
                    stop=round(px * (1 - CONFIG["stop_pct"]), 4), target=round(px * (1 + target), 4), target_pct=target,
                    breakeven=False, high=px, low=px, checked_until=fill_bar[0].isoformat(), sessions_held=[session.isoformat()],
@@ -581,7 +650,7 @@ def step(now=None, log=print):
     if state["last_run"] is None or now >= dt.datetime.fromisoformat(state["last_run"]):
         manage_positions(state, now, clock, daily_dates)
         consider_signals(state, sig, bt_by_key, now, clock, daily_dates)
-        recheck_pending(state, now)
+        recheck_pending(state, now, daily_dates)
         fill_pending(state, now, clock)
         manage_positions(state, now, clock, daily_dates)  # new fills may already hit levels this session
     enrich_closed(state)

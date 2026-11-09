@@ -67,7 +67,7 @@ class Engine(unittest.TestCase):
         spy = spy or session_bars(s_open, flat(500, 390))
         data = {"CVX": (cvx, {}), "SPY": (spy, {}), "INR=X": ([], {})}
         clock = (is_open, s_open.astimezone(paper.ET).date(), s_open, s_open + dt.timedelta(minutes=390))
-        with mock.patch.object(paper, "bars", side_effect=lambda s, rng="5d": data[s]), \
+        with mock.patch.object(paper, "bars", side_effect=lambda s, rng="5d": data.get(s, ([], {}))), \
              mock.patch.object(paper, "market_clock", return_value=clock):
             return paper.step(now=now, log=lambda *a: None)
 
@@ -156,6 +156,37 @@ class Engine(unittest.TestCase):
         self.assertEqual(st["pending"], [])
         self.assertEqual(st["decisions"][0]["action"], "cancel")
         self.assertIn("no longer confirms", st["decisions"][0]["reason"])
+
+    def test_order_fills_at_open_even_if_next_run_is_after_the_close(self):
+        # GitHub cron can skip the whole session; the fill must still be at that session's open
+        self.write([signal()])
+        self.go(OPEN - dt.timedelta(hours=1), [], is_open=False)
+        day = session_bars(OPEN, [(101, 101, 101, 101)] + flat(102, 389))
+        st = self.go(OPEN + dt.timedelta(hours=8), day, is_open=False)
+        (p,) = st["positions"]
+        self.assertAlmostEqual(p["entry_px"], 101 * (1 + paper.CONFIG["slippage"][paper.asset_class("CVX")]), places=4)
+        self.assertEqual(p["entry_fill"], "market-on-open")
+        self.assertEqual(p["entry_time"], OPEN.isoformat())
+
+    def test_cpi_headline_outside_release_window_skipped(self):
+        self.write([signal(type="us_cpi_cool", event="US CPI below forecast", published="2026-11-09T01:00:00+00:00")],
+                   rows=[dict(BT_ROW, type="us_cpi_cool")])
+        st = self.go(OPEN - dt.timedelta(hours=1), [], is_open=False)
+        self.assertIn("CPI release window", st["decisions"][0]["reason"])
+
+    def test_earnings_outside_season_skipped(self):
+        self.assertTrue(paper.in_earnings_season("NFLX", dt.date(2026, 10, 20)))
+        self.assertFalse(paper.in_earnings_season("NFLX", dt.date(2026, 11, 8)))
+        self.assertTrue(paper.in_earnings_season("NVDA", dt.date(2026, 11, 19)))
+        self.assertFalse(paper.in_earnings_season("NVDA", dt.date(2026, 10, 28)))
+
+    def test_follow_up_coverage_of_same_release_is_stale(self):
+        # Friday's payrolls were seen (and skipped); Monday's follow-up article is the same event
+        st = paper.new_state(OPEN)
+        st["decisions"] = [dict(event="Strong US payrolls (beat)", published="2026-11-06T13:33:00+00:00", action="skip")]
+        first = paper.first_release_date(st, "nfp_strong_beat", dt.datetime(2026, 11, 8, 23, 0, tzinfo=UTC))
+        self.assertEqual(first.date(), dt.date(2026, 11, 6))
+        self.assertEqual(paper.first_release_date(st, "opec_cut", OPEN), OPEN)
 
     def test_stale_signal_skipped(self):
         # Monday's news first seen before Wednesday's open: 2 sessions late for a 3d edge

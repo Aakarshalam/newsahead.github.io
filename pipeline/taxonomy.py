@@ -93,6 +93,15 @@ NON_US = (r"\b(uk|britain|british|england|euro ?(zone|area)|euro|europe(an)?|chi
           r"scotland|scottish|ireland|irish|netherlands|dutch|belgi(um|an)|austria(n)?|denmark|danish|finland|finnish|"
           r"greece|greek|portugal|portuguese|czech|hungar(y|ian)|romania(n)?|uruguay|ecuador|bolivia)\b")
 
+# CPI subject: the index itself, or "inflation" used as a data point (inflation rose/eased/rate/data),
+# not "inflation concerns" or "inflation squeeze". Live false positives (7-9 Nov 2026) all used
+# bare "inflation" in commentary.
+CPI_SUBJ = (r"\b(cpi|consumer price(s| index)?|inflation (rate|data|report|figures?|reading|print|numbers?|rose|rises|"
+            r"jumped|jumps|climbed|climbs|accelerat\w*|cooled|cools|eased|eases|slowed|slows|fell|falls|picks? up|"
+            r"quicken\w*|hit|hits|tops|topped|surged?|surges|ticks? (up|down)|unexpectedly))\b")
+CPI_COMMENTARY = (r"\b(concerns?|fears?|worries|worried|squeeze|risks?|holds? the key|ahead of|awaits?|eyes|preview|"
+                  r"week ahead|due (out|on)|set to|watch(es|ing)?)\b")
+
 FED = r"\b(fed|federal reserve|fomc|powell)\b"
 ECB = r"\b(ecb|european central bank|lagarde)\b"
 HIKE = r"\b(hikes?|hiked|hiking|raises?|raised|raising|increases?|lifts?)\b"
@@ -138,8 +147,8 @@ EVENT_TYPES = [
       note="Few occurrences since 2000; treat statistics as anecdotal.",
       impacts=[I("US Equities", "Banks & cyclicals", {"XLF": "Financials", "KBE": "Bank ETF", "XLI": "Industrials", "SPY": "S&P 500"})]),
     T("us_cpi_hot", "US CPI above forecast", "Economic", "United States",
-      [r"\b(cpi|consumer prices?|inflation)\b", r"\b(hotter|higher|above|beats?|tops?|exceeds?|accelerat\w*|surges?|jumps?|rises? more)\b"],
-      none=[r"\b(officials?|beat inflation|fight\w* inflation|tame inflation|pointing|target)\b", r"\b(cooler|slows?|below|eases?|softer|misses?)\b", NON_US],
+      [CPI_SUBJ, r"\b(hotter|higher|above|beats?|tops?|exceeds?|accelerat\w*|surges?|jumps?|rises? more)\b"],
+      none=[r"\b(officials?|beat inflation|fight\w* inflation|tame inflation|pointing|target)\b", CPI_COMMENTARY, r"\b(cooler|slows?|below|eases?|softer|misses?)\b", NON_US],
       boost=[r"\b(expect|forecast|estimate|consensus)", r"\bcore\b", r"\b(us|u\.s\.)\b"],
       commentary_ok=True,
       impacts=[I("US Equities", "Broad & growth", {"SPY": "S&P 500", "QQQ": "Nasdaq 100", "IWM": "Small caps", "XHB": "Homebuilders"}),
@@ -148,8 +157,8 @@ EVENT_TYPES = [
                I("Commodities", "Gold", {"GC=F": "Gold"}),
                I("Crypto", "Bitcoin", {"BTC-USD": "Bitcoin"})]),
     T("us_cpi_cool", "US CPI below forecast", "Economic", "United States",
-      [r"\b(cpi|consumer prices?|inflation)\b", r"\b(cooler|cools|slows?|slowed|below|eases?|eased|softer|misses?|decelerat\w*)\b"],
-      none=[r"\b(officials?|beat inflation|fight\w* inflation|tame inflation|pointing|target)\b", r"\b(hotter|above|beats?|accelerat\w*)\b", NON_US],
+      [CPI_SUBJ, r"\b(cool|cooler|cools|cooled|slows?|slowed|below|eases?|eased|softer|misses?|decelerat\w*)\b"],
+      none=[r"\b(officials?|beat inflation|fight\w* inflation|tame inflation|pointing|target)\b", CPI_COMMENTARY, r"\b(hotter|above|beats?|accelerat\w*)\b", NON_US],
       boost=[r"\b(expect|forecast|estimate|consensus)", r"\bcore\b", r"\b(us|u\.s\.)\b"],
       commentary_ok=True,
       impacts=[I("US Equities", "Broad & growth", {"SPY": "S&P 500", "QQQ": "Nasdaq 100", "IWM": "Small caps", "XHB": "Homebuilders"}),
