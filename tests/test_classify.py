@@ -75,6 +75,8 @@ NEGATIVE = [
     "Turkish inflation surges above forecast",
     "Canada adds 60,000 jobs, beating forecasts",
     "Gold edges up as softer crude tempers inflation concerns",
+    "China extends suspension of 24% additional tariff on US goods for two months",
+    "Kosovo's harmonised annual inflation slows down in Oct",
     "US Fed rate hike in December faces uncertainty as jobs surge, but CPI and oil hold the key",
     # speculation / previews / odds
     "October jobs shock seals case for December Fed rate hike",

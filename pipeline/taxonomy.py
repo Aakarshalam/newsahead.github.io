@@ -91,7 +91,11 @@ NON_US = (r"\b(uk|britain|british|england|euro ?(zone|area)|euro|europe(an)?|chi
           r"philippines?|filipino|thai(land)?|malaysia(n)?|singapore(an)?|korea(n)?|taiwan(ese)?|hong kong|iran(ian)?|"
           r"israel(i)?|saudi|uae|emirati|qatar|zimbabwe(an)?|ethiopia(n)?|lebanon|lebanese|belarus|kazakhstan|"
           r"scotland|scottish|ireland|irish|netherlands|dutch|belgi(um|an)|austria(n)?|denmark|danish|finland|finnish|"
-          r"greece|greek|portugal|portuguese|czech|hungar(y|ian)|romania(n)?|uruguay|ecuador|bolivia)\b")
+          r"greece|greek|portugal|portuguese|czech|hungar(y|ian)|romania(n)?|uruguay|ecuador|bolivia|kosovo|serbia(n)?|"
+          r"croatia(n)?|bosnia(n)?|albania(n)?|bulgaria(n)?|slovakia|slovenia|lithuania|latvia|estonia|armenia(n)?|"
+          r"azerbaijan|uzbekistan|mongolia(n)?|nepal(ese)?|myanmar|cambodia|morocco|moroccan|tunisia|algeria|angola|"
+          r"zambia|uganda|tanzania|rwanda|senegal|cameroon|jamaica|paraguay|iceland|cyprus|malta|luxembourg|"
+          r"jordan(ian)?|iraq(i)?|kuwait(i)?|oman|bahrain)\b")
 
 # CPI subject: the index itself, or "inflation" used as a data point (inflation rose/eased/rate/data),
 # not "inflation concerns" or "inflation squeeze". Live false positives (7-9 Nov 2026) all used
@@ -210,7 +214,8 @@ EVENT_TYPES = [
     # ── POLITICAL ────────────────────────────────────────────────────────────
     T("us_tariffs_on_china", "US tariffs imposed on China", "Political", "United States / China",
       [r"\b(tariffs?|duties|levies)\b", r"\b(china|chinese|beijing)\b", r"\b(impose[sd]?|announce[sd]?|raises?|raised|hikes?|hiked|slaps?|additional|increase[sd]?|levies|takes? effect|go(es)? into effect|sign(s|ed)? order)\b"],
-      none=[r"\b(truce|deal|pause[sd]?|suspend\w*|lift\w*|remove[sd]?|exempt\w*|cuts?|lowers?|retaliat\w*)\b"],
+      none=[r"\b(truce|deal|pause[sd]?|suspen\w*|lift\w*|remove[sd]?|exempt\w*|cuts?|lowers?|retaliat\w*|delay\w*|postpone\w*)\b",
+            r"\bon (us|u\.s\.|american) (goods|products|imports|exports)\b"],
       boost=[r"\b(trump|biden|white house|ustr|commerce)\b", r"\b\d{2,3}%"],
       impacts=[I("US Equities", "China-exposed US names", {"AAPL": "Apple", "QCOM": "Qualcomm", "MU": "Micron", "WMT": "Walmart", "TGT": "Target", "GM": "GM", "DE": "Deere", "ADM": "ADM"}),
                I("Asia Equities", "China & Taiwan", {"FXI": "China large-cap", "BABA": "Alibaba", "JD": "JD.com", "TSM": "TSMC", "^HSI": "Hang Seng"}),
